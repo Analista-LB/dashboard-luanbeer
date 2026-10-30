@@ -6,15 +6,18 @@
  * Uso:
  *   node scripts/seed_supabase.js
  *
- * Requiere variables de entorno (o archivo .env):
- *   SUPABASE_URL
- *   SUPABASE_SERVICE_ROLE_KEY (o SUPABASE_ANON_KEY si las políticas permiten la siembra inicial)
+ * Busca SUPABASE_SERVICE_ROLE_KEY en:
+ *   1. Variable de entorno actual (process.env.SUPABASE_SERVICE_ROLE_KEY)
+ *   2. Archivo .env en la raíz del proyecto (ignorado por .gitignore)
+ *   3. Variables de entorno de usuario de Windows (HKCU\Environment)
  */
 
 const fs = require('fs');
 const path = require('path');
+const vm = require('vm');
+const { execSync } = require('child_process');
 
-// Cargar .env si existe
+// 1. Cargar .env si existe
 const envPath = path.join(__dirname, '..', '.env');
 if (fs.existsSync(envPath)) {
   const envContent = fs.readFileSync(envPath, 'utf8');
@@ -31,13 +34,74 @@ if (fs.existsSync(envPath)) {
   });
 }
 
-const SUPABASE_URL = process.env.SUPABASE_URL;
-const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY;
+// 2. Si no está en process.env, buscar en variables de entorno de Windows (HKCU)
+if (!process.env.SUPABASE_SERVICE_ROLE_KEY) {
+  try {
+    const regOutput = execSync('reg query HKCU\\Environment /v SUPABASE_SERVICE_ROLE_KEY', { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
+    const match = regOutput.match(/SUPABASE_SERVICE_ROLE_KEY\s+REG_\w+\s+(.+)/);
+    if (match && match[1]) {
+      process.env.SUPABASE_SERVICE_ROLE_KEY = match[1].trim();
+    }
+  } catch (e) { /* ignore */ }
+}
+
+// 3. Cargar SUPABASE_URL desde src/config/supabaseConfig.js si no viene en env
+let SUPABASE_URL = process.env.SUPABASE_URL;
+if (!SUPABASE_URL) {
+  try {
+    const cfg = require('../src/config/supabaseConfig.js');
+    if (cfg && cfg.url) SUPABASE_URL = cfg.url;
+  } catch (e) {}
+}
+
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_KEY;
+
+function createSupabaseClient(url, key) {
+  const vendorPath = path.join(__dirname, '..', 'vendor', 'supabase.min.js');
+  const code = fs.readFileSync(vendorPath, 'utf8');
+  const ctx = {
+    window: {},
+    self: {},
+    fetch: global.fetch,
+    console: console,
+    Headers: global.Headers,
+    Request: global.Request,
+    Response: global.Response,
+    URL: global.URL,
+    URLSearchParams: global.URLSearchParams,
+    WebSocket: global.WebSocket || class DummyWS {},
+    setTimeout: global.setTimeout,
+    clearTimeout: global.clearTimeout,
+    setInterval: global.setInterval,
+    clearInterval: global.clearInterval
+  };
+  ctx.window = ctx;
+  ctx.self = ctx;
+  ctx.global = ctx;
+  vm.createContext(ctx);
+  vm.runInContext(code, ctx);
+  return ctx.supabase.createClient(url, key, {
+    auth: { persistSession: false, autoRefreshToken: false }
+  });
+}
 
 async function runSeed() {
   console.log('================================================================');
   console.log(' SEED COMPLETO A SUPABASE — DASHBOARD LUANBEER');
   console.log('================================================================');
+
+  if (!SUPABASE_KEY) {
+    console.log('\n[AVISO CRÍTICO] SUPABASE_SERVICE_ROLE_KEY no encontrada.');
+    console.log('Para cargarla localmente de forma segura (sin exponerla en el chat):');
+    console.log('\n--- OPCIÓN 1 (Recomendada: Archivo .env en la raíz del proyecto) ---');
+    console.log('Creá el archivo: c:\\Users\\thoma\\OneDrive\\Desktop\\Argon Gemini\\.env');
+    console.log('Con el contenido:');
+    console.log('SUPABASE_SERVICE_ROLE_KEY=tu_secret_service_role_key_aqui');
+    console.log('(El archivo .env está protegido por .gitignore y nunca se subirá a git)\n');
+    console.log('--- OPCIÓN 2 (Variable de Entorno de Usuario en PowerShell) ---');
+    console.log('[Environment]::SetEnvironmentVariable("SUPABASE_SERVICE_ROLE_KEY", "tu_secret_service_role_key_aqui", "User")\n');
+    return { success: false, missingKey: true };
+  }
 
   // Cargar bundle real
   global.window = global;
@@ -52,6 +116,7 @@ async function runSeed() {
   const GalaxiaEngine = require('../src/modules/galaxiaEngine.js');
 
   const totalSalesRows = bundle.salesColumnar ? bundle.salesColumnar.count : 0;
+  console.log(`Proyecto Supabase: ${SUPABASE_URL}`);
   console.log(`Cargado bundle: ${totalSalesRows} transacciones.`);
   console.log(`Clientes maestros: ${(bundle.masters.clientes || []).length}`);
   console.log(`Productos portfolio: ${(bundle.masters.portfolio || []).length}`);
@@ -95,7 +160,7 @@ async function runSeed() {
     segmento_canal: 'GENERAL'
   }));
 
-  // 4. Calcular métricas globales de ventas y universos
+  // 4. Calcular métricas globales de ventas
   let totalHl = 0;
   let totalNeto = 0;
   const periodsSet = new Set();
@@ -108,167 +173,188 @@ async function runSeed() {
   const minPeriod = periodsList[0] || '2025/01';
   const maxPeriod = periodsList[periodsList.length - 1] || '2026/09';
 
-  console.log('----------------------------------------------------------------');
-  console.log(`Clientes preparados: ${customers.length}`);
-  console.log(`Productos preparados: ${products.length}`);
-  console.log(`Canales preparados: ${channels.length}`);
-  console.log(`Ventas totales: ${totalSalesRows} filas | ${totalHl.toFixed(2)} HL | $${totalNeto.toFixed(2)}`);
-  console.log(`Rango de períodos: ${minPeriod} hasta ${maxPeriod} (${periodsList.length} períodos)`);
-  console.log('----------------------------------------------------------------');
-
-  // 5. Calcular estados de Tablero y Galaxia
   const tacoData = GalaxiaEngine.computeTableroVentasTaco(bundle);
   const galaxiaData = GalaxiaEngine.computeGalaxia2026Evaluation(bundle);
 
-  if (!SUPABASE_URL || !SUPABASE_KEY) {
-    console.log('[seed_supabase] AVISO: SUPABASE_URL y/o SUPABASE_SERVICE_ROLE_KEY no están configuradas en .env.');
-    console.log('[seed_supabase] Para conectar Supabase real:');
-    console.log('  1. Creá un archivo .env con:');
-    console.log('     SUPABASE_URL=https://<tu-id-proyecto>.supabase.co');
-    console.log('     SUPABASE_SERVICE_ROLE_KEY=<tu-service-role-key>');
-    console.log('     SUPABASE_ANON_KEY=<tu-anon-key>');
-    console.log('  2. Ejecutá este script nuevamente: node scripts/seed_supabase.js');
-    return;
-  }
+  const supabase = createSupabaseClient(SUPABASE_URL, SUPABASE_KEY);
 
-  const { createClient } = require('../vendor/supabase.min.js');
-  const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
-    auth: { persistSession: false }
-  });
+  const summary = {
+    tables: {},
+    errors: []
+  };
 
-  console.log(`Conectando a Supabase: ${SUPABASE_URL}...`);
-
-  // 1. Clientes
-  console.log('Sembrando clientes (1,851 registros)...');
-  for (let i = 0; i < customers.length; i += 500) {
-    const batch = customers.slice(i, i + 500);
-    const { error } = await supabase.from('customers').upsert(batch, { onConflict: 'codigo' });
-    if (error) {
-      console.error(`Error sembrando clientes batch ${i}-${i + batch.length}:`, error.message);
-    }
-  }
-  console.log('✅ Clientes sembrados.');
-
-  // 2. Productos
-  console.log('Sembrando productos portfolio (1,675 registros)...');
-  for (let i = 0; i < products.length; i += 500) {
-    const batch = products.slice(i, i + 500);
-    const { error } = await supabase.from('products').upsert(batch, { onConflict: 'codigo' });
-    if (error) {
-      console.error(`Error sembrando productos batch ${i}-${i + batch.length}:`, error.message);
-    }
-  }
-  console.log('✅ Portfolio sembrado.');
-
-  // 3. Canales
-  console.log('Sembrando canales comerciales (16 registros)...');
-  const { error: errChan } = await supabase.from('channel_mkt').upsert(channels, { onConflict: 'canal_mkt' });
-  if (errChan) console.error('Error sembrando canales:', errChan.message);
-  else console.log('✅ Canales sembrados.');
-
-  // 4. Tablero de Ventas State & Galaxia State
-  console.log('Sembrando estado de Tablero de Ventas & Galaxia 2026...');
-  const { error: errTaco } = await supabase.from('tablero_ventas_state').upsert({
-    period: maxPeriod,
-    source_file: 'Tablero Ventas.xlsb',
-    fecha_corte: tacoData.fechaCorte,
-    mando_integral: tacoData.scores,
-    mesa_julio: tacoData.comparativaMesas?.mesaJulio || {},
-    mesa_gonza: tacoData.comparativaMesas?.mesaGonza || {},
-    by_vendedor: tacoData.vendedoresMatrix || []
-  }, { onConflict: 'period' });
-  if (errTaco) console.warn('Aviso tablero_ventas_state:', errTaco.message);
-  else console.log('✅ Estado de Tablero de Ventas sembrado.');
-
-  const { error: errGal } = await supabase.from('galaxia_state').upsert({
-    period: maxPeriod,
-    scorecard: galaxiaData.scorecard11000
-  }, { onConflict: 'period' });
-  if (errGal) console.warn('Aviso galaxia_state:', errGal.message);
-  else console.log('✅ Estado de Galaxia 2026 sembrado.');
-
-  // 5. Ventas Históricas y Base a la Fecha (por períodos)
-  console.log(`Sembrando ventas agrupadas por períodos (${periodsList.length} períodos)...`);
-  for (const per of periodsList) {
-    const periodIdx = bundle.dictionaries.periodos.indexOf(per);
-    const rows = [];
-    for (let i = 0; i < totalSalesRows; i++) {
-      if (bundle.salesColumnar.per[i] === periodIdx) {
-        rows.push({
-          period: per,
-          cte: bundle.salesColumnar.cte[i],
-          prod: bundle.salesColumnar.prod[i],
-          canal: bundle.dictionaries.canalesRaw[bundle.salesColumnar.canal[i]],
-          vend: bundle.salesColumnar.vend[i],
-          sup: bundle.salesColumnar.sup[i],
-          ccc: bundle.salesColumnar.ccc[i],
-          bultos: bundle.salesColumnar.bultos[i],
-          hl: bundle.salesColumnar.hl[i],
-          neto: bundle.salesColumnar.neto[i],
-          bonif: bundle.salesColumnar.bonif[i],
-          source: bundle.salesColumnar.source[i]
-        });
+  try {
+    // 1. Clientes
+    console.log(`\n[1/7] Sembrando clientes (${customers.length} registros)...`);
+    let custCount = 0;
+    for (let i = 0; i < customers.length; i += 500) {
+      const batch = customers.slice(i, i + 500);
+      const { error } = await supabase.from('customers').upsert(batch, { onConflict: 'codigo' });
+      if (error) {
+        console.error(`  Error en lote clientes [${i}]:`, error.message);
+        summary.errors.push(`customers [${i}]: ${error.message}`);
+      } else {
+        custCount += batch.length;
       }
     }
+    summary.tables['customers'] = custCount;
+    console.log(`  -> Clientes cargados: ${custCount}`);
 
-    // Insertar en lotes de 1000
-    for (let b = 0; b < rows.length; b += 1000) {
-      const chunk = rows.slice(b, b + 1000);
-      const { error: errChunk } = await supabase.from('sales_monthly').insert(chunk);
-      if (errChunk) {
-        console.error(`Error insertando ventas ${per} lote ${b}-${b + chunk.length}:`, errChunk.message);
-        break;
+    // 2. Productos
+    console.log(`\n[2/7] Sembrando portfolio (${products.length} registros)...`);
+    let prodCount = 0;
+    for (let i = 0; i < products.length; i += 500) {
+      const batch = products.slice(i, i + 500);
+      const { error } = await supabase.from('products').upsert(batch, { onConflict: 'codigo' });
+      if (error) {
+        console.error(`  Error en lote productos [${i}]:`, error.message);
+        summary.errors.push(`products [${i}]: ${error.message}`);
+      } else {
+        prodCount += batch.length;
       }
     }
-    console.log(`  -> Período ${per}: ${rows.length} transacciones procesadas.`);
-  }
-  console.log('✅ Ventas mensuales sembradas.');
+    summary.tables['products'] = prodCount;
+    console.log(`  -> Productos cargados: ${prodCount}`);
 
-  // 6. Data Versions
-  console.log('Actualizando data_versions...');
-  const { error: errVer } = await supabase.from('data_versions').upsert([
-    { dataset: 'customers', version: 1, metadata: { count: customers.length } },
-    { dataset: 'products', version: 1, metadata: { count: products.length } },
-    { dataset: 'channel_mkt', version: 1, metadata: { count: channels.length } },
-    { dataset: 'sales', version: 1, metadata: { count: totalSalesRows, totalHl: Math.round(totalHl * 100) / 100, minPeriod, maxPeriod } },
-    { dataset: 'tablero', version: 1, metadata: { period: maxPeriod } },
-    { dataset: 'galaxia', version: 1, metadata: { score: galaxiaData.scorecard11000.puntajeTotalObtenido } }
-  ], { onConflict: 'dataset' });
-  if (errVer) console.error('Error data_versions:', errVer.message);
-  else console.log('✅ Versiones de datos inicializadas.');
-
-  // 7. Ingestion Log Inicial
-  console.log('Registrando auditoría inicial en ingestion_log...');
-  const { error: errLog } = await supabase.from('ingestion_log').insert({
-    source_type: 'CARGA_INICIAL_SISTEMA',
-    period: `${minPeriod} - ${maxPeriod}`,
-    file_name: 'real_data_bundle.js',
-    rows_count: totalSalesRows,
-    deleted_rows: 0,
-    inserted_rows: totalSalesRows,
-    min_date: minPeriod,
-    max_date: maxPeriod,
-    status: 'EXITOSO',
-    user_email: 'admin@luanbeer.com',
-    diagnostic: {
-      totalHl: Math.round(totalHl * 100) / 100,
-      totalNeto: Math.round(totalNeto * 100) / 100,
-      customersCount: customers.length,
-      productsCount: products.length,
-      periodsCount: periodsList.length
+    // 3. Canales
+    console.log(`\n[3/7] Sembrando canales (${channels.length} registros)...`);
+    const { error: errChan } = await supabase.from('channel_mkt').upsert(channels, { onConflict: 'canal_mkt' });
+    if (errChan) {
+      console.error('  Error canales:', errChan.message);
+      summary.errors.push(`channel_mkt: ${errChan.message}`);
+      summary.tables['channel_mkt'] = 0;
+    } else {
+      summary.tables['channel_mkt'] = channels.length;
+      console.log(`  -> Canales cargados: ${channels.length}`);
     }
-  });
-  if (errLog) console.warn('Aviso ingestion_log:', errLog.message);
-  else console.log('✅ Log de auditoría inicial registrado exitosamente.');
 
-  console.log('================================================================');
-  console.log(' SIEMBRA A SUPABASE FINALIZADA CON ÉXITO');
-  console.log('================================================================');
+    // 4. Tablero de Ventas & Galaxia State
+    console.log('\n[4/7] Sembrando estado Tablero TACO & Galaxia 2026...');
+    const { error: errTaco } = await supabase.from('tablero_ventas_state').upsert({
+      period: maxPeriod,
+      source_file: 'Tablero Ventas.xlsb',
+      fecha_corte: tacoData.fechaCorte,
+      mando_integral: tacoData.scores,
+      mesa_julio: tacoData.comparativaMesas?.mesaJulio || {},
+      mesa_gonza: tacoData.comparativaMesas?.mesaGonza || {},
+      by_vendedor: tacoData.vendedoresMatrix || []
+    }, { onConflict: 'period' });
+    if (errTaco) summary.errors.push(`tablero_ventas_state: ${errTaco.message}`);
+    summary.tables['tablero_ventas_state'] = errTaco ? 0 : 1;
+
+    const { error: errGal } = await supabase.from('galaxia_state').upsert({
+      period: maxPeriod,
+      scorecard: galaxiaData.scorecard11000
+    }, { onConflict: 'period' });
+    if (errGal) summary.errors.push(`galaxia_state: ${errGal.message}`);
+    summary.tables['galaxia_state'] = errGal ? 0 : 1;
+    console.log('  -> Estados de Tablero y Galaxia cargados.');
+
+    // 5. Ventas Mensuales (sales_monthly)
+    console.log(`\n[5/7] Sembrando ventas mensuales (${totalSalesRows} filas en ${periodsList.length} períodos)...`);
+    let salesInserted = 0;
+
+    for (let pIdx = 0; pIdx < periodsList.length; pIdx++) {
+      const per = periodsList[pIdx];
+      const dictPerIdx = bundle.dictionaries.periodos.indexOf(per);
+      const rows = [];
+      for (let i = 0; i < totalSalesRows; i++) {
+        if (bundle.salesColumnar.per[i] === dictPerIdx) {
+          rows.push({
+            period: per,
+            cte: bundle.salesColumnar.cte[i],
+            prod: bundle.salesColumnar.prod[i],
+            canal: bundle.dictionaries.canalesRaw[bundle.salesColumnar.canal[i]],
+            vend: bundle.salesColumnar.vend[i],
+            sup: bundle.salesColumnar.sup[i],
+            ccc: bundle.salesColumnar.ccc[i],
+            bultos: bundle.salesColumnar.bultos[i],
+            hl: bundle.salesColumnar.hl[i],
+            neto: bundle.salesColumnar.neto[i],
+            bonif: bundle.salesColumnar.bonif[i],
+            source: bundle.salesColumnar.source[i]
+          });
+        }
+      }
+
+      // Insertar por lotes de 1000
+      let periodSuccess = 0;
+      for (let b = 0; b < rows.length; b += 1000) {
+        const chunk = rows.slice(b, b + 1000);
+        const { error: errChunk } = await supabase.from('sales_monthly').insert(chunk);
+        if (errChunk) {
+          console.error(`  Error en período ${per} lote [${b}]:`, errChunk.message);
+          summary.errors.push(`sales_monthly ${per} [${b}]: ${errChunk.message}`);
+          break;
+        } else {
+          periodSuccess += chunk.length;
+        }
+      }
+      salesInserted += periodSuccess;
+      console.log(`  [${pIdx + 1}/${periodsList.length}] Período ${per}: ${periodSuccess} filas insertadas.`);
+    }
+    summary.tables['sales_monthly'] = salesInserted;
+    console.log(`  -> Ventas mensuales totales cargadas: ${salesInserted}`);
+
+    // 6. Data Versions
+    console.log('\n[6/7] Inicializando data_versions...');
+    const { error: errVer } = await supabase.from('data_versions').upsert([
+      { dataset: 'customers', version: 1, metadata: { count: custCount } },
+      { dataset: 'products', version: 1, metadata: { count: prodCount } },
+      { dataset: 'channel_mkt', version: 1, metadata: { count: channels.length } },
+      { dataset: 'sales', version: 1, metadata: { count: salesInserted, totalHl: Math.round(totalHl * 100) / 100, minPeriod, maxPeriod } },
+      { dataset: 'tablero', version: 1, metadata: { period: maxPeriod } },
+      { dataset: 'galaxia', version: 1, metadata: { score: galaxiaData.scorecard11000.puntajeTotalObtenido } }
+    ], { onConflict: 'dataset' });
+    if (errVer) summary.errors.push(`data_versions: ${errVer.message}`);
+    summary.tables['data_versions'] = errVer ? 0 : 6;
+    console.log('  -> data_versions inicializado.');
+
+    // 7. Ingestion Log
+    console.log('\n[7/7] Registrando auditoría inicial en ingestion_log...');
+    const { error: errLog } = await supabase.from('ingestion_log').insert({
+      source_type: 'CARGA_INICIAL_SISTEMA',
+      period: `${minPeriod} - ${maxPeriod}`,
+      file_name: 'real_data_bundle.js',
+      rows_count: totalSalesRows,
+      deleted_rows: 0,
+      inserted_rows: salesInserted,
+      min_date: minPeriod,
+      max_date: maxPeriod,
+      status: 'EXITOSO',
+      user_email: 'admin@luanbeer.com',
+      diagnostic: {
+        totalHl: Math.round(totalHl * 100) / 100,
+        totalNeto: Math.round(totalNeto * 100) / 100,
+        customersCount: custCount,
+        productsCount: prodCount,
+        periodsCount: periodsList.length
+      }
+    });
+    if (errLog) summary.errors.push(`ingestion_log: ${errLog.message}`);
+    summary.tables['ingestion_log'] = errLog ? 0 : 1;
+    console.log('  -> ingestion_log registrado.');
+
+    console.log('\n================================================================');
+    console.log(' RESUMEN FINAL DE SIEMBRA');
+    console.log('================================================================');
+    console.table(summary.tables);
+    if (summary.errors.length > 0) {
+      console.log(`Avisos / Errores (${summary.errors.length}):`, summary.errors);
+    } else {
+      console.log('0 errores. Todos los registros fueron transferidos exitosamente.');
+    }
+
+    return { success: true, summary };
+  } catch (err) {
+    console.error('Excepción durante la siembra:', err);
+    return { success: false, error: err.message };
+  }
 }
 
 if (require.main === module) {
   runSeed().catch(err => {
-    console.error('Error en seed_supabase:', err);
+    console.error('Error fatal en seed_supabase:', err);
     process.exit(1);
   });
 }
