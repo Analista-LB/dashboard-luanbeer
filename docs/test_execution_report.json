@@ -1,0 +1,260 @@
+{
+  "executedAt": "2026-10-30T13:14:35.057Z",
+  "totalTests": 36,
+  "passed": 36,
+  "failed": 0,
+  "results": [
+    {
+      "category": "1. Fuentes Originales",
+      "name": "1.1 Presencia e integridad intacta de los 14 archivos reales (.xlsx)",
+      "status": "PASS",
+      "durationMs": 5,
+      "detail": "14 archivos verificados intactos en workspace (14/14)"
+    },
+    {
+      "category": "1. Fuentes Originales",
+      "name": "1.2 Inventario completo de las 14 fuentes y 18 hojas en el modelo de datos",
+      "status": "PASS",
+      "durationMs": 0,
+      "detail": "14 fuentes (9 Actualizar + 5 Fijo) y 18 hojas inventariadas con metadatos completos"
+    },
+    {
+      "category": "1. Fuentes Originales",
+      "name": "1.3 Detección multi-hoja y exclusión de fila descriptora de tipos en (Actualizar) Negociaciones.xlsx",
+      "status": "PASS",
+      "durationMs": 269,
+      "detail": "5 hojas detectadas; hoja principal con 630 filas válidas tras excluir fila descriptora de tipos"
+    },
+    {
+      "category": "1. Fuentes Originales",
+      "name": "1.4 Normalización de caracteres de control ASCII (\\u0002) y columnas duplicadas en (Actualizar) Activos Fijos.xlsx",
+      "status": "PASS",
+      "durationMs": 335,
+      "detail": "2,000 equipos verificados, carácter de control \\u0002 limpiado y columnas duplicadas desambiguadas"
+    },
+    {
+      "category": "2. Ingesta Multifuente",
+      "name": "2.1 Carga de 1 archivo individual válido (.xlsx) y exclusión de fila TOTAL GENERAL",
+      "status": "PASS",
+      "durationMs": 4,
+      "detail": "1 archivo ingerido; fila TOTAL GENERAL excluida automáticamente (4 filas válidas)"
+    },
+    {
+      "category": "2. Ingesta Multifuente",
+      "name": "2.2 Carga simultánea de 10 archivos heterogéneos (.xlsx + .csv)",
+      "status": "PASS",
+      "durationMs": 18,
+      "detail": "10 archivos simultáneos (.xlsx y .csv) inspeccionados sin errores"
+    },
+    {
+      "category": "2. Ingesta Multifuente",
+      "name": "2.3 Rechazo controlado al intentar cargar más de 10 archivos simultáneos (11 archivos)",
+      "status": "PASS",
+      "durationMs": 0,
+      "detail": "Límite de 10 archivos validado correctamente: \"Límite excedido: se seleccionaron 11 archivos. El máximo permitido por operación de ingesta es de 10 archivos.\""
+    },
+    {
+      "category": "2. Ingesta Multifuente",
+      "name": "2.4 Lectura de archivo CSV válido (Canales_Comerciales.csv) y Excel multi-hoja (Ventas_2026.xlsx)",
+      "status": "PASS",
+      "durationMs": 2,
+      "detail": "CSV (3 filas) y Excel multi-hoja (2 hojas) verificados"
+    },
+    {
+      "category": "2. Ingesta Multifuente",
+      "name": "2.5 Tolerancia ante archivo corrupto (Archivo_Corrupto.xlsx) sin caída del sistema",
+      "status": "PASS",
+      "durationMs": 2,
+      "detail": "Archivo corrupto aislado con estado 'error' (Error al leer archivo \"Archivo_Corrupto.xlsx\": Firma binaria inválida: el archivo está corrupto o no es un documento Excel válido.) mientras Objetivos_2026.xlsx se procesó OK"
+    },
+    {
+      "category": "2. Ingesta Multifuente",
+      "name": "2.6 Manejo de columnas desconocidas, datos faltantes e inconsistentes (Datos_Inconsistentes.xlsx)",
+      "status": "PASS",
+      "durationMs": 2,
+      "detail": "Archivo con columnas desconocidas y datos faltantes procesado con 1 advertencia(s) documentada(s)"
+    },
+    {
+      "category": "3. Relaciones e Integridad",
+      "name": "3.1 Verificación de las 8 relaciones maestras-transaccionales en las 14 fuentes reales",
+      "status": "PASS",
+      "durationMs": 0,
+      "detail": "8 relaciones verificadas; 2 códigos huérfanos (78043, 29056) detectados y homologados por División"
+    },
+    {
+      "category": "3. Relaciones e Integridad",
+      "name": "3.2 Reconciliación anti-duplicación entre (Actualizar) Base Prod. y Vol. y (Actualizar) Base a la fecha",
+      "status": "PASS",
+      "durationMs": 0,
+      "detail": "Anti-duplicación exacta: 266,041 claves compartidas deduplicadas + 55 filas POP = 266,096 registros"
+    },
+    {
+      "category": "3. Relaciones e Integridad",
+      "name": "3.3 Deduplicación de claves duplicadas en (Actualizar) Base CNC.xlsx (2026/09)",
+      "status": "PASS",
+      "durationMs": 0,
+      "detail": "2 registros duplicados en Base CNC (2026/09) deduplicados antes de consolidar (25,895 -> 25,893)"
+    },
+    {
+      "category": "3. Relaciones e Integridad",
+      "name": "3.4 Detección automática de relaciones, huérfanos (Cliente 999), exclusión de pre-agregados y conversión Litros->HL en lote sintético",
+      "status": "PASS",
+      "durationMs": 8,
+      "detail": "Lote sintético de 10 archivos consolidado: 50,000 L -> 500 HL (2025), 500 HL (2026), Facturación +12.93%, CCC 3 -> 4 (+33.33%)"
+    },
+    {
+      "category": "4. Matemática Comercial",
+      "name": "4.1 Exactitud de Volumen 2025 Completo, YTD 2026 y YTD 2025 Homogéneo (HL)",
+      "status": "PASS",
+      "durationMs": 1,
+      "detail": "YTD 2026: 33684.68 HL vs YTD 2025: 44035.71 HL (-23.51%)"
+    },
+    {
+      "category": "4. Matemática Comercial",
+      "name": "4.2 Exactitud de Facturación Neta y separación estricta de Bonificaciones",
+      "status": "PASS",
+      "durationMs": 21,
+      "detail": "Facturación Neta YTD 2026: $5.828.427.216 (-2.83%); Bonificación separada: $1.376.316.317"
+    },
+    {
+      "category": "4. Matemática Comercial",
+      "name": "4.3 Cálculo de Clientes Con Compra (CCC) deduplicados reales (Set de Código Cliente)",
+      "status": "PASS",
+      "durationMs": 0,
+      "detail": "CCC YTD 2026 deduplicado = 1,482 clientes únicos (+16.88% vs 1,268 en YTD 2025; suma mensual ingenua evitada: 9763)"
+    },
+    {
+      "category": "4. Matemática Comercial",
+      "name": "4.4 Protección ante división por cero o base negativa (ADYACENCIAS y MARKETPLACE ALIMENTOS)",
+      "status": "PASS",
+      "durationMs": 0,
+      "detail": "Protección verificada: ADYACENCIAS (base neg. -2.89 HL -> varPct=null) y MARKETPLACE ALIMENTOS (base 0 -> varPct=null)"
+    },
+    {
+      "category": "4. Matemática Comercial",
+      "name": "4.5 Coherencia de Trimestres (1Q–4Q) y Participación Interna (100% del total seleccionado)",
+      "status": "PASS",
+      "durationMs": 0,
+      "detail": "Trimestres 1Q (15746.85 HL), 2Q (8379.5 HL), 3Q (9558.33 HL), 4Q (0 HL) exactos; Participación Interna = 100.00%"
+    },
+    {
+      "category": "4. Matemática Comercial",
+      "name": "4.6 Filtros combinados multidimensionales y evaluación de bases operativas (Activos Fijos y Negociaciones)",
+      "status": "PASS",
+      "durationMs": 158,
+      "detail": "Filtro combinado [UNG + 1Q] = 3584.19 HL; Activos Fijos (2,000 eq, 4518.16 HL repago) y Negociaciones (630 acuerdos)"
+    },
+    {
+      "category": "5. Insights y NLQ",
+      "name": "5.1 Generación de hallazgos comerciales con los 8 campos obligatorios de auditoría",
+      "status": "PASS",
+      "durationMs": 9,
+      "detail": "44 hallazgos comerciales verificados con sus 8 campos obligatorios y datos reales"
+    },
+    {
+      "category": "5. Insights y NLQ",
+      "name": "5.2 Intérprete local de Consultas en Lenguaje Natural (NLQ) y rechazo de causas externas no verificables",
+      "status": "PASS",
+      "durationMs": 9,
+      "detail": "8 preguntas comerciales respondidas con fórmula y fuentes + rechazo verificable de causas externas no presentes en datos"
+    },
+    {
+      "category": "6. Persistencia Local",
+      "name": "6.1 Guardado, recuperación, reemplazo sin duplicar, rollback ante fallo y separación Real/Prueba",
+      "status": "PASS",
+      "durationMs": 1,
+      "detail": "Guardado, lectura, reemplazo sin duplicación, rollback de snapshot y separación Real/Prueba verificados"
+    },
+    {
+      "category": "7. Interfaz y Seguridad",
+      "name": "7.1 Sanitización contra inyección HTML/XSS en nombres de archivos, columnas y celdas",
+      "status": "PASS",
+      "durationMs": 1,
+      "detail": "Payloads XSS neutralizados correctamente (&lt;script&gt;alert(&quot;xss&quot;)&lt;/s...)"
+    },
+    {
+      "category": "7. Interfaz y Seguridad",
+      "name": "7.2 Verificación del servidor HTTP local y estructura DOM completa de index.html",
+      "status": "PASS",
+      "durationMs": 15,
+      "detail": "Servidor local verificado (HTTP 200 en HTML, CSS y JS; HTTP 404 controlado; 6 módulos navegables verificados)"
+    },
+    {
+      "category": "8. Exportaciones",
+      "name": "8.1 Generación y verificación de archivo CSV con BOM UTF-8, metadatos de filtro y datos reales",
+      "status": "PASS",
+      "durationMs": 2,
+      "detail": "Archivo CSV generado y verificado (2800 bytes en exports_verificados/Argon_BI_Evolucion_Mensual.csv)"
+    },
+    {
+      "category": "8. Exportaciones",
+      "name": "8.2 Generación y re-lectura verificable de libro Excel (.xlsx) con 8 hojas comerciales",
+      "status": "PASS",
+      "durationMs": 61,
+      "detail": "Archivo XLSX generado y re-parseado (143.0 KB, 8 hojas verificadas)"
+    },
+    {
+      "category": "8. Exportaciones",
+      "name": "8.3 Generación y verificación estructural de informe ejecutivo PDF (.pdf)",
+      "status": "PASS",
+      "durationMs": 3,
+      "detail": "Archivo PDF generado y validado (2.4 KB, estructura %PDF-1.4 + xref + %%EOF íntegra)"
+    },
+    {
+      "category": "8. Exportaciones",
+      "name": "8.4 Generación y verificación de presentación ejecutiva PowerPoint (.pptx) editable",
+      "status": "PASS",
+      "durationMs": 81,
+      "detail": "Archivo PPTX editable generado y verificado (309.3 KB, contenedor OpenXML íntegro)"
+    },
+    {
+      "category": "9. Actualización 2026",
+      "name": "9.1 Presencia e integridad de las 20 fuentes reales en 1. Bases/ (19 hojas de cálculo + Manual PDF)",
+      "status": "PASS",
+      "durationMs": 1,
+      "detail": "20 fuentes verificadas intactas (19 operativas en 1. Bases/ + maqueta Tablero Ventas.xlsb en 1. Ejemplos/)"
+    },
+    {
+      "category": "9. Actualización 2026",
+      "name": "9.2 Ingesta binaria BIFF12 de Tablero Ventas.xlsb (55 hojas con soporte de registro 0x3b)",
+      "status": "PASS",
+      "durationMs": 14097,
+      "detail": "Tablero Ventas.xlsb (30.4 MB) leído exitosamente: 55 hojas binarias BIFF12 decodificadas"
+    },
+    {
+      "category": "9. Actualización 2026",
+      "name": "9.3 Motor Tablero de Ventas (TACO .xlsb): Scores Mando Integral, Mesa Julio y Mesa Gonza",
+      "status": "PASS",
+      "durationMs": 99,
+      "detail": "Scorecard TACO verificado: Mando Integral KPI 72.69% | RTO 30.37% | Total 46.77% | Mesa Julio 67.13% | Mesa Gonza 69.33%"
+    },
+    {
+      "category": "9. Actualización 2026",
+      "name": "9.4 Escala Oficial CMQ y Scorecard de 11.000 Puntos del Programa Galaxia 2026",
+      "status": "PASS",
+      "durationMs": 9,
+      "detail": "Escala CMQ verificada en sus 6 tramos; Scorecard 11.000 pts: 6640 pts (60.36%) — Categoría: EN DESARROLLO (FOCO CIERRE TACO)"
+    },
+    {
+      "category": "9. Actualización 2026",
+      "name": "9.5 Maestro de Clientes 2026, Ruteo Presencial y Alerta de Excesos de Frecuencia",
+      "status": "PASS",
+      "durationMs": 6,
+      "detail": "Maestro auditado: 1,485 activos, 6,586 anulados, 92.05% GPS, 209 On Premise, y exactamente 16 clientes con exceso de frecuencia"
+    },
+    {
+      "category": "9. Actualización 2026",
+      "name": "9.6 Auditoría de Pilares Galaxia: Sensibilización 66/33, Coolers Depósito y Trade Spend R3/MMAA",
+      "status": "PASS",
+      "durationMs": 4,
+      "detail": "Pilares auditados: Sensibilización 66/33 (2 alertas en Vol. Total), Coolers en stock (22.81% vs meta <=3%), Trade Spend $40.859/HL con TOP 5 por canal"
+    },
+    {
+      "category": "9. Actualización 2026",
+      "name": "9.7 Consultas de Lenguaje Natural (NLQ) para Programa Galaxia 2026 y Tablero TACO",
+      "status": "PASS",
+      "durationMs": 2,
+      "detail": "4 consultas NLQ de 2026 verificadas matemáticamente sobre TACO, Galaxia 11k pts, Sensibilización 66/33 y On Premise"
+    }
+  ]
+}

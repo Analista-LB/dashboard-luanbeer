@@ -1,0 +1,49 @@
+# ==============================================================================
+# .gitignore — Dashboard LuanBeer
+# Protege archivos confidenciales, hojas de cálculo empresariales y secretos
+# ==============================================================================
+
+# Entorno y Secretos
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+credentials.json
+supabase_keys.json
+
+# Hojas de cálculo y bases reales empresariales (Confidenciales)
+1. Bases/
+*.xlsx
+*.xlsb
+*.xlsm
+*.xls
+exports_verificados/
+test_data/
+
+# Backups y archivos temporales de scratch
+scratch/
+scratch_*
+*.tmp
+*.bak
+*.swp
+*~
+
+# Logs y trazas de depuración
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencias y artefactos de build
+node_modules/
+.pnpm-store/
+.wrangler/
+dist/
+.cache/
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini

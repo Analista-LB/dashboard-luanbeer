@@ -1,0 +1,3638 @@
+[
+  {
+    "fileName": "(Actualizar) Activos Fijos.xlsx",
+    "sizeBytes": 233235,
+    "category": "Actualizar",
+    "sheets": [
+      {
+        "sheetName": "Browser",
+        "ref": "A1:V2001",
+        "totalRowsRaw": 2001,
+        "headerRowIdx": 0,
+        "dataRowCount": 2000,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Articulo",
+            "nonNull": 2000,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 103,
+            "sum": 14966902,
+            "min": 2787,
+            "max": 32041,
+            "samples": [
+              2787,
+              2788,
+              3180,
+              3181,
+              3474
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "Numero de Serie",
+            "nonNull": 2000,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1000,
+            "sum": 3445344400764421000,
+            "min": 0,
+            "max": 865741000000000000,
+            "samples": [
+              "\u00020785301032601051902",
+              1108025,
+              1108066,
+              1108625,
+              1114693
+            ]
+          },
+          {
+            "colIdx": 2,
+            "name": "Numero de Activo",
+            "nonNull": 1999,
+            "nullCount": 1,
+            "inferredType": "string",
+            "distinctApprox": 677,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "01-105190-24",
+              "01-429279-18",
+              "01-429283-18",
+              "01-429359-18",
+              "01-429686-18"
+            ]
+          },
+          {
+            "colIdx": 3,
+            "name": "Comp.",
+            "nonNull": 2000,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "NO"
+            ]
+          },
+          {
+            "colIdx": 4,
+            "name": "Descripcion Articulo",
+            "nonNull": 2000,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 103,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "HELADERA PATAGONIA SLIM B/C",
+              "HELADERA PATAGONIA SLIM USADA B/C",
+              "HELADERA ECO VERT MEDIANA",
+              "HELADERA ECO VERTICAL GRANDE",
+              "HELADERA QUILMES DOBLE PUERTA"
+            ]
+          },
+          {
+            "colIdx": 5,
+            "name": "fisico",
+            "nonNull": 2000,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 2,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "no",
+              "yes"
+            ]
+          },
+          {
+            "colIdx": 6,
+            "name": "instalado",
+            "nonNull": 2000,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 2,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "yes",
+              "no"
+            ]
+          },
+          {
+            "colIdx": 7,
+            "name": "Logo",
+            "nonNull": 2000,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 22,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "PATAGONIA",
+              "ECO",
+              "QUILMES",
+              "BRAHMA",
+              "GLACIAR"
+            ]
+          },
+          {
+            "colIdx": 8,
+            "name": "Modelo",
+            "nonNull": 2000,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 13,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "SLIM",
+              "VM",
+              "VG",
+              "DP",
+              "HH"
+            ]
+          },
+          {
+            "colIdx": 9,
+            "name": "Tipo de Material",
+            "nonNull": 2000,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "HELADERA"
+            ]
+          },
+          {
+            "colIdx": 10,
+            "name": "Unidad de Negocio",
+            "nonNull": 2000,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 3,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "CERVEZAS CMQ",
+              "AGUAS ECO",
+              "UNG"
+            ]
+          },
+          {
+            "colIdx": 11,
+            "name": "Cliente",
+            "nonNull": 775,
+            "nullCount": 1225,
+            "inferredType": "number",
+            "distinctApprox": 457,
+            "sum": 3417204,
+            "min": 15,
+            "max": 9104,
+            "samples": [
+              6853,
+              6584,
+              6577,
+              3989,
+              3561
+            ]
+          },
+          {
+            "colIdx": 12,
+            "name": "Razon Social",
+            "nonNull": 775,
+            "nullCount": 1225,
+            "inferredType": "string",
+            "distinctApprox": 435,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "SANCHO PANZA S. A. S.",
+              "OLMOS QUINTEROS NADYA KATHERINA",
+              "PERELLO MATIAS NAHUEL",
+              "GUILDEFENIK FERNANDO",
+              "GUO HAIFENG"
+            ]
+          },
+          {
+            "colIdx": 13,
+            "name": "Comprobante",
+            "nonNull": 775,
+            "nullCount": 1225,
+            "inferredType": "string",
+            "distinctApprox": 760,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "COPOP--0001-00003369",
+              "COPOP--0001-00002252",
+              "COPOP--0001-00002251",
+              "COPOP--0001-00002263",
+              "COPOP--0001-00003551"
+            ]
+          },
+          {
+            "colIdx": 14,
+            "name": "Litros Repago",
+            "nonNull": 2000,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 13,
+            "sum": 451816,
+            "min": 0,
+            "max": 567,
+            "samples": [
+              192,
+              162,
+              240,
+              384,
+              144
+            ]
+          },
+          {
+            "colIdx": 15,
+            "name": "Venta Prom.",
+            "nonNull": 2000,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 575,
+            "sum": 415132.04,
+            "min": 0,
+            "max": 11720.13,
+            "samples": [
+              436.53,
+              46.34,
+              38.25,
+              0,
+              46.27
+            ]
+          },
+          {
+            "colIdx": 16,
+            "name": "Litros Pendientes",
+            "nonNull": 2000,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 658,
+            "sum": 289498.04,
+            "min": 0,
+            "max": 11528.13,
+            "samples": [
+              4.53,
+              46.34,
+              38.25,
+              0,
+              46.27
+            ]
+          },
+          {
+            "colIdx": 17,
+            "name": "Repaga?",
+            "nonNull": 2000,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 2,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "NO",
+              "SI"
+            ]
+          },
+          {
+            "colIdx": 18,
+            "name": "Estado",
+            "nonNull": 2000,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 3,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "INSTALADO",
+              "DE BAJA",
+              "EN STOCK"
+            ]
+          },
+          {
+            "colIdx": 19,
+            "name": "Fecha colocación",
+            "nonNull": 775,
+            "nullCount": 1225,
+            "inferredType": "date",
+            "distinctApprox": 429,
+            "sum": null,
+            "min": "2008-08-30",
+            "max": "2026-09-30",
+            "samples": [
+              "2025-01-10",
+              "2020-11-07",
+              "2020-11-16",
+              "2025-07-19",
+              "2026-08-21"
+            ]
+          },
+          {
+            "colIdx": 20,
+            "name": "%Rep. Mes actual",
+            "nonNull": 1990,
+            "nullCount": 10,
+            "inferredType": "number",
+            "distinctApprox": 1,
+            "sum": 0,
+            "min": 0,
+            "max": 0,
+            "samples": [
+              0
+            ]
+          },
+          {
+            "colIdx": 21,
+            "name": "Numero de Serie",
+            "nonNull": 2000,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 1000,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "\u0002\u0002078530103260105190",
+              "\u000201108025",
+              "\u000201108066",
+              "\u000201108625",
+              "\u000201114693"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "fileName": "(Actualizar) Base CNC.xlsx",
+    "sizeBytes": 1072808,
+    "category": "Actualizar",
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:H25896",
+        "totalRowsRaw": 25896,
+        "headerRowIdx": 0,
+        "dataRowCount": 25895,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Año/Mes",
+            "nonNull": 25895,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 21,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "2025/01",
+              "2025/02",
+              "2025/03",
+              "2025/04",
+              "2025/05"
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "Cod Cte",
+            "nonNull": 25895,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1000,
+            "sum": 132331720,
+            "min": 14,
+            "max": 9991,
+            "samples": [
+              14,
+              15,
+              17,
+              20,
+              28
+            ]
+          },
+          {
+            "colIdx": 2,
+            "name": "Cliente",
+            "nonNull": 25895,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 1000,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "QUIROGA SANDRA NOEMI",
+              "AIELLO SUPERMERCADOS S.A.",
+              "REA ESMILSE LUISA",
+              "AGUERO PRIMA MARIA",
+              "ROMERA UVILLA JUAN FRANCISCO"
+            ]
+          },
+          {
+            "colIdx": 3,
+            "name": "Domicilio",
+            "nonNull": 25889,
+            "nullCount": 6,
+            "inferredType": "string",
+            "distinctApprox": 1000,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "BALCARCE Y MITRE 122",
+              "(117)JUAN T. ZAVALA S/Nº B° EL 121",
+              "M.C C.16  B° 544 VIVI. 16",
+              "M.17 C.18  B° EL LINCE 18",
+              "RIVADAVIA 1001 Y LAVALLE 1001"
+            ]
+          },
+          {
+            "colIdx": 4,
+            "name": "Canal Mkt.",
+            "nonNull": 25895,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 14,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Tradicional",
+              "Supermercados",
+              "Kioscos/Maxikioscos",
+              "REF GASTRONOMICO",
+              "REF NOCTURNO"
+            ]
+          },
+          {
+            "colIdx": 5,
+            "name": "Universo",
+            "nonNull": 25895,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 2,
+            "sum": 25251,
+            "min": 1,
+            "max": 1,
+            "samples": [
+              1,
+              "0"
+            ]
+          },
+          {
+            "colIdx": 6,
+            "name": "Clientes Activos",
+            "nonNull": 25895,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 2,
+            "sum": 25893,
+            "min": 1,
+            "max": 1,
+            "samples": [
+              1,
+              "0"
+            ]
+          },
+          {
+            "colIdx": 7,
+            "name": "Clientes No Compradores",
+            "nonNull": 25895,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 2,
+            "sum": 4456,
+            "min": 1,
+            "max": 1,
+            "samples": [
+              "0",
+              1
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "fileName": "(Actualizar) Base Eficiencia.xlsx",
+    "sizeBytes": 1586122,
+    "category": "Actualizar",
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:I40318",
+        "totalRowsRaw": 40318,
+        "headerRowIdx": 0,
+        "dataRowCount": 40317,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Año/Mes",
+            "nonNull": 40317,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 21,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "2025/01",
+              "2025/02",
+              "2025/03",
+              "2025/04",
+              "2025/05"
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "Código Cliente",
+            "nonNull": 40317,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1000,
+            "sum": 207144229,
+            "min": 14,
+            "max": 9999,
+            "samples": [
+              14,
+              15,
+              17,
+              20,
+              28
+            ]
+          },
+          {
+            "colIdx": 2,
+            "name": "Canal Mkt.",
+            "nonNull": 40317,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 13,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Tradicional",
+              "Supermercados",
+              "Kioscos/Maxikioscos",
+              "REF GASTRONOMICO",
+              "REF NOCTURNO"
+            ]
+          },
+          {
+            "colIdx": 3,
+            "name": "Cantidad Visitas",
+            "nonNull": 40317,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 23,
+            "sum": 142636,
+            "min": 0,
+            "max": 26,
+            "samples": [
+              9,
+              8,
+              7,
+              0,
+              1
+            ]
+          },
+          {
+            "colIdx": 4,
+            "name": "Cantidad Visitas Efectivas",
+            "nonNull": 40317,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 13,
+            "sum": 48112,
+            "min": 0,
+            "max": 21,
+            "samples": [
+              6,
+              5,
+              1,
+              0,
+              4
+            ]
+          },
+          {
+            "colIdx": 5,
+            "name": "Visitas con Venta Fuera Ruta",
+            "nonNull": 40317,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 18,
+            "sum": 20865,
+            "min": 0,
+            "max": 21,
+            "samples": [
+              0,
+              2,
+              1,
+              3,
+              6
+            ]
+          },
+          {
+            "colIdx": 6,
+            "name": "Cantidad Llamados Efectivos",
+            "nonNull": 40317,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1,
+            "sum": 0,
+            "min": 0,
+            "max": 0,
+            "samples": [
+              0
+            ]
+          },
+          {
+            "colIdx": 7,
+            "name": "Llamadas Realizadas",
+            "nonNull": 40317,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1,
+            "sum": 0,
+            "min": 0,
+            "max": 0,
+            "samples": [
+              0
+            ]
+          },
+          {
+            "colIdx": 8,
+            "name": "Días de Visita",
+            "nonNull": 40317,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 27,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "MA,VI",
+              "Sin Días de Visita",
+              "VI",
+              "LU,MA,VI",
+              "MA,JU"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "fileName": "(Actualizar) Base MXPDV.xlsx",
+    "sizeBytes": 690574,
+    "category": "Actualizar",
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:F21339",
+        "totalRowsRaw": 21339,
+        "headerRowIdx": 0,
+        "dataRowCount": 21338,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Año/Mes",
+            "nonNull": 21338,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 21,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "2025/01",
+              "2025/02",
+              "2025/03",
+              "2025/04",
+              "2025/05"
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "Código Cliente",
+            "nonNull": 21338,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1000,
+            "sum": 105362307,
+            "min": 14,
+            "max": 9991,
+            "samples": [
+              14,
+              15,
+              17,
+              20,
+              28
+            ]
+          },
+          {
+            "colIdx": 2,
+            "name": "Canal Mkt.",
+            "nonNull": 21338,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 11,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Tradicional",
+              "Supermercados",
+              "Kioscos/Maxikioscos",
+              "REF NOCTURNO",
+              "Autoservicio"
+            ]
+          },
+          {
+            "colIdx": 3,
+            "name": "Código Sector de Venta",
+            "nonNull": 21338,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 10,
+            "sum": 200973,
+            "min": 3,
+            "max": 18,
+            "samples": [
+              7,
+              9,
+              12,
+              6,
+              10
+            ]
+          },
+          {
+            "colIdx": 4,
+            "name": "Código Sector de Supervisión",
+            "nonNull": 21338,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 3,
+            "sum": 2143930,
+            "min": 99,
+            "max": 101,
+            "samples": [
+              101,
+              100,
+              99
+            ]
+          },
+          {
+            "colIdx": 5,
+            "name": "Cantidad de Marcas",
+            "nonNull": 21338,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 36,
+            "sum": 176711,
+            "min": 1,
+            "max": 39,
+            "samples": [
+              12,
+              30,
+              9,
+              7,
+              17
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "fileName": "(Actualizar) Base Obj..xlsx",
+    "sizeBytes": 41232888,
+    "category": "Actualizar",
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:L591871",
+        "totalRowsRaw": 591871,
+        "headerRowIdx": 0,
+        "dataRowCount": 591870,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Año/Mes",
+            "nonNull": 591870,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 21,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "2025/01",
+              "2025/02",
+              "2025/03",
+              "2025/04",
+              "2025/05"
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "División",
+            "nonNull": 591870,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 10,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "BEB ENERGIZANTES",
+              "GASEOSAS",
+              "CERVEZAS",
+              "ISOTONICAS",
+              "BEBIDAS SABORIZADAS"
+            ]
+          },
+          {
+            "colIdx": 2,
+            "name": "Familia",
+            "nonNull": 591870,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 9,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "REGULAR",
+              "LIGHT",
+              "SIN AZUCAR",
+              "BAJAS CALORIAS",
+              "BLACK"
+            ]
+          },
+          {
+            "colIdx": 3,
+            "name": "Marca",
+            "nonNull": 591870,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 59,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "RED BULL",
+              "ROCKSTAR",
+              "PASO DE LOS TOROS",
+              "CORONA",
+              "QUILMES 0.0%"
+            ]
+          },
+          {
+            "colIdx": 4,
+            "name": "Sabor",
+            "nonNull": 591870,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 46,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "RED BULL",
+              "ROCKSTAR",
+              "POMELO",
+              "BLANCA",
+              "TRADICIONAL"
+            ]
+          },
+          {
+            "colIdx": 5,
+            "name": "Calibre",
+            "nonNull": 591870,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 38,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "250 CC LATAS",
+              "500 CC VD S/R",
+              "500 CC PET",
+              "410 CC",
+              "473 CC LATAS"
+            ]
+          },
+          {
+            "colIdx": 6,
+            "name": "Código Producto",
+            "nonNull": 591870,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 249,
+            "sum": 13375106726,
+            "min": 591,
+            "max": 78145,
+            "samples": [
+              16371,
+              24118,
+              1483,
+              21862,
+              22383
+            ]
+          },
+          {
+            "colIdx": 7,
+            "name": "Código Cliente",
+            "nonNull": 591870,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1000,
+            "sum": 2779484036,
+            "min": 14,
+            "max": 9991,
+            "samples": [
+              14,
+              15,
+              20,
+              28,
+              35
+            ]
+          },
+          {
+            "colIdx": 8,
+            "name": "Canal Mkt.",
+            "nonNull": 591870,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 11,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Tradicional",
+              "Supermercados",
+              "Kioscos/Maxikioscos",
+              "REF NOCTURNO",
+              "REF GASTRONOMICO"
+            ]
+          },
+          {
+            "colIdx": 9,
+            "name": "Código Sector de Venta",
+            "nonNull": 591870,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 10,
+            "sum": 5547451,
+            "min": 3,
+            "max": 18,
+            "samples": [
+              7,
+              9,
+              12,
+              6,
+              8
+            ]
+          },
+          {
+            "colIdx": 10,
+            "name": "Código Sector de Supervisión",
+            "nonNull": 591870,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 3,
+            "sum": 59471163,
+            "min": 99,
+            "max": 101,
+            "samples": [
+              101,
+              100,
+              99
+            ]
+          },
+          {
+            "colIdx": 11,
+            "name": "Objetivo Total en HL",
+            "nonNull": 591870,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1000,
+            "sum": 113886.24,
+            "min": -16.712087706861,
+            "max": 552.483674513479,
+            "samples": [
+              0.00552204,
+              0.29698479,
+              0.00572976,
+              0.0456543528,
+              0.334223223
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "fileName": "(Actualizar) Base Prod. y Vol..xlsx",
+    "sizeBytes": 21272017,
+    "category": "Actualizar",
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:P266042",
+        "totalRowsRaw": 266042,
+        "headerRowIdx": 0,
+        "dataRowCount": 266041,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Año/Mes",
+            "nonNull": 266041,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 21,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "2025/01",
+              "2025/02",
+              "2025/03",
+              "2025/04",
+              "2025/05"
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "División",
+            "nonNull": 266041,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 13,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "AGUAS",
+              "ALIMENTOS MKTPLACE",
+              "BEB ENERGIZANTES",
+              "BEBIDAS SABORIZADAS",
+              "CERVEZAS"
+            ]
+          },
+          {
+            "colIdx": 2,
+            "name": "Familia",
+            "nonNull": 266041,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 18,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "REGULAR",
+              "CLASICO",
+              "DIAMANTADO",
+              "DON NICANOR",
+              "DULCE DE LECHE"
+            ]
+          },
+          {
+            "colIdx": 3,
+            "name": "Marca",
+            "nonNull": 266041,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 71,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "ECO DE LOS ANDES",
+              "GLACIAR",
+              "NESTLE PUREZA VITAL",
+              "POZO",
+              "TARAGUI"
+            ]
+          },
+          {
+            "colIdx": 4,
+            "name": "Sabor",
+            "nonNull": 266041,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 61,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "AGUA CON GAS",
+              "AGUA SIN GAS",
+              "AGUA DE MESA",
+              "GALLETITAS",
+              "MATE COCIDO"
+            ]
+          },
+          {
+            "colIdx": 5,
+            "name": "Calibre",
+            "nonNull": 266041,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 47,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "1500 CC PET",
+              "500 CC PET",
+              "1000 CC PET",
+              "2000 CC PET",
+              "2250 CC PET"
+            ]
+          },
+          {
+            "colIdx": 6,
+            "name": "Código Producto",
+            "nonNull": 266041,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 244,
+            "sum": 6321961669,
+            "min": 591,
+            "max": 78280,
+            "samples": [
+              2428,
+              14934,
+              22318,
+              2439,
+              21014
+            ]
+          },
+          {
+            "colIdx": 7,
+            "name": "Código Cliente",
+            "nonNull": 266041,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1000,
+            "sum": 1262559659,
+            "min": 14,
+            "max": 9991,
+            "samples": [
+              15,
+              198,
+              624,
+              796,
+              1110
+            ]
+          },
+          {
+            "colIdx": 8,
+            "name": "Canal Mkt.",
+            "nonNull": 266041,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 10,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Supermercados",
+              "Tradicional",
+              "REF ENTRETENIMIENTO",
+              "Kioscos/Maxikioscos",
+              "Autoservicio"
+            ]
+          },
+          {
+            "colIdx": 9,
+            "name": "Código Sector de Venta",
+            "nonNull": 266041,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 10,
+            "sum": 2492118,
+            "min": 3,
+            "max": 18,
+            "samples": [
+              9,
+              6,
+              7,
+              3,
+              8
+            ]
+          },
+          {
+            "colIdx": 10,
+            "name": "Código Sector de Supervisión",
+            "nonNull": 266041,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 3,
+            "sum": 26730341,
+            "min": 99,
+            "max": 101,
+            "samples": [
+              100,
+              101,
+              99
+            ]
+          },
+          {
+            "colIdx": 11,
+            "name": "Clientes con Compra",
+            "nonNull": 266041,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 2,
+            "sum": 248987,
+            "min": 0,
+            "max": 1,
+            "samples": [
+              1,
+              "0",
+              0
+            ]
+          },
+          {
+            "colIdx": 12,
+            "name": "Cantidad Total en Bultos",
+            "nonNull": 266041,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 175,
+            "sum": 923730.93,
+            "min": -263,
+            "max": 3600,
+            "samples": [
+              2,
+              3,
+              1,
+              16,
+              11
+            ]
+          },
+          {
+            "colIdx": 13,
+            "name": "Cantidad Total en HL",
+            "nonNull": 266041,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 450,
+            "sum": 96607.03,
+            "min": -31.56,
+            "max": 408.6,
+            "samples": [
+              0.18,
+              0.27,
+              0.09,
+              1.44,
+              0.99
+            ]
+          },
+          {
+            "colIdx": 14,
+            "name": "Importe Neto",
+            "nonNull": 266041,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1000,
+            "sum": 14823747363.87,
+            "min": -4903432.7,
+            "max": 73855076.55552,
+            "samples": [
+              9731.6713,
+              17996.34375,
+              17996.3343,
+              0,
+              7427.0625
+            ]
+          },
+          {
+            "colIdx": 15,
+            "name": "Importe Bonif. Total",
+            "nonNull": 266041,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1000,
+            "sum": 5026659272.45,
+            "min": -1790763.962876,
+            "max": 27473464.2,
+            "samples": [
+              5240.1307,
+              10569.28125,
+              10569.2757,
+              9521.875,
+              2094.8125
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "fileName": "(Actualizar) Base Rechazos.xlsx",
+    "sizeBytes": 288360,
+    "category": "Actualizar",
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:F5804",
+        "totalRowsRaw": 5804,
+        "headerRowIdx": 0,
+        "dataRowCount": 5803,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Año/Mes",
+            "nonNull": 5803,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 21,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "2025/11",
+              "2025/12",
+              "2026/01",
+              "2026/02",
+              "2026/03"
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "Código Cliente",
+            "nonNull": 5803,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1000,
+            "sum": 27733779,
+            "min": 14,
+            "max": 9991,
+            "samples": [
+              28,
+              2751,
+              2886,
+              3631,
+              3782
+            ]
+          },
+          {
+            "colIdx": 2,
+            "name": "Rechazo Total Bultos",
+            "nonNull": 5803,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 515,
+            "sum": 54989.33,
+            "min": 0.001,
+            "max": 2600,
+            "samples": [
+              15.75,
+              3,
+              4.25,
+              4.75,
+              30
+            ]
+          },
+          {
+            "colIdx": 3,
+            "name": "Rechazo Importe Neto",
+            "nonNull": 5803,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1000,
+            "sum": 923460682.65,
+            "min": 0,
+            "max": 41771989.87662,
+            "samples": [
+              141770.190475,
+              67190.428467,
+              77286.289778,
+              83952.948935,
+              171891.1774
+            ]
+          },
+          {
+            "colIdx": 4,
+            "name": "Rechazo Total UM",
+            "nonNull": 5803,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1000,
+            "sum": 5803.6,
+            "min": 0,
+            "max": 310.98,
+            "samples": [
+              1.14375,
+              0.3564,
+              0.4752,
+              0.40865,
+              2.73
+            ]
+          },
+          {
+            "colIdx": 5,
+            "name": "Motivo Rechazo",
+            "nonNull": 3096,
+            "nullCount": 2707,
+            "inferredType": "string",
+            "distinctApprox": 11,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "CAMINO INTRANSITABLE - ZONA PELIGROSA",
+              "CERRADO",
+              "ERROR DE CARGA",
+              "FECHA CORTA",
+              "HORARIO FLETERO - SINDICAL"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "fileName": "(Actualizar) Base a la fecha.xlsx",
+    "sizeBytes": 18344416,
+    "category": "Actualizar",
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:L266097",
+        "totalRowsRaw": 266097,
+        "headerRowIdx": 0,
+        "dataRowCount": 266096,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Año/Mes",
+            "nonNull": 266096,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 21,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "2025/01",
+              "2025/02",
+              "2025/03",
+              "2025/04",
+              "2025/05"
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "Código Cliente",
+            "nonNull": 266096,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1000,
+            "sum": 1262873518,
+            "min": 14,
+            "max": 9991,
+            "samples": [
+              14,
+              15,
+              17,
+              20,
+              28
+            ]
+          },
+          {
+            "colIdx": 2,
+            "name": "Código Producto",
+            "nonNull": 266096,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 247,
+            "sum": 6325152223,
+            "min": 591,
+            "max": 83179,
+            "samples": [
+              1416,
+              1418,
+              1422,
+              2057,
+              2218
+            ]
+          },
+          {
+            "colIdx": 3,
+            "name": "Canal Mkt.",
+            "nonNull": 266096,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 10,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Tradicional",
+              "Supermercados",
+              "Kioscos/Maxikioscos",
+              "REF NOCTURNO",
+              "Autoservicio"
+            ]
+          },
+          {
+            "colIdx": 4,
+            "name": "Clientes con Compra",
+            "nonNull": 266096,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 2,
+            "sum": 248987,
+            "min": 0,
+            "max": 1,
+            "samples": [
+              1,
+              "0",
+              0
+            ]
+          },
+          {
+            "colIdx": 5,
+            "name": "Marca",
+            "nonNull": 266096,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 74,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "GATORADE",
+              "ANDES",
+              "QUILMES",
+              "PASO DE LOS TOROS",
+              "RED BULL"
+            ]
+          },
+          {
+            "colIdx": 6,
+            "name": "Código Sector de Venta",
+            "nonNull": 266096,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 10,
+            "sum": 2492644,
+            "min": 3,
+            "max": 18,
+            "samples": [
+              7,
+              9,
+              12,
+              6,
+              10
+            ]
+          },
+          {
+            "colIdx": 7,
+            "name": "División",
+            "nonNull": 266096,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 15,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "ISOTONICAS",
+              "CERVEZAS",
+              "GASEOSAS",
+              "BEB ENERGIZANTES",
+              "AGUAS"
+            ]
+          },
+          {
+            "colIdx": 8,
+            "name": "Código Sector de Supervisión",
+            "nonNull": 266096,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 3,
+            "sum": 26735818,
+            "min": 99,
+            "max": 101,
+            "samples": [
+              101,
+              100,
+              99
+            ]
+          },
+          {
+            "colIdx": 9,
+            "name": "Cantidad Total en HL",
+            "nonNull": 266096,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 447,
+            "sum": 96607.03,
+            "min": -31.56,
+            "max": 408.6,
+            "samples": [
+              0.03,
+              0.06,
+              0.6984,
+              0.1135,
+              1.08
+            ]
+          },
+          {
+            "colIdx": 10,
+            "name": "Cantidad Total en Bultos",
+            "nonNull": 266096,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 173,
+            "sum": 923992.93,
+            "min": -263,
+            "max": 3600,
+            "samples": [
+              1,
+              2,
+              6,
+              9,
+              0.1666666667
+            ]
+          },
+          {
+            "colIdx": 11,
+            "name": "Importe Neto",
+            "nonNull": 266096,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1000,
+            "sum": 14824765958.71,
+            "min": -4903432.7,
+            "max": 73855076.55552,
+            "samples": [
+              4011.513,
+              11365.9535,
+              108568.696545,
+              20461.93919,
+              166542.66342
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "fileName": "(Actualizar) Negociaciones.xlsx",
+    "sizeBytes": 179556,
+    "category": "Actualizar",
+    "sheets": [
+      {
+        "sheetName": "Negociaciones",
+        "ref": "A1:R632",
+        "totalRowsRaw": 632,
+        "headerRowIdx": 0,
+        "dataRowCount": 631,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Fecha inicio",
+            "nonNull": 631,
+            "nullCount": 0,
+            "inferredType": "date",
+            "distinctApprox": 50,
+            "sum": null,
+            "min": "2026-04-15",
+            "max": "2026-09-30",
+            "samples": [
+              "FECHA",
+              "2026-04-15",
+              "2026-04-17",
+              "2026-04-18",
+              "2026-04-21"
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "Fecha fin",
+            "nonNull": 631,
+            "nullCount": 0,
+            "inferredType": "date",
+            "distinctApprox": 110,
+            "sum": null,
+            "min": "2026-10-13",
+            "max": "2028-09-29",
+            "samples": [
+              "FECHA",
+              "2026-12-03",
+              "2026-12-30",
+              "2026-11-20",
+              "2026-11-22"
+            ]
+          },
+          {
+            "colIdx": 2,
+            "name": "Cliente",
+            "nonNull": 631,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 206,
+            "sum": 3453755,
+            "min": 15,
+            "max": 9102,
+            "samples": [
+              "ENTERO",
+              4368,
+              4000,
+              7708,
+              7709
+            ]
+          },
+          {
+            "colIdx": 3,
+            "name": "Descripcion Cliente",
+            "nonNull": 631,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 182,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "CARÁCTER",
+              "SLOTS MACHINES S.A.",
+              "BERGARA FACUNDO ESTEBAN",
+              "EL KOSLEÃ‘O S. R. L.",
+              "ACOSTA BERMUDEZ VITO CHANEL"
+            ]
+          },
+          {
+            "colIdx": 4,
+            "name": "Contacto",
+            "nonNull": 631,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 4,
+            "sum": 624,
+            "min": 0,
+            "max": 2,
+            "samples": [
+              "ENTERO",
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "colIdx": 5,
+            "name": "Nombre Contacto",
+            "nonNull": 622,
+            "nullCount": 9,
+            "inferredType": "string",
+            "distinctApprox": 96,
+            "sum": 17473990,
+            "min": 266525,
+            "max": 4235235,
+            "samples": [
+              "CARÁCTER",
+              "JEFE COMPRAS",
+              "DELFIN",
+              "ASD",
+              "VITOS"
+            ]
+          },
+          {
+            "colIdx": 6,
+            "name": "Ruta de venta",
+            "nonNull": 631,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 30,
+            "sum": 55831,
+            "min": 10,
+            "max": 2728,
+            "samples": [
+              "ENTERO",
+              117,
+              29,
+              10,
+              112
+            ]
+          },
+          {
+            "colIdx": 7,
+            "name": "Descripción ruta",
+            "nonNull": 631,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 30,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "CARÁCTER",
+              "L.RODRIGUEZLINCEHORNEROTIBI",
+              "LA TOMA",
+              "JUANA KOSLAY",
+              "RUTA 7 A ESPAÃ‘ASUCRE A RIOB"
+            ]
+          },
+          {
+            "colIdx": 8,
+            "name": "Responsable",
+            "nonNull": 631,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 3,
+            "sum": 124200,
+            "min": 0,
+            "max": 200,
+            "samples": [
+              "ENTERO",
+              200,
+              0
+            ]
+          },
+          {
+            "colIdx": 9,
+            "name": "Nombre responsable",
+            "nonNull": 622,
+            "nullCount": 9,
+            "inferredType": "string",
+            "distinctApprox": 2,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "CARÁCTER",
+              "ALBARRACIN CRISTIAN B."
+            ]
+          },
+          {
+            "colIdx": 10,
+            "name": "Superior a cargo",
+            "nonNull": 631,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 2,
+            "sum": 0,
+            "min": 0,
+            "max": 0,
+            "samples": [
+              "ENTERO",
+              0
+            ]
+          },
+          {
+            "colIdx": 11,
+            "name": "Nombre Superior",
+            "nonNull": 1,
+            "nullCount": 630,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "CARÁCTER"
+            ]
+          },
+          {
+            "colIdx": 12,
+            "name": "Grupo de Producto (GP)/Articulo (A)",
+            "nonNull": 631,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 3,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "CARÁCTER",
+              "GP",
+              "A"
+            ]
+          },
+          {
+            "colIdx": 13,
+            "name": "Código",
+            "nonNull": 631,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 23,
+            "sum": 1277361,
+            "min": 799,
+            "max": 24879,
+            "samples": [
+              "ENTERO",
+              1115,
+              2128,
+              2173,
+              2361
+            ]
+          },
+          {
+            "colIdx": 14,
+            "name": "Descripción",
+            "nonNull": 631,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 23,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "CARÁCTER",
+              "UDN-UNG LB",
+              "2 â€“ CZA Above Core",
+              "OESTE CORE CERVEZA",
+              "UDN - Aguas"
+            ]
+          },
+          {
+            "colIdx": 15,
+            "name": "Bonif. parc. cond. (%)",
+            "nonNull": 631,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 20,
+            "sum": 15674.16,
+            "min": 5,
+            "max": 99.99,
+            "samples": [
+              "ENTERO",
+              30,
+              20,
+              25,
+              5
+            ]
+          },
+          {
+            "colIdx": 16,
+            "name": "Bultos variables (%)",
+            "nonNull": 631,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 2,
+            "sum": 0,
+            "min": 0,
+            "max": 0,
+            "samples": [
+              "ENTERO",
+              0
+            ]
+          },
+          {
+            "colIdx": 17,
+            "name": "% Cia",
+            "nonNull": 631,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 2,
+            "sum": 63000,
+            "min": 100,
+            "max": 100,
+            "samples": [
+              "ENTERO",
+              100
+            ]
+          }
+        ]
+      },
+      {
+        "sheetName": "Sucursales y Fuerzas de Venta",
+        "ref": "A1:D3",
+        "totalRowsRaw": 3,
+        "headerRowIdx": 1,
+        "dataRowCount": 1,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Sucursal",
+            "nonNull": 1,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1,
+            "sum": 1,
+            "min": 1,
+            "max": 1,
+            "samples": [
+              1
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "Descripción",
+            "nonNull": 1,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "CASA CENTRAL"
+            ]
+          },
+          {
+            "colIdx": 2,
+            "name": "Fuerzas de venta",
+            "nonNull": 1,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1,
+            "sum": 1,
+            "min": 1,
+            "max": 1,
+            "samples": [
+              1
+            ]
+          },
+          {
+            "colIdx": 3,
+            "name": "Descripción",
+            "nonNull": 1,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "ESQUEMA UNICO"
+            ]
+          }
+        ]
+      },
+      {
+        "sheetName": "Vendedores",
+        "ref": "A1:G18",
+        "totalRowsRaw": 18,
+        "headerRowIdx": 1,
+        "dataRowCount": 16,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Sucursal",
+            "nonNull": 16,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1,
+            "sum": 16,
+            "min": 1,
+            "max": 1,
+            "samples": [
+              1
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "Fuerza de Venta",
+            "nonNull": 16,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1,
+            "sum": 16,
+            "min": 1,
+            "max": 1,
+            "samples": [
+              1
+            ]
+          },
+          {
+            "colIdx": 2,
+            "name": "Código",
+            "nonNull": 16,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 16,
+            "sum": 641,
+            "min": 3,
+            "max": 200,
+            "samples": [
+              3,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "colIdx": 3,
+            "name": "Descripción",
+            "nonNull": 16,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 16,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "ALAN BAEZ",
+              "ADRIAN RODRIGUEZ",
+              "GONZALO DIEZ",
+              "ABEL ZALEH",
+              "SUPERMERCADOS"
+            ]
+          },
+          {
+            "colIdx": 4,
+            "name": "Cargo",
+            "nonNull": 16,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 3,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "V",
+              "S",
+              "G"
+            ]
+          },
+          {
+            "colIdx": 5,
+            "name": "Superior",
+            "nonNull": 16,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 5,
+            "sum": 1803,
+            "min": 0,
+            "max": 200,
+            "samples": [
+              100,
+              101,
+              99,
+              200,
+              0
+            ]
+          },
+          {
+            "colIdx": 6,
+            "name": "Descripción",
+            "nonNull": 15,
+            "nullCount": 1,
+            "inferredType": "string",
+            "distinctApprox": 4,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "GONZALO CORIA",
+              "JULIO BASUALDO",
+              "DEPOSITO",
+              "ALBARRACIN CRISTIAN B."
+            ]
+          }
+        ]
+      },
+      {
+        "sheetName": "Modos de atencion",
+        "ref": "A1:D7",
+        "totalRowsRaw": 7,
+        "headerRowIdx": 1,
+        "dataRowCount": 5,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Código",
+            "nonNull": 5,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 5,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "PRE",
+              "ACT",
+              "MER",
+              "MKP",
+              "TEL"
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "Descripción",
+            "nonNull": 5,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 5,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "PRIMARIO",
+              "ACTIVADOR",
+              "COMPLEMENTARIO",
+              "MARKETPLACE",
+              "TELESALES"
+            ]
+          },
+          {
+            "colIdx": 2,
+            "name": "Primario",
+            "nonNull": 5,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 2,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Si",
+              "No"
+            ]
+          },
+          {
+            "colIdx": 3,
+            "name": "Presencial",
+            "nonNull": 5,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 2,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Si",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "sheetName": "Grupos de productos",
+        "ref": "A1:B5245",
+        "totalRowsRaw": 5245,
+        "headerRowIdx": 1,
+        "dataRowCount": 5243,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Código",
+            "nonNull": 5243,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1000,
+            "sum": 17628899,
+            "min": 185,
+            "max": 5987,
+            "samples": [
+              185,
+              186,
+              187,
+              188,
+              189
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "Descripción",
+            "nonNull": 5243,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 1000,
+            "sum": 0,
+            "min": 0,
+            "max": 0,
+            "samples": [
+              "480 - AGUAS REFRIGERADOS",
+              "351 - GASEOSAS PET 500",
+              "352 - GASEOSAS INDIVIDUALES S/PET 500",
+              "355 - GASEOSAS FAMILIARES RETORNABLES",
+              "479 - AGUAS FAMILIARES PET SABORIZADA"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "fileName": "(Fijo) Base Portfolio.xlsx",
+    "sizeBytes": 234523,
+    "category": "Fijo",
+    "sheets": [
+      {
+        "sheetName": "Productos",
+        "ref": "A1:AX1674",
+        "totalRowsRaw": 1674,
+        "headerRowIdx": 0,
+        "dataRowCount": 1673,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Código Producto",
+            "nonNull": 1673,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 1000,
+            "sum": 34946021,
+            "min": 0,
+            "max": 900000,
+            "samples": [
+              77837,
+              77831,
+              76476,
+              77838,
+              77882
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "Producto",
+            "nonNull": 1673,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 1000,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "YERBA MATE UNIÓN 4FLEX X10 500GR",
+              "YERBA MATE TARAGUI 4FLEX X10 500GR",
+              "YERBA MATE PLAYADITO C/PALO X10 500GR",
+              "YERBA MATE MAÑANITA X10 1KG",
+              "YERBA LA MERCED CAMPO SUR X6 500GR"
+            ]
+          },
+          {
+            "colIdx": 2,
+            "name": "Unidad de Negocio",
+            "nonNull": 1673,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 10,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "MARKETPLACE ALIMENTOS",
+              "CERVEZAS",
+              "AGUAS",
+              "UNG",
+              "MARKETPLACE"
+            ]
+          },
+          {
+            "colIdx": 3,
+            "name": "División",
+            "nonNull": 1673,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 36,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "YERBAS MARKETPLACE",
+              "CERVEZAS",
+              "VINOS",
+              "AGUAS",
+              "POP"
+            ]
+          },
+          {
+            "colIdx": 4,
+            "name": "Marca",
+            "nonNull": 1673,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 184,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "UNION",
+              "TARAGUI",
+              "PLAYADITO",
+              "MAÃ?ANITA",
+              "LA MERCED"
+            ]
+          },
+          {
+            "colIdx": 5,
+            "name": "Calibre",
+            "nonNull": 1673,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 145,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "PACK 500GR",
+              "PACK 1000GR",
+              "1000 CC VIDRIO",
+              "BARRIL 50 LTS",
+              "BARRIL 30 LTS"
+            ]
+          },
+          {
+            "colIdx": 6,
+            "name": "Sabor",
+            "nonNull": 1673,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 114,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "YERBA",
+              "BLANCA",
+              "MALBEC",
+              "SODA",
+              "NO APLICABLE"
+            ]
+          },
+          {
+            "colIdx": 7,
+            "name": "Familia",
+            "nonNull": 1673,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 51,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "REGULAR",
+              "CON PALO",
+              "CAMPO SUR",
+              "POP LIVIANO",
+              "P0P PESADO"
+            ]
+          },
+          {
+            "colIdx": 8,
+            "name": "Marca Unificado",
+            "nonNull": 1673,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 126,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "UNION ",
+              "TARAGUI",
+              "PLAYADITO",
+              "MAÑANITA",
+              "LA MERCED"
+            ]
+          },
+          {
+            "colIdx": 9,
+            "name": "Segmento",
+            "nonNull": 1673,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 35,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "YERBA ",
+              "CORE",
+              "VINOS",
+              "NO APLICA",
+              "CORE UNG"
+            ]
+          },
+          {
+            "colIdx": 10,
+            "name": "Calibre tipo",
+            "nonNull": 1673,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 12,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "OTROS",
+              "LITRO RET",
+              "BARRIL",
+              "DESCARTABLE",
+              "SINGLE SERVE"
+            ]
+          },
+          {
+            "colIdx": 11,
+            "name": "Calibre LT",
+            "nonNull": 1673,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 4,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "NO LT",
+              "LATA",
+              "RETORNO COMERCIAL",
+              "LATON"
+            ]
+          },
+          {
+            "colIdx": 12,
+            "name": "SUGAR",
+            "nonNull": 1673,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 3,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "REGULAR",
+              "NON SUGAR",
+              "RETORNO COMERCIAL"
+            ]
+          },
+          {
+            "colIdx": 13,
+            "name": "CENSO",
+            "nonNull": 87,
+            "nullCount": 1586,
+            "inferredType": "string",
+            "distinctApprox": 8,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "STELLA ARTOIS 1 L (STELLA ARTOIS STELLA ARTOIS NOIRE)",
+              "STELLA ARTOIS 473 CC (STELLA ARTOIS STELLA ARTOIS NOIRE)",
+              "QUILMES 1 L (CLASICA Q VARIEDADES)",
+              "QUILMES 473 CC (CLASICA Q VARIEDADES)",
+              "BRAHMA 1 L"
+            ]
+          },
+          {
+            "colIdx": 14,
+            "name": "340/269",
+            "nonNull": 308,
+            "nullCount": 1365,
+            "inferredType": "string",
+            "distinctApprox": 2,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Mktplc",
+              "340/269"
+            ]
+          },
+          {
+            "colIdx": 15,
+            "name": "GRP NS/GT/RB",
+            "nonNull": 171,
+            "nullCount": 1502,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "NS/GT/RB"
+            ]
+          },
+          {
+            "colIdx": 16,
+            "name": "Tipo POP",
+            "nonNull": 8,
+            "nullCount": 1665,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "GDC"
+            ]
+          },
+          {
+            "colIdx": 17,
+            "name": "TOP UNG",
+            "nonNull": 246,
+            "nullCount": 1427,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "TOP UNG"
+            ]
+          },
+          {
+            "colIdx": 18,
+            "name": "ABOVE CORE",
+            "nonNull": 369,
+            "nullCount": 1304,
+            "inferredType": "string",
+            "distinctApprox": 2,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "ABOVE CORE",
+              "RETORNO COMERCIAL"
+            ]
+          },
+          {
+            "colIdx": 19,
+            "name": "Innov.",
+            "nonNull": 264,
+            "nullCount": 1409,
+            "inferredType": "string",
+            "distinctApprox": 3,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Taco",
+              "Innov.",
+              "RETORNO COMERCIAL"
+            ]
+          },
+          {
+            "colIdx": 20,
+            "name": "MA",
+            "nonNull": 18,
+            "nullCount": 1655,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Innov.IP"
+            ]
+          },
+          {
+            "colIdx": 21,
+            "name": "RGB",
+            "nonNull": 61,
+            "nullCount": 1612,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "RGB"
+            ]
+          },
+          {
+            "colIdx": 22,
+            "name": "BS Match",
+            "nonNull": 38,
+            "nullCount": 1635,
+            "inferredType": "string",
+            "distinctApprox": 4,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "RESTO",
+              "ABOVE CORE",
+              "CORE",
+              "ESPUMANTE"
+            ]
+          },
+          {
+            "colIdx": 23,
+            "name": "Gatorade",
+            "nonNull": 51,
+            "nullCount": 1622,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Gatorade"
+            ]
+          },
+          {
+            "colIdx": 24,
+            "name": "Enemigo Pepsi",
+            "nonNull": 2,
+            "nullCount": 1671,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Enemigo"
+            ]
+          },
+          {
+            "colIdx": 25,
+            "name": "7u FAM",
+            "nonNull": 4,
+            "nullCount": 1669,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "7up FAM"
+            ]
+          },
+          {
+            "colIdx": 26,
+            "name": "Single Serv",
+            "nonNull": 23,
+            "nullCount": 1650,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "SS"
+            ]
+          },
+          {
+            "colIdx": 27,
+            "name": "NS FAM",
+            "nonNull": 7,
+            "nullCount": 1666,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "NS FAM"
+            ]
+          },
+          {
+            "colIdx": 28,
+            "name": "VALUE",
+            "nonNull": 31,
+            "nullCount": 1642,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "VALUE"
+            ]
+          },
+          {
+            "colIdx": 29,
+            "name": "BS NABS",
+            "nonNull": 133,
+            "nullCount": 1540,
+            "inferredType": "string",
+            "distinctApprox": 7,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Enemigo",
+              "SS",
+              "NS FAM",
+              "VALUE",
+              "Gatorade"
+            ]
+          },
+          {
+            "colIdx": 30,
+            "name": "Subcategoria MKTP",
+            "nonNull": 98,
+            "nullCount": 1575,
+            "inferredType": "string",
+            "distinctApprox": 16,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Yerba",
+              "Vinos",
+              "Galletitas",
+              "Merchand   ",
+              "Infusiones"
+            ]
+          },
+          {
+            "colIdx": 31,
+            "name": "UNG Premium",
+            "nonNull": 67,
+            "nullCount": 1606,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "premium"
+            ]
+          },
+          {
+            "colIdx": 32,
+            "name": "1er Censo 2024 Desc.",
+            "nonNull": 316,
+            "nullCount": 1357,
+            "inferredType": "string",
+            "distinctApprox": 17,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "ANDES",
+              "STELLA ARTOIS",
+              "QUILMES+VARIEDADES",
+              "1890+BAJO CERO",
+              "QUILMES 0%"
+            ]
+          },
+          {
+            "colIdx": 33,
+            "name": "1er Censo 2024 Calib.",
+            "nonNull": 333,
+            "nullCount": 1340,
+            "inferredType": "string",
+            "distinctApprox": 4,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "1L",
+              "473CC",
+              "710CC",
+              "TOTAL CALIBRES"
+            ]
+          },
+          {
+            "colIdx": 34,
+            "name": "2DA Quincena",
+            "nonNull": 220,
+            "nullCount": 1453,
+            "inferredType": "string",
+            "distinctApprox": 33,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "3x2 Playadito 500gr",
+              "3x2 Aguas 1,5lts",
+              "3x2 Temple Lata",
+              "3X2 Stella Arotis 473ml/410ml",
+              "2x1 Stella Arotis Blanche 473ml"
+            ]
+          },
+          {
+            "colIdx": 35,
+            "name": "BS Beer",
+            "nonNull": 66,
+            "nullCount": 1607,
+            "inferredType": "string",
+            "distinctApprox": 15,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "SA LITRO",
+              "SA LATA",
+              "Innov.IP",
+              "0.0",
+              "M1 LITRO"
+            ]
+          },
+          {
+            "colIdx": 36,
+            "name": "STILL",
+            "nonNull": 9,
+            "nullCount": 1664,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "STILL"
+            ]
+          },
+          {
+            "colIdx": 37,
+            "name": "BD",
+            "nonNull": 261,
+            "nullCount": 1412,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "bd"
+            ]
+          },
+          {
+            "colIdx": 38,
+            "name": "Sensibilizacion",
+            "nonNull": 1391,
+            "nullCount": 282,
+            "inferredType": "string",
+            "distinctApprox": 5,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "CORE + VALUE",
+              "AGUAS",
+              "TOTAL UNG",
+              "ABOVE CORE",
+              "VOL TOP UNG"
+            ]
+          },
+          {
+            "colIdx": 39,
+            "name": "Categoria mktp",
+            "nonNull": 156,
+            "nullCount": 1517,
+            "inferredType": "string",
+            "distinctApprox": 17,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "YERBA",
+              "VINOS",
+              "GALLETITAS",
+              "GIFPACK",
+              "INFUSIONES"
+            ]
+          },
+          {
+            "colIdx": 40,
+            "name": "Sabor",
+            "nonNull": 17,
+            "nullCount": 1656,
+            "inferredType": "string",
+            "distinctApprox": 8,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "RB SF",
+              "RBSF ",
+              "RB 355CC",
+              "RB RED",
+              "RB BLUE"
+            ]
+          },
+          {
+            "colIdx": 41,
+            "name": "Cero Alc.",
+            "nonNull": 17,
+            "nullCount": 1656,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Cero Alc."
+            ]
+          },
+          {
+            "colIdx": 42,
+            "name": "B en P",
+            "nonNull": 1667,
+            "nullCount": 6,
+            "inferredType": "number",
+            "distinctApprox": 127,
+            "sum": 158800,
+            "min": 0,
+            "max": 1190,
+            "samples": [
+              105,
+              90,
+              50,
+              96,
+              0
+            ]
+          },
+          {
+            "colIdx": 43,
+            "name": "U en B",
+            "nonNull": 1667,
+            "nullCount": 6,
+            "inferredType": "number",
+            "distinctApprox": 34,
+            "sum": 16180,
+            "min": 0,
+            "max": 1000,
+            "samples": [
+              10,
+              6,
+              12,
+              0,
+              1
+            ]
+          },
+          {
+            "colIdx": 44,
+            "name": "Affordable",
+            "nonNull": 9,
+            "nullCount": 1664,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Affordable"
+            ]
+          },
+          {
+            "colIdx": 45,
+            "name": "Unidad MKTP",
+            "nonNull": 1651,
+            "nullCount": 22,
+            "inferredType": "string",
+            "distinctApprox": 7,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "MARKETPLACE",
+              "CERVEZAS",
+              "AGUAS",
+              "UNG",
+              "ADYACENCIAS"
+            ]
+          },
+          {
+            "colIdx": 46,
+            "name": "Foco Comercial",
+            "nonNull": 287,
+            "nullCount": 1386,
+            "inferredType": "string",
+            "distinctApprox": 5,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "PREMIUM",
+              "CORE",
+              "VALUE",
+              "Balanced Choices",
+              "Isotonicas"
+            ]
+          },
+          {
+            "colIdx": 47,
+            "name": "Categoria OBJETIVO",
+            "nonNull": 1667,
+            "nullCount": 6,
+            "inferredType": "string",
+            "distinctApprox": 11,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "MARKETPLACE",
+              "CORE",
+              "AGUAS",
+              "UNG",
+              "HIGH END"
+            ]
+          },
+          {
+            "colIdx": 48,
+            "name": "Filtro Matriz",
+            "nonNull": 402,
+            "nullCount": 1271,
+            "inferredType": "string",
+            "distinctApprox": 14,
+            "sum": 24570,
+            "min": 1890,
+            "max": 1890,
+            "samples": [
+              "Stella Artois",
+              "BUD",
+              "Andes",
+              "Corona",
+              "AO"
+            ]
+          },
+          {
+            "colIdx": 49,
+            "name": "Nivel Segmento",
+            "nonNull": 1668,
+            "nullCount": 5,
+            "inferredType": "string",
+            "distinctApprox": 9,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "OTRAS UNIDADES",
+              "SUPER PREMIUM",
+              "TOP",
+              "FAM",
+              "PREMIUM"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "fileName": "(Fijo) Canal MKT.xlsx",
+    "sizeBytes": 9730,
+    "category": "Fijo",
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:C20",
+        "totalRowsRaw": 20,
+        "headerRowIdx": 0,
+        "dataRowCount": 19,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Canal Mkt.",
+            "nonNull": 19,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 19,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "ENTRETENIMIENTO",
+              "COMIDA",
+              "Mayorista",
+              "Clie People",
+              "Tradicional"
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "Canal UNIFICADO",
+            "nonNull": 19,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 9,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Refrigerado ",
+              "Mayoristas",
+              "Clie People",
+              "Tradicional ",
+              "Autoservicios"
+            ]
+          },
+          {
+            "colIdx": 2,
+            "name": "Segmento Canal",
+            "nonNull": 19,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 8,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "REFRIG",
+              "MAYORISTAS",
+              "EMPLEADOS",
+              "K+T",
+              "AS"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "fileName": "(Fijo) DetallePersonal.xlsx",
+    "sizeBytes": 10342,
+    "category": "Fijo",
+    "sheets": [
+      {
+        "sheetName": "ag-grid",
+        "ref": "A1:K17",
+        "totalRowsRaw": 17,
+        "headerRowIdx": 0,
+        "dataRowCount": 16,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Anulado",
+            "nonNull": 16,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "false"
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "Código",
+            "nonNull": 16,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 16,
+            "sum": 641,
+            "min": 3,
+            "max": 200,
+            "samples": [
+              3,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "colIdx": 2,
+            "name": "Descripción",
+            "nonNull": 16,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 16,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "ALAN BAEZ",
+              "ADRIAN RODRIGUEZ",
+              "GONZALO DIEZ",
+              "ABEL ZALEH",
+              "SUPERMERCADOS"
+            ]
+          },
+          {
+            "colIdx": 3,
+            "name": "Tipo",
+            "nonNull": 16,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Personal Comercial"
+            ]
+          },
+          {
+            "colIdx": 4,
+            "name": "Sucursal",
+            "nonNull": 16,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "CASA CENTRAL"
+            ]
+          },
+          {
+            "colIdx": 5,
+            "name": "Fuerza de Venta",
+            "nonNull": 16,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 1,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "ESQUEMA UNICO"
+            ]
+          },
+          {
+            "colIdx": 6,
+            "name": "Tipo segmento vendedor",
+            "nonNull": 12,
+            "nullCount": 4,
+            "inferredType": "string",
+            "distinctApprox": 4,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "VE Conjunta",
+              "No Aplicable",
+              "VE Autoservicios",
+              "Merchand"
+            ]
+          },
+          {
+            "colIdx": 7,
+            "name": "Domicilio",
+            "nonNull": 0,
+            "nullCount": 16,
+            "inferredType": "string",
+            "distinctApprox": 0,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": []
+          },
+          {
+            "colIdx": 8,
+            "name": "Teléfono",
+            "nonNull": 0,
+            "nullCount": 16,
+            "inferredType": "string",
+            "distinctApprox": 0,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": []
+          },
+          {
+            "colIdx": 9,
+            "name": "Superior",
+            "nonNull": 15,
+            "nullCount": 1,
+            "inferredType": "string",
+            "distinctApprox": 4,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "GONZALO CORIA",
+              "JULIO BASUALDO",
+              "DEPOSITO",
+              "CRISTIAN ALBARRACIN"
+            ]
+          },
+          {
+            "colIdx": 10,
+            "name": "Cargo",
+            "nonNull": 16,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 3,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "VENDEDOR",
+              "SUPERVISOR",
+              "GERENTE"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "fileName": "(Fijo) Medida Tiempo.xlsx",
+    "sizeBytes": 11020,
+    "category": "Fijo",
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:G25",
+        "totalRowsRaw": 25,
+        "headerRowIdx": 0,
+        "dataRowCount": 24,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Año",
+            "nonNull": 24,
+            "nullCount": 0,
+            "inferredType": "number",
+            "distinctApprox": 2,
+            "sum": 48612,
+            "min": 2025,
+            "max": 2026,
+            "samples": [
+              2025,
+              2026
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "Año/Mes",
+            "nonNull": 24,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 24,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "2025/01",
+              "2025/02",
+              "2025/03",
+              "2025/04",
+              "2025/05"
+            ]
+          },
+          {
+            "colIdx": 2,
+            "name": "Mes",
+            "nonNull": 24,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 12,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Enero",
+              "Febrero",
+              "Marzo",
+              "Abril",
+              "Mayo"
+            ]
+          },
+          {
+            "colIdx": 3,
+            "name": "Nro. Mes - Mes",
+            "nonNull": 24,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 12,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "01 - Enero",
+              "02 - Febrero",
+              "03 - Marzo",
+              "04 - Abril",
+              "05 - Mayo"
+            ]
+          },
+          {
+            "colIdx": 4,
+            "name": "Trimestre",
+            "nonNull": 24,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 4,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "1Q",
+              "2Q",
+              "3Q",
+              "4Q"
+            ]
+          },
+          {
+            "colIdx": 5,
+            "name": "A.Vig",
+            "nonNull": 24,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 2,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "A.Anterior",
+              "Año Actual"
+            ]
+          },
+          {
+            "colIdx": 6,
+            "name": "Bimestre",
+            "nonNull": 24,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 6,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "1B",
+              "2B",
+              "3B",
+              "4B",
+              "5B"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "fileName": "(Fijo) Subcanales Mkt.xlsx",
+    "sizeBytes": 11110,
+    "category": "Fijo",
+    "sheets": [
+      {
+        "sheetName": "Subcanal MKT",
+        "ref": "A1:C70",
+        "totalRowsRaw": 70,
+        "headerRowIdx": 0,
+        "dataRowCount": 69,
+        "columns": [
+          {
+            "colIdx": 0,
+            "name": "Subcanal",
+            "nonNull": 69,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 69,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "MAYORISTA SALON",
+              "MAYORISTA DEPOSI",
+              "AUTOSERVICIO BC",
+              "AUTOSERVICIO IND",
+              "CADENITAS SMK"
+            ]
+          },
+          {
+            "colIdx": 1,
+            "name": "Canal MKT",
+            "nonNull": 69,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 16,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "Mayorista",
+              "Autoservicio",
+              "SMK",
+              "Kioscos/Maxikioscos",
+              "Tradicional"
+            ]
+          },
+          {
+            "colIdx": 2,
+            "name": "Segmento Canal",
+            "nonNull": 69,
+            "nullCount": 0,
+            "inferredType": "string",
+            "distinctApprox": 6,
+            "sum": null,
+            "min": null,
+            "max": null,
+            "samples": [
+              "MAY",
+              "AS",
+              "SMK",
+              "K+T",
+              "REF"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,1783 @@
+[
+  {
+    "file": "(Actualizar) Activos Fijos.xlsx",
+    "sizeBytes": 233235,
+    "isHugeSample": false,
+    "sheets": [
+      {
+        "sheetName": "Browser",
+        "ref": "A1:V2001",
+        "loadedRows": 2001,
+        "colCount": 22,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Articulo",
+              "Numero de Serie",
+              "Numero de Activo",
+              "Comp.",
+              "Descripcion Articulo",
+              "fisico",
+              "instalado",
+              "Logo",
+              "Modelo",
+              "Tipo de Material",
+              "Unidad de Negocio",
+              "Cliente",
+              "Razon Social",
+              "Comprobante",
+              "Litros Repago",
+              "Venta Prom.",
+              "Litros Pendientes",
+              "Repaga?",
+              "Estado",
+              "Fecha colocación",
+              "%Rep. Mes actual",
+              "Numero de Serie"
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              2787,
+              "\u00020785301032601051902",
+              "01-105190-24",
+              "NO",
+              "HELADERA PATAGONIA SLIM B/C",
+              "no",
+              "yes",
+              "PATAGONIA",
+              "SLIM",
+              "HELADERA",
+              "CERVEZAS CMQ",
+              6853,
+              "SANCHO PANZA S. A. S.",
+              "COPOP--0001-00003369",
+              192,
+              436.53,
+              4.53,
+              "NO",
+              "INSTALADO",
+              45667,
+              0,
+              "\u0002\u0002078530103260105190"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              2787,
+              1108025,
+              "01-429279-18",
+              "NO",
+              "HELADERA PATAGONIA SLIM B/C",
+              "no",
+              "yes",
+              "PATAGONIA",
+              "SLIM",
+              "HELADERA",
+              "CERVEZAS CMQ",
+              6584,
+              "OLMOS QUINTEROS NADYA KATHERINA",
+              "COPOP--0001-00002252",
+              192,
+              46.34,
+              46.34,
+              "NO",
+              "INSTALADO",
+              44142,
+              0,
+              "\u000201108025"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              2787,
+              1108066,
+              "01-429283-18",
+              "NO",
+              "HELADERA PATAGONIA SLIM B/C",
+              "no",
+              "yes",
+              "PATAGONIA",
+              "SLIM",
+              "HELADERA",
+              "CERVEZAS CMQ",
+              6577,
+              "PERELLO MATIAS NAHUEL",
+              "COPOP--0001-00002251",
+              192,
+              38.25,
+              38.25,
+              "NO",
+              "INSTALADO",
+              44142,
+              0,
+              "\u000201108066"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "(Actualizar) Base a la fecha.xlsx",
+    "sizeBytes": 18344416,
+    "isHugeSample": true,
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:L25",
+        "loadedRows": 25,
+        "colCount": 12,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Año/Mes",
+              "Código Cliente",
+              "Código Producto",
+              "Canal Mkt.",
+              "Clientes con Compra",
+              "Marca",
+              "Código Sector de Venta",
+              "División",
+              "Código Sector de Supervisión",
+              "Cantidad Total en HL",
+              "Cantidad Total en Bultos",
+              "Importe Neto"
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              "2025/01",
+              14,
+              1416,
+              "Tradicional",
+              1,
+              "GATORADE",
+              7,
+              "ISOTONICAS",
+              101,
+              0.03,
+              1,
+              4011.513
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              "2025/01",
+              14,
+              1418,
+              "Tradicional",
+              1,
+              "GATORADE",
+              7,
+              "ISOTONICAS",
+              101,
+              0.06,
+              2,
+              11365.9535
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              "2025/01",
+              14,
+              1422,
+              "Tradicional",
+              1,
+              "GATORADE",
+              7,
+              "ISOTONICAS",
+              101,
+              0.06,
+              2,
+              11365.9535
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "(Actualizar) Base CNC.xlsx",
+    "sizeBytes": 1072808,
+    "isHugeSample": false,
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:H25896",
+        "loadedRows": 25896,
+        "colCount": 8,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Año/Mes",
+              "Cod Cte",
+              "Cliente",
+              "Domicilio",
+              "Canal Mkt.",
+              "Universo",
+              "Clientes Activos",
+              "Clientes No Compradores"
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              "2025/01",
+              14,
+              "QUIROGA SANDRA NOEMI",
+              "BALCARCE Y MITRE 122",
+              "Tradicional",
+              1,
+              1,
+              "0"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              "2025/01",
+              15,
+              "AIELLO SUPERMERCADOS S.A.",
+              "(117)JUAN T. ZAVALA S/Nº B° EL 121",
+              "Supermercados",
+              1,
+              1,
+              "0"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              "2025/01",
+              17,
+              "REA ESMILSE LUISA",
+              "M.C C.16  B° 544 VIVI. 16",
+              "Tradicional",
+              1,
+              1,
+              "0"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "(Actualizar) Base de Clientes.xlsx",
+    "sizeBytes": 5379301,
+    "isHugeSample": false,
+    "sheets": [
+      {
+        "sheetName": "Base de Clientes",
+        "ref": "A1:GX8072",
+        "loadedRows": 8072,
+        "colCount": 206,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Sucursal",
+              "Cliente",
+              "Razon social",
+              "Nombre de fantasia",
+              "Telefonos",
+              "Movil",
+              "e-Mail",
+              "Domicilio",
+              "Calle",
+              "Altura",
+              "Depto",
+              "Calle 1",
+              "Calle 2",
+              "Comentario",
+              "Coord X",
+              "Coord Y",
+              "Lugar de Entrega",
+              "Calle de entrega",
+              "Altura de entrega",
+              "Depto de entrega",
+              "Calle 1 de entrega",
+              "Calle 2 de entrega",
+              "Comentario de entrega",
+              "Horario de entrega",
+              "Flete de entrega"
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              1,
+              1,
+              "MORANDI TERESA",
+              null,
+              null,
+              2665114891,
+              null,
+              "Bº 114 VIV M. 193 C. 21 1",
+              "Bº 114 VIV M. 193 C. 21",
+              1,
+              null,
+              null,
+              null,
+              null,
+              "0.000000",
+              "0.000000",
+              null,
+              null,
+              0,
+              null,
+              null,
+              null,
+              null,
+              "9 A 1330 HS",
+              "0.00%"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              1,
+              2,
+              "GOLKE NOEMI",
+              "GOLKE NOEMI",
+              null,
+              null,
+              null,
+              "Bº 134 VIV M.289 C.2 1",
+              "Bº 134 VIV M.289 C.2",
+              1,
+              null,
+              null,
+              null,
+              null,
+              "0.000000",
+              "0.000000",
+              null,
+              null,
+              0,
+              null,
+              null,
+              null,
+              null,
+              null,
+              "0.00%"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              1,
+              3,
+              "POGGIO MOYANO MARIA GRACIELA",
+              "IL FIORENTINO PIZZERIA",
+              4447636,
+              2664220788,
+              null,
+              "(113) RIVADAVIA 1093 1",
+              "(113) RIVADAVIA 1093",
+              1,
+              null,
+              null,
+              null,
+              null,
+              -66337510,
+              -33297580,
+              null,
+              null,
+              0,
+              null,
+              null,
+              null,
+              null,
+              "11:00 A 13:00",
+              "0.00%"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "(Actualizar) Base Eficiencia.xlsx",
+    "sizeBytes": 1586122,
+    "isHugeSample": false,
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:I40318",
+        "loadedRows": 40318,
+        "colCount": 9,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Año/Mes",
+              "Código Cliente",
+              "Canal Mkt.",
+              "Cantidad Visitas",
+              "Cantidad Visitas Efectivas",
+              "Visitas con Venta Fuera Ruta",
+              "Cantidad Llamados Efectivos",
+              "Llamadas Realizadas",
+              "Días de Visita"
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              "2025/01",
+              14,
+              "Tradicional",
+              9,
+              6,
+              0,
+              0,
+              0,
+              "MA,VI"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              "2025/02",
+              14,
+              "Tradicional",
+              8,
+              5,
+              0,
+              0,
+              0,
+              "MA,VI"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              "2025/03",
+              14,
+              "Tradicional",
+              8,
+              6,
+              0,
+              0,
+              0,
+              "MA,VI"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "(Actualizar) Base MXPDV.xlsx",
+    "sizeBytes": 690574,
+    "isHugeSample": false,
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:F21339",
+        "loadedRows": 21339,
+        "colCount": 6,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Año/Mes",
+              "Código Cliente",
+              "Canal Mkt.",
+              "Código Sector de Venta",
+              "Código Sector de Supervisión",
+              "Cantidad de Marcas"
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              "2025/01",
+              14,
+              "Tradicional",
+              7,
+              101,
+              12
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              "2025/01",
+              15,
+              "Supermercados",
+              9,
+              100,
+              30
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              "2025/01",
+              17,
+              "Tradicional",
+              12,
+              100,
+              9
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "(Actualizar) Base Obj..xlsx",
+    "sizeBytes": 41232888,
+    "isHugeSample": true,
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:L25",
+        "loadedRows": 25,
+        "colCount": 12,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Año/Mes",
+              "División",
+              "Familia",
+              "Marca",
+              "Sabor",
+              "Calibre",
+              "Código Producto",
+              "Código Cliente",
+              "Canal Mkt.",
+              "Código Sector de Venta",
+              "Código Sector de Supervisión",
+              "Objetivo Total en HL"
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              "2025/01",
+              "BEB ENERGIZANTES",
+              "REGULAR",
+              "RED BULL",
+              "RED BULL",
+              "250 CC LATAS",
+              16371,
+              14,
+              "Tradicional",
+              7,
+              101,
+              0.00552204
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              "2025/01",
+              "BEB ENERGIZANTES",
+              "REGULAR",
+              "ROCKSTAR",
+              "ROCKSTAR",
+              "500 CC VD S/R",
+              24118,
+              14,
+              "Tradicional",
+              7,
+              101,
+              0.29698479
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              "2025/01",
+              "GASEOSAS",
+              "REGULAR",
+              "PASO DE LOS TOROS",
+              "POMELO",
+              "500 CC PET",
+              1483,
+              14,
+              "Tradicional",
+              7,
+              101,
+              0.00572976
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "(Actualizar) Base Prod. y Vol..xlsx",
+    "sizeBytes": 21272017,
+    "isHugeSample": true,
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:P25",
+        "loadedRows": 25,
+        "colCount": 16,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Año/Mes",
+              "División",
+              "Familia",
+              "Marca",
+              "Sabor",
+              "Calibre",
+              "Código Producto",
+              "Código Cliente",
+              "Canal Mkt.",
+              "Código Sector de Venta",
+              "Código Sector de Supervisión",
+              "Clientes con Compra",
+              "Cantidad Total en Bultos",
+              "Cantidad Total en HL",
+              "Importe Neto",
+              "Importe Bonif. Total"
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              "2025/01",
+              "AGUAS",
+              "REGULAR",
+              "ECO DE LOS ANDES",
+              "AGUA CON GAS",
+              "1500 CC PET",
+              2428,
+              15,
+              "Supermercados",
+              9,
+              100,
+              1,
+              2,
+              0.18,
+              9731.6713,
+              5240.1307
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              "2025/01",
+              "AGUAS",
+              "REGULAR",
+              "ECO DE LOS ANDES",
+              "AGUA CON GAS",
+              "1500 CC PET",
+              2428,
+              198,
+              "Tradicional",
+              6,
+              101,
+              1,
+              3,
+              0.27,
+              17996.34375,
+              10569.28125
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              "2025/01",
+              "AGUAS",
+              "REGULAR",
+              "ECO DE LOS ANDES",
+              "AGUA CON GAS",
+              "1500 CC PET",
+              2428,
+              624,
+              "Tradicional",
+              7,
+              101,
+              1,
+              3,
+              0.27,
+              17996.3343,
+              10569.2757
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "(Actualizar) Base Rechazos.xlsx",
+    "sizeBytes": 288360,
+    "isHugeSample": false,
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:F5804",
+        "loadedRows": 5804,
+        "colCount": 6,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Año/Mes",
+              "Código Cliente",
+              "Rechazo Total Bultos",
+              "Rechazo Importe Neto",
+              "Rechazo Total UM",
+              "Motivo Rechazo"
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              "2025/11",
+              28,
+              15.75,
+              141770.190475,
+              1.14375,
+              null
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              "2025/11",
+              2751,
+              3,
+              67190.428467,
+              0.3564,
+              null
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              "2025/11",
+              2886,
+              4.25,
+              77286.289778,
+              0.4752,
+              null
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "(Actualizar) Clientes Presencial.xlsx",
+    "sizeBytes": 589543,
+    "isHugeSample": false,
+    "sheets": [
+      {
+        "sheetName": "Browser",
+        "ref": "A1:BX1492",
+        "loadedRows": 1492,
+        "colCount": 76,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Vnd.",
+              "Sucursal",
+              "Fuerza de Ventas",
+              "Pasa en",
+              "Cliente",
+              "Razón Social",
+              "Domicilio",
+              "Ruta",
+              "Orden",
+              "LU",
+              "MA",
+              "MI",
+              "JU",
+              "VI",
+              "SA",
+              "DO",
+              "Días de Visita",
+              "D.S. Bultos",
+              "D.S. Importe",
+              "Efectivas",
+              "Eficiencia",
+              "Visitas",
+              "diasvisrut",
+              "Periodicidad",
+              "Descripción Vendedor"
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              3,
+              1,
+              1,
+              3,
+              7471,
+              "UNIVERSIDAD NACIONAL DE SAN LUIS",
+              "AVENIDA EJÉRCITO DE LOS ANDES 950",
+              108,
+              0,
+              null,
+              null,
+              "X",
+              null,
+              null,
+              null,
+              null,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4.7,
+              4,
+              "ALAN BAEZ"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              3,
+              1,
+              1,
+              2,
+              7660,
+              "PEÑALOZA MARIA ESTER",
+              "ESTEBAN ADARO 1665",
+              108,
+              0,
+              null,
+              null,
+              "X",
+              null,
+              null,
+              null,
+              null,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4.7,
+              2,
+              "ALAN BAEZ"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              3,
+              1,
+              1,
+              2,
+              7705,
+              "REINOSO ALEJANDRO NAHUEL",
+              "B° SANTA RITA MZNA 3 CASA 41",
+              108,
+              0,
+              null,
+              null,
+              "X",
+              null,
+              null,
+              null,
+              null,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4.7,
+              4,
+              "ALAN BAEZ"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "(Actualizar) Negociaciones.xlsx",
+    "sizeBytes": 179556,
+    "isHugeSample": false,
+    "sheets": [
+      {
+        "sheetName": "Negociaciones",
+        "ref": "A1:R632",
+        "loadedRows": 632,
+        "colCount": 18,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Fecha inicio",
+              "Fecha fin",
+              "Cliente",
+              "Descripcion Cliente",
+              "Contacto",
+              "Nombre Contacto",
+              "Ruta de venta",
+              "Descripción ruta",
+              "Responsable",
+              "Nombre responsable",
+              "Superior a cargo",
+              "Nombre Superior",
+              "Grupo de Producto (GP)/Articulo (A)",
+              "Código",
+              "Descripción",
+              "Bonif. parc. cond. (%)",
+              "Bultos variables (%)",
+              "% Cia"
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              "FECHA",
+              "FECHA",
+              "ENTERO",
+              "CARÁCTER",
+              "ENTERO",
+              "CARÁCTER",
+              "ENTERO",
+              "CARÁCTER",
+              "ENTERO",
+              "CARÁCTER",
+              "ENTERO",
+              "CARÁCTER",
+              "CARÁCTER",
+              "ENTERO",
+              "CARÁCTER",
+              "ENTERO",
+              "ENTERO",
+              "ENTERO"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              46127,
+              46359,
+              4368,
+              "SLOTS MACHINES S.A.",
+              1,
+              "JEFE COMPRAS",
+              117,
+              "L.RODRIGUEZLINCEHORNEROTIBI",
+              200,
+              "ALBARRACIN CRISTIAN B.",
+              0,
+              null,
+              "GP",
+              1115,
+              "UDN-UNG LB",
+              30,
+              0,
+              100
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              46127,
+              46359,
+              4368,
+              "SLOTS MACHINES S.A.",
+              1,
+              "JEFE COMPRAS",
+              117,
+              "L.RODRIGUEZLINCEHORNEROTIBI",
+              200,
+              "ALBARRACIN CRISTIAN B.",
+              0,
+              null,
+              "GP",
+              2128,
+              "2 â€“ CZA Above Core",
+              20,
+              0,
+              100
+            ]
+          }
+        ]
+      },
+      {
+        "sheetName": "Sucursales y Fuerzas de Venta",
+        "ref": "A1:D3",
+        "loadedRows": 3,
+        "colCount": 4,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Sucursales",
+              null,
+              "Fuerzas de ventas",
+              null
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              "Sucursal",
+              "Descripción",
+              "Fuerzas de venta",
+              "Descripción"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              1,
+              "CASA CENTRAL",
+              1,
+              "ESQUEMA UNICO"
+            ]
+          }
+        ]
+      },
+      {
+        "sheetName": "Vendedores",
+        "ref": "A1:G18",
+        "loadedRows": 18,
+        "colCount": 7,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Vendedores",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              "Sucursal",
+              "Fuerza de Venta",
+              "Código",
+              "Descripción",
+              "Cargo",
+              "Superior",
+              "Descripción"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              1,
+              1,
+              3,
+              "ALAN BAEZ",
+              "V",
+              100,
+              "GONZALO CORIA"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              1,
+              1,
+              6,
+              "ADRIAN RODRIGUEZ",
+              "V",
+              101,
+              "JULIO BASUALDO"
+            ]
+          }
+        ]
+      },
+      {
+        "sheetName": "Modos de atencion",
+        "ref": "A1:D7",
+        "loadedRows": 7,
+        "colCount": 4,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Modos de atención ",
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              "Código",
+              "Descripción",
+              "Primario",
+              "Presencial"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              "PRE",
+              "PRIMARIO",
+              "Si",
+              "Si"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              "ACT",
+              "ACTIVADOR",
+              "No",
+              "Si"
+            ]
+          }
+        ]
+      },
+      {
+        "sheetName": "Grupos de productos",
+        "ref": "A1:B5245",
+        "loadedRows": 5245,
+        "colCount": 2,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Grupos de productos",
+              null
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              "Código",
+              "Descripción"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              185,
+              "480 - AGUAS REFRIGERADOS"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              186,
+              "351 - GASEOSAS PET 500"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "(Actualizar) Reporte de Clientes.xlsx",
+    "sizeBytes": 4167117,
+    "isHugeSample": false,
+    "sheets": [
+      {
+        "sheetName": "Hoja1",
+        "ref": "A1:DZ8072",
+        "loadedRows": 8072,
+        "colCount": 130,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Sucursal",
+              "Cliente",
+              "Razon social",
+              "Nombre de fantasia",
+              "Telefonos",
+              "Movil",
+              "e-Mail",
+              "Domicilio",
+              "Calle",
+              "Altura",
+              "Depto",
+              "Calle 1",
+              "Calle 2",
+              "Comentario",
+              "Coord X",
+              "Coord Y",
+              "Lugar de Entrega",
+              "Calle de entrega",
+              "Altura de entrega",
+              "Depto de entrega",
+              "Calle 1 de entrega",
+              "Calle 2 de entrega",
+              "Comentario de entrega",
+              "Horario de entrega",
+              "Flete de entrega"
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              1,
+              1,
+              "MORANDI TERESA",
+              null,
+              null,
+              2665114891,
+              null,
+              "Bº 114 VIV M. 193 C. 21 1",
+              "Bº 114 VIV M. 193 C. 21",
+              1,
+              null,
+              null,
+              null,
+              null,
+              "0.000000",
+              "0.000000",
+              null,
+              null,
+              0,
+              null,
+              null,
+              null,
+              null,
+              "9 A 1330 HS",
+              "0.00%"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              1,
+              2,
+              "GOLKE NOEMI",
+              "GOLKE NOEMI",
+              null,
+              null,
+              null,
+              "Bº 134 VIV M.289 C.2 1",
+              "Bº 134 VIV M.289 C.2",
+              1,
+              null,
+              null,
+              null,
+              null,
+              "0.000000",
+              "0.000000",
+              null,
+              null,
+              0,
+              null,
+              null,
+              null,
+              null,
+              null,
+              "0.00%"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              1,
+              3,
+              "POGGIO MOYANO MARIA GRACIELA",
+              "IL FIORENTINO PIZZERIA",
+              4447636,
+              2664220788,
+              null,
+              "(113) RIVADAVIA 1093 1",
+              "(113) RIVADAVIA 1093",
+              1,
+              null,
+              null,
+              null,
+              null,
+              -66337510,
+              -33297580,
+              null,
+              null,
+              0,
+              null,
+              null,
+              null,
+              null,
+              "11:00 A 13:00",
+              "0.00%"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "(Fijo) Base Portfolio.xlsx",
+    "sizeBytes": 234523,
+    "isHugeSample": false,
+    "sheets": [
+      {
+        "sheetName": "Productos",
+        "ref": "A1:AX1674",
+        "loadedRows": 1674,
+        "colCount": 50,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Código Producto",
+              "Producto",
+              "Unidad de Negocio",
+              "División",
+              "Marca",
+              "Calibre",
+              "Sabor",
+              "Familia",
+              "Marca Unificado",
+              "Segmento",
+              "Calibre tipo",
+              "Calibre LT",
+              "SUGAR",
+              "CENSO",
+              "340/269",
+              "GRP NS/GT/RB",
+              "Tipo POP",
+              "TOP UNG",
+              "ABOVE CORE",
+              "Innov.",
+              "MA",
+              "RGB",
+              "BS Match",
+              "Gatorade",
+              "Enemigo Pepsi"
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              77837,
+              "YERBA MATE UNIÓN 4FLEX X10 500GR",
+              "MARKETPLACE ALIMENTOS",
+              "YERBAS MARKETPLACE",
+              "UNION",
+              "PACK 500GR",
+              "YERBA",
+              "REGULAR",
+              "UNION ",
+              "YERBA ",
+              "OTROS",
+              "NO LT",
+              "REGULAR",
+              null,
+              "Mktplc",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              77831,
+              "YERBA MATE TARAGUI 4FLEX X10 500GR",
+              "MARKETPLACE ALIMENTOS",
+              "YERBAS MARKETPLACE",
+              "TARAGUI",
+              "PACK 500GR",
+              "YERBA",
+              "REGULAR",
+              "TARAGUI",
+              "YERBA ",
+              "OTROS",
+              "NO LT",
+              "REGULAR",
+              null,
+              "Mktplc",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              76476,
+              "YERBA MATE PLAYADITO C/PALO X10 500GR",
+              "MARKETPLACE ALIMENTOS",
+              "YERBAS MARKETPLACE",
+              "PLAYADITO",
+              "PACK 500GR",
+              "YERBA",
+              "CON PALO",
+              "PLAYADITO",
+              "YERBA ",
+              "OTROS",
+              "NO LT",
+              "REGULAR",
+              null,
+              "Mktplc",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "(Fijo) Canal MKT.xlsx",
+    "sizeBytes": 9730,
+    "isHugeSample": false,
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:C20",
+        "loadedRows": 20,
+        "colCount": 3,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Canal Mkt.",
+              "Canal UNIFICADO",
+              "Segmento Canal "
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              "ENTRETENIMIENTO",
+              "Refrigerado ",
+              "REFRIG"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              "COMIDA",
+              "Refrigerado ",
+              "REFRIG"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              "Mayorista",
+              "Mayoristas",
+              "MAYORISTAS"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "(Fijo) DetallePersonal.xlsx",
+    "sizeBytes": 10342,
+    "isHugeSample": false,
+    "sheets": [
+      {
+        "sheetName": "ag-grid",
+        "ref": "A1:K17",
+        "loadedRows": 17,
+        "colCount": 11,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Anulado",
+              "Código",
+              "Descripción",
+              "Tipo",
+              "Sucursal",
+              "Fuerza de Venta",
+              "Tipo segmento vendedor",
+              "Domicilio",
+              "Teléfono",
+              "Superior",
+              "Cargo"
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              "false",
+              3,
+              "ALAN BAEZ",
+              "Personal Comercial",
+              "CASA CENTRAL",
+              "ESQUEMA UNICO",
+              "VE Conjunta",
+              null,
+              null,
+              "GONZALO CORIA",
+              "VENDEDOR"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              "false",
+              6,
+              "ADRIAN RODRIGUEZ",
+              "Personal Comercial",
+              "CASA CENTRAL",
+              "ESQUEMA UNICO",
+              "VE Conjunta",
+              null,
+              null,
+              "JULIO BASUALDO",
+              "VENDEDOR"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              "false",
+              7,
+              "GONZALO DIEZ",
+              "Personal Comercial",
+              "CASA CENTRAL",
+              "ESQUEMA UNICO",
+              "VE Conjunta",
+              null,
+              null,
+              "JULIO BASUALDO",
+              "VENDEDOR"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "(Fijo) Medida Tiempo.xlsx",
+    "sizeBytes": 11020,
+    "isHugeSample": false,
+    "sheets": [
+      {
+        "sheetName": "Página1",
+        "ref": "A1:G25",
+        "loadedRows": 25,
+        "colCount": 7,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Año",
+              "Año/Mes",
+              "Mes",
+              "Nro. Mes - Mes",
+              "Trimestre",
+              "A.Vig",
+              "Bimestre"
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              2025,
+              "2025/01",
+              "Enero",
+              "01 - Enero",
+              "1Q",
+              "A.Anterior",
+              "1B"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              2025,
+              "2025/02",
+              "Febrero",
+              "02 - Febrero",
+              "1Q",
+              "A.Anterior",
+              "1B"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              2025,
+              "2025/03",
+              "Marzo",
+              "03 - Marzo",
+              "1Q",
+              "A.Anterior",
+              "2B"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "(Fijo) Subcanales Mkt.xlsx",
+    "sizeBytes": 11110,
+    "isHugeSample": false,
+    "sheets": [
+      {
+        "sheetName": "Subcanal MKT",
+        "ref": "A1:C70",
+        "loadedRows": 70,
+        "colCount": 3,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Subcanal",
+              "Canal MKT",
+              "Segmento Canal "
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              "MAYORISTA SALON",
+              "Mayorista",
+              "MAY"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              "MAYORISTA DEPOSI",
+              "Mayorista",
+              "MAY"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              "AUTOSERVICIO BC",
+              "Autoservicio",
+              "AS"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "(SemiFijo) DetallePersonal.xlsx",
+    "sizeBytes": 10021,
+    "isHugeSample": false,
+    "sheets": [
+      {
+        "sheetName": "ag-grid",
+        "ref": "A1:K17",
+        "loadedRows": 17,
+        "colCount": 11,
+        "sampleRows": [
+          {
+            "rowIndex": 0,
+            "values": [
+              "Anulado",
+              "Código",
+              "Descripción",
+              "Tipo",
+              "Sucursal",
+              "Fuerza de Venta",
+              "Tipo segmento vendedor",
+              "Domicilio",
+              "Teléfono",
+              "Superior",
+              "Cargo"
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "values": [
+              "false",
+              3,
+              "ALAN BAEZ",
+              "Personal Comercial",
+              "CASA CENTRAL",
+              "ESQUEMA UNICO",
+              "VE Conjunta",
+              null,
+              null,
+              "GONZALO CORIA",
+              "VENDEDOR"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "values": [
+              "false",
+              6,
+              "ADRIAN RODRIGUEZ",
+              "Personal Comercial",
+              "CASA CENTRAL",
+              "ESQUEMA UNICO",
+              "VE Conjunta",
+              null,
+              null,
+              "JULIO BASUALDO",
+              "VENDEDOR"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "values": [
+              "false",
+              7,
+              "GONZALO DIEZ",
+              "Personal Comercial",
+              "CASA CENTRAL",
+              "ESQUEMA UNICO",
+              "VE Conjunta",
+              null,
+              null,
+              "JULIO BASUALDO",
+              "VENDEDOR"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Tablero Ventas.xlsb",
+    "error": "Unexpected record 0x3b"
+  }
+]

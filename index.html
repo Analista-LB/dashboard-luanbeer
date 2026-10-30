@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard LuanBeer — Gestión Comercial & Distribución</title>
+  <link rel="stylesheet" href="src/styles/corporate.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Menú Lateral Corporativo -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <img src="src/assets/logo_luanbeer.jpg" alt="Logo LuanBeer" class="brand-logo-img" />
+        <div>
+          <div class="brand-title">Dashboard LuanBeer</div>
+          <div class="brand-subtitle">Gestión Comercial & Distribución</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-label">Módulos Principales</div>
+        <button class="nav-btn active" data-view="dashboard" id="navBtnDashboard">
+          <span>📊 Dashboard Comercial</span>
+        </button>
+        <button class="nav-btn" data-view="tablerotaco" id="navBtnTableroTaco">
+          <span>📈 Tablero de Ventas</span>
+        </button>
+        <button class="nav-btn" data-view="galaxia2026" id="navBtnGalaxia2026">
+          <span>🌌 Galaxia 2026</span>
+        </button>
+        <button class="nav-btn" data-view="ingesta" id="navBtnIngesta">
+          <span>📥 Ingesta de Bases</span>
+        </button>
+        <button class="nav-btn" data-view="relaciones" id="navBtnRelaciones">
+          <span>🔗 Modelo de Datos</span>
+        </button>
+        <button class="nav-btn" data-view="analisis" id="navBtnAnalisis">
+          <span>💬 Consultas</span>
+        </button>
+        <button class="nav-btn" data-view="auditoria" id="navBtnAuditoria">
+          <span>🛡️ Auditoría</span>
+        </button>
+        <button class="nav-btn" data-view="exportaciones" id="navBtnExportaciones">
+          <span>📤 Exportar</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div><span class="status-dot"></span><strong>LuanBeer — Distribuidora Oficial</strong></div>
+        <div style="margin-top:4px;">Cervecería y Maltería Quilmes</div>
+        <div style="margin-top:4px;color:var(--text-muted);">Persistencia: IndexedDB Activa</div>
+      </div>
+    </aside>
+
+    <!-- Área Principal -->
+    <div class="main-area">
+      <!-- Barra Superior -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú">☰ Menú</button>
+          <div class="universe-pill" id="universePill">
+            <span class="status-dot"></span> <span id="universePillText">LuanBeer Oficial — Bases Activas</span>
+          </div>
+          <span id="activePeriodSummaryLabel" style="font-size:12.5px;color:var(--text-secondary);"></span>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="btn btn-sync-bases" id="btnSyncBases" title="Sincronizar y re-escanear bases desde 1. Bases/">
+            <span class="sync-icon">🔄</span> Actualizar Bases
+          </button>
+        </div>
+      </header>
+
+      <!-- Barra de Filtros Globales en Acordeón Colapsable (Estilo Agrupación de Excel) -->
+      <section class="filter-accordion" id="filterAccordion" aria-label="Filtros Globales de Segmentación">
+        <div class="filter-accordion-header">
+          <div class="filter-header-left">
+            <button class="filter-toggle-btn" id="filterAccordionToggle" aria-expanded="false" title="Expandir o contraer filtros de segmentación">
+              <span class="toggle-icon">▾</span>
+              <span>⚡ Filtros de Segmentación</span>
+            </button>
+            <div class="filter-summary-chip" id="filterSummaryChip" title="Resumen de filtros de segmentación activos">
+              <span class="chip-label">Filtros:</span>
+              <span id="filterSummaryText">Período: YTD | Mes: Todos | Canal: Todos | UN: Todas | División: Todas</span>
+            </div>
+          </div>
+          <button class="filter-reset-btn" id="btnResetFilters" title="Restablecer todos los filtros dinámicos">
+            <span>✖</span>
+            <span>Restablecer Filtros</span>
+          </button>
+        </div>
+
+        <div class="filter-accordion-body" id="filterAccordionBody">
+          <!-- Presets de Acceso Rápido -->
+          <div class="quick-presets-row">
+            <span style="font-size:11.5px;font-weight:700;color:var(--text-muted);text-transform:uppercase;margin-right:4px;">Acceso Rápido:</span>
+            <button type="button" class="quick-preset-btn highlight" id="btnQuickCurrentMonth" title="Filtrar instantáneamente por el mes en curso (Octubre 2026)">
+              <span>🟢</span> Mes Actual (Octubre 2026)
+            </button>
+            <button type="button" class="quick-preset-btn" id="btnQuickYTD" title="Ver acumulado anual YTD completo">
+              <span>📅</span> YTD Completo
+            </button>
+            <button type="button" class="quick-preset-btn" id="btnQuickLastQuarter" title="Filtrar por el último trimestre">
+              <span>📊</span> Último Trimestre
+            </button>
+          </div>
+
+          <div class="filter-categories-container">
+            <!-- Categoría 1: Corte Temporal -->
+            <div class="filter-category-card">
+              <div class="filter-category-title">📅 Corte Temporal & Rango de Meses</div>
+              <div class="filter-category-grid">
+                <div class="filter-group" style="grid-column: span 2;">
+                  <label for="fltAño">Año Base</label>
+                  <select id="fltAño" class="filter-control">
+                    <option value="2026" selected>2026</option>
+                    <option value="2025">2025</option>
+                  </select>
+                </div>
+                <div class="filter-group" style="grid-column: span 2;">
+                  <label for="fltModoComp">Corte Comparativo</label>
+                  <select id="fltModoComp" class="filter-control">
+                    <option value="YTD">YTD</option>
+                    <option value="ANUAL">Año Anterior Completo (Ene–Dic)</option>
+                  </select>
+                </div>
+                <div class="filter-group">
+                  <label for="fltMesDesde">Mes Desde</label>
+                  <select id="fltMesDesde" class="filter-control">
+                    <option value="ALL">01 - Ene (Inicio)</option>
+                    <option value="01">01 - Enero</option>
+                    <option value="02">02 - Febrero</option>
+                    <option value="03">03 - Marzo</option>
+                    <option value="04">04 - Abril</option>
+                    <option value="05">05 - Mayo</option>
+                    <option value="06">06 - Junio</option>
+                    <option value="07">07 - Julio</option>
+                    <option value="08">08 - Agosto</option>
+                    <option value="09">09 - Septiembre</option>
+                    <option value="10">10 - Octubre</option>
+                    <option value="11">11 - Noviembre</option>
+                    <option value="12">12 - Diciembre</option>
+                  </select>
+                </div>
+                <div class="filter-group">
+                  <label for="fltMesHasta">Mes Hasta</label>
+                  <select id="fltMesHasta" class="filter-control">
+                    <option value="ALL">Último Disponible</option>
+                    <option value="01">01 - Enero</option>
+                    <option value="02">02 - Febrero</option>
+                    <option value="03">03 - Marzo</option>
+                    <option value="04">04 - Abril</option>
+                    <option value="05">05 - Mayo</option>
+                    <option value="06">06 - Junio</option>
+                    <option value="07">07 - Julio</option>
+                    <option value="08">08 - Agosto</option>
+                    <option value="09">09 - Septiembre</option>
+                    <option value="10">10 - Octubre</option>
+                    <option value="11">11 - Noviembre</option>
+                    <option value="12">12 - Diciembre</option>
+                  </select>
+                </div>
+                <!-- Select de respaldo retrocompatible para scripts y tests -->
+                <select id="fltMes" class="filter-control" style="display:none;"><option value="ALL">Todos los Meses</option></select>
+                <div class="filter-group" style="grid-column: span 2;">
+                  <label for="fltTrimestre">Trimestre</label>
+                  <select id="fltTrimestre" class="filter-control">
+                    <option value="ALL">Todos los Trimestres (1Q–4Q)</option>
+                    <option value="1Q">1Q — T1 (Ene–Mar)</option>
+                    <option value="2Q">2Q — T2 (Abr–Jun)</option>
+                    <option value="3Q">3Q — T3 (Jul–Sep)</option>
+                    <option value="4Q">4Q — T4 (Oct–Dic)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Categoría 2: Mercado y Clientes -->
+            <div class="filter-category-card">
+              <div class="filter-category-title">🏢 Canales y Clientes</div>
+              <div class="filter-category-grid">
+                <div class="filter-group" style="grid-column: span 2;">
+                  <label for="fltCanal">Canal Comercial</label>
+                  <select id="fltCanal" class="filter-control">
+                    <option value="ALL">Todos los Canales</option>
+                    <option value="On Premise">On Premise</option>
+                    <option value="Mayoristas">Mayoristas</option>
+                    <option value="Mercado Hogar — Sin Autoservicio">Mercado Hogar — Sin Autoservicio</option>
+                    <option value="Mercado Hogar — Con Autoservicio">Mercado Hogar — Con Autoservicio</option>
+                    <option value="Autoservicio">Autoservicio</option>
+                    <option value="Clie People + Instituciones">Clie People + Instituciones</option>
+                    <option value="Cadenitas">Cadenitas</option>
+                    <option value="Aiellos">Aiellos</option>
+                    <option value="Delfines">Delfines</option>
+                  </select>
+                  <!-- Select retrocompatible oculto para scripts y tests de granularidad interna -->
+                  <select id="fltCanalLegacy" class="filter-control" style="display:none;">
+                    <optgroup label="🍺 Refrigerados / On Premise (REF)">
+                      <option value="REF_ALL">Todos los REF (On Premise)</option>
+                      <option value="REF GASTRONOMICO">REF GASTRONOMICO</option>
+                      <option value="REF NOCTURNO">REF NOCTURNO</option>
+                      <option value="REF ENTRETENIMIENTO">REF ENTRETENIMIENTO</option>
+                      <option value="COMIDA">COMIDA</option>
+                      <option value="BEBIDA">BEBIDA</option>
+                      <option value="Disco/Pub">Disco/Pub</option>
+                      <option value="KA GASTRONOMICO">KA GASTRONOMICO</option>
+                      <option value="KA NOCTURNO">KA NOCTURNO</option>
+                    </optgroup>
+                    <optgroup label="📦 Mayoristas">
+                      <option value="Mayorista">Mayorista</option>
+                    </optgroup>
+                    <optgroup label="🏠 Mercado Hogar">
+                      <option value="MERCADO_HOGAR_ALL">Todo Mercado Hogar</option>
+                      <option value="Kioscos/Maxikioscos">Kioscos/Maxikioscos</option>
+                      <option value="Tradicional">Tradicional</option>
+                      <option value="Autoservicio">Autoservicio</option>
+                    </optgroup>
+                    <optgroup label="🛒 Cadenitas">
+                      <option value="CADENITAS_ALL">Todas las Cadenitas</option>
+                      <option value="CADENITAS_AIELLO">Cadenitas — Supermercados Aiello</option>
+                      <option value="CADENITAS_DELFIN">Cadenitas — Supermercados Delfines</option>
+                      <option value="Supermercados">Supermercados (General)</option>
+                    </optgroup>
+                    <optgroup label="🏢 Instituciones y Personal">
+                      <option value="INSTITUCIONES_ALL">Todas las Instituciones y Personal</option>
+                      <option value="Instituciones">Instituciones</option>
+                      <option value="Clie Institucional">Clie Institucional</option>
+                      <option value="Clie People">Clie People</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <!-- Select retrocompatible oculto para scripts y tests -->
+                <select id="fltCanalUnif" class="filter-control" style="display:none;"><option value="ALL">Todos</option></select>
+                <div class="filter-group" style="grid-column: span 2;">
+                  <label for="fltCliente">Cliente Específico (Padrón)</label>
+                  <select id="fltCliente" class="filter-control"><option value="ALL">Todos (1.485 Clientes Activos)</option></select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Categoría 3: Portafolio y Fuerza de Ventas -->
+            <div class="filter-category-card">
+              <div class="filter-category-title">📦 Portafolio y Fuerza de Ventas</div>
+              <div class="filter-category-grid">
+                <div class="filter-group">
+                  <label for="fltUN">Unidad Negocio</label>
+                  <select id="fltUN" class="filter-control"><option value="ALL">Todas</option></select>
+                </div>
+                <div class="filter-group">
+                  <label for="fltDivision">División</label>
+                  <select id="fltDivision" class="filter-control"><option value="ALL">Todas</option></select>
+                </div>
+                <div class="filter-group">
+                  <label for="fltVendedor">Promotor (Vendedor)</label>
+                  <select id="fltVendedor" class="filter-control"><option value="ALL">Todos</option></select>
+                </div>
+                <div class="filter-group">
+                  <label for="fltSupervisor">Supervisor</label>
+                  <select id="fltSupervisor" class="filter-control"><option value="ALL">Todos</option></select>
+                </div>
+                <div class="filter-group" style="grid-column: span 2;">
+                  <label for="fltProducto">Producto SKU</label>
+                  <select id="fltProducto" class="filter-control"><option value="ALL">Todos</option></select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-meta-row">
+            <div>
+              <label style="cursor:pointer;display:inline-flex;align-items:center;gap:6px;">
+                <input type="checkbox" id="fltIncludePOP" checked />
+                <span>Incluir registros de División <strong>POP</strong> ($1,018,594.84 | 0.00 HL)</span>
+              </label>
+            </div>
+            <div style="color:var(--text-muted);font-size:11.5px;">
+              Reglas: <strong>HL = Litros / 100</strong> | <strong>CCC Desduplicado por Set(Código)</strong> | <strong>Anti-Duplicación Ventas Activa</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VISTA 1: DASHBOARD COMERCIAL PRINCIPAL -->
+      <main class="view-container active" id="view-dashboard">
+        <div class="section-header">
+          <h1 class="section-title">Indicadores Comerciales Consolidados — Dashboard LuanBeer</h1>
+        </div>
+
+        <!-- Tarjetas KPI -->
+        <div class="kpi-grid" id="kpiCardsContainer"></div>
+
+        <!-- Gráfico Principal Combinado + Participación por Unidad de Negocio -->
+        <div class="charts-row">
+          <div class="panel" style="margin-bottom:0;">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">Evolución Mensual Comparativa (Barras: 2026 Actual | Línea: 2025 Anterior)</div>
+                <small style="color:var(--text-muted)">Los meses Oct–Dic 2026 figuran en Medida Tiempo sin actividad cargada en las bases transaccionales.</small>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <label for="chartMetricSelector" style="font-size:11.5px;color:var(--text-muted)">Indicador:</label>
+                <select id="chartMetricSelector" class="filter-control" style="width:auto;">
+                  <option value="hl">Volumen Vendido (HL)</option>
+                  <option value="neto">Facturación Neta ($)</option>
+                  <option value="ccc">Clientes con Compra (CCC)</option>
+                  <option value="bultos">Cantidad en Bultos</option>
+                  <option value="precio">Precio Promedio ($/HL)</option>
+                  <option value="ops">Cantidad de Operaciones</option>
+                </select>
+              </div>
+            </div>
+            <div class="chart-box">
+              <canvas id="mainComboChartCanvas"></canvas>
+            </div>
+          </div>
+
+          <div class="panel" style="margin-bottom:0;">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">Participación Interna por Unidad de Negocio</div>
+                <small style="color:var(--text-muted)">Proporción interna s/ universo analizado (No Market Share)</small>
+              </div>
+            </div>
+            <div class="chart-box">
+              <canvas id="unShareChartCanvas"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Participación por Canal Comercial y Análisis Trimestral -->
+        <div class="share-grid">
+          <div class="panel" style="margin-bottom:0;">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">Participación Interna por Canal Comercial (HL 2026 vs 2025)</div>
+                <small style="color:var(--text-muted)">Cruce con (Fijo) Canal MKT.xlsx y (Fijo) Subcanales Mkt.xlsx</small>
+              </div>
+            </div>
+            <div class="chart-box" style="height:260px;">
+              <canvas id="canalShareChartCanvas"></canvas>
+            </div>
+          </div>
+
+          <div class="panel" style="margin-bottom:0;">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">Análisis Trimestral Comparativo (T1, T2, T3 y T4)</div>
+                <small style="color:var(--text-muted)">Cruce con (Fijo) Medida Tiempo.xlsx (1Q a 4Q)</small>
+              </div>
+            </div>
+            <div class="quarters-grid" id="quartersContainer"></div>
+          </div>
+        </div>
+
+        <!-- Tabla Comercial Ordenable y Filtrable -->
+        <div class="panel">
+          <div class="panel-header">
+            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+              <div class="panel-title">Matriz Comercial Detallada y Participación Interna</div>
+              <select id="tableGroupBySelector" class="filter-control" style="width:auto;">
+                <option value="canal">Agrupar por: Canal Comercial</option>
+                <option value="un">Agrupar por: Unidad de Negocio</option>
+                <option value="mes">Agrupar por: Mes</option>
+                <option value="trimestre">Agrupar por: Trimestre</option>
+                <option value="division">Agrupar por: División</option>
+                <option value="vendedor">Agrupar por: Vendedor</option>
+                <option value="producto">Agrupar por: Producto (SKU)</option>
+              </select>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <input type="search" id="tableSearchInput" class="filter-control" placeholder="🔍 Filtrar filas..." style="width:210px;" />
+            </div>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="data-table" id="commercialDataTable">
+              <thead>
+                <tr>
+                  <th data-sort="label" id="tableGroupColumnTitle">Canal Comercial ↕</th>
+                  <th class="num" data-sort="hl26">Volumen 2026 (HL) ↕</th>
+                  <th class="num" data-sort="hl25">Volumen 2025 (HL) ↕</th>
+                  <th class="num" data-sort="hlDiff">Dif. Abs (HL) ↕</th>
+                  <th class="num" data-sort="hlVarPct">Var % HL ↕</th>
+                  <th class="num" data-sort="shareHL26">Part. Interna % ↕</th>
+                  <th class="num" data-sort="neto26">Facturación 2026 ($) ↕</th>
+                  <th class="num" data-sort="neto25">Facturación 2025 ($) ↕</th>
+                  <th class="num" data-sort="netoVarPct">Var % Fact. ↕</th>
+                  <th class="num" data-sort="ccc26">CCC Único 2026 (25) ↕</th>
+                  <th class="num" data-sort="objHL26">Objetivo 2026 (HL) ↕</th>
+                  <th class="num" data-sort="cumplObj26Pct">% Cumpl. ↕</th>
+                </tr>
+              </thead>
+              <tbody id="commercialTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+
+      <!-- VISTA NUEVA: TABLERO DE VENTAS (TACO .xlsb) -->
+      <main class="view-container" id="view-tablerotaco">
+        <div class="section-header">
+          <div>
+            <h1 class="section-title">📈 Tablero de Ventas (TACO .xlsb) — Espejo Mando Integral & Supervisión</h1>
+            <p style="color:var(--text-secondary);font-size:12.5px;margin-top:2px;">
+              Espejo operacional analítico de <code>1. Bases/Tablero Ventas.xlsb</code> (55 hojas binarias BIFF12). Monitoreo de KPIs de ejecución, resultados de volumen y drill-down jerárquico por Promotor y Cliente.
+            </p>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span class="badge badge-neutral" id="tacoCorteBadge" style="font-size:12px;padding:6px 12px;">
+              📅 Corte: Octubre 2026 (12/26 días = 46.15%)
+            </span>
+          </div>
+        </div>
+
+        <!-- Banner de Slicers Dinámicos TACO -->
+        <div class="slicers-bar">
+          <div style="font-weight:700;font-size:12.5px;color:var(--accent-orange);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.5px;">
+            Filtros y Slicers Operativos del Tablero de Ventas
+          </div>
+          <div class="slicers-grid">
+            <div class="filter-group">
+              <label for="tacoSlicerMesa">Mesa / Tablero</label>
+              <select id="tacoSlicerMesa" class="filter-control">
+                <option value="Mando Integral">Mando Integral (Total Distribuidora)</option>
+                <option value="Mesa Julio">Mesa Julio (101 - Julio Basualdo)</option>
+                <option value="Mesa Gonza">Mesa Gonza (100 - Gonzalo Coria)</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="tacoSlicerSupervisor">Supervisor</label>
+              <select id="tacoSlicerSupervisor" class="filter-control">
+                <option value="ALL">Todos los Supervisores</option>
+                <option value="S1 - Julio">S1 - Julio Basualdo (101)</option>
+                <option value="S2 - Gonza">S2 - Gonzalo Coria (100)</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="tacoSlicerVendedor">Promotor Comercial</label>
+              <select id="tacoSlicerVendedor" class="filter-control">
+                <option value="ALL">Todos los Vendedores</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="tacoSlicerTipoFdv">Tipo Preventa</label>
+              <select id="tacoSlicerTipoFdv" class="filter-control">
+                <option value="ALL">Todos los Tipos</option>
+                <option value="PRE (Primario)">PRE (Primario - VE Conjunta)</option>
+                <option value="MER (Complementario)">MER (Complementario - Merchand)</option>
+                <option value="ON PREMISE 2026">On Premise 2026 (Gastronomía/Bares)</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="tacoSlicerCanal">Canal Comercial</label>
+              <select id="tacoSlicerCanal" class="filter-control">
+                <option value="ALL">Todos los Canales</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="tacoSlicerSubcanal">Subcanal Mkt</label>
+              <select id="tacoSlicerSubcanal" class="filter-control">
+                <option value="ALL">Todos los Subcanales</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="tacoSlicerEstadoCliente">Padrón Clientes</label>
+              <select id="tacoSlicerEstadoCliente" class="filter-control">
+                <option value="ACTIVO">Solo Activos (1.485 PDVs)</option>
+                <option value="ES PLAN CZA">Planes Cerveza Activos</option>
+                <option value="ANULADO">Anulados Históricos (6.586)</option>
+                <option value="ALL">Total Maestro (8.071 PDVs)</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="tacoSlicerSearch">Buscar Cliente / Razón</label>
+              <input type="search" id="tacoSlicerSearch" class="filter-control" placeholder="🔍 Código, Razón, Calle..." />
+            </div>
+          </div>
+        </div>
+
+        <!-- Scores Resumen TACO -->
+        <div class="taco-scores-summary" id="tacoScoresContainer"></div>
+
+        <!-- Tablas TACO KPI y TACO Resultados -->
+        <div class="charts-row">
+          <div class="panel" style="margin-bottom:0;">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title" id="tacoKpiTableTitle">Bloque TACO KPI (Ejecución, Digitalización y Cobertura)</div>
+                <small style="color:var(--text-muted)">Ponderación oficial según Tablero Ventas.xlsb</small>
+              </div>
+            </div>
+            <div class="table-wrapper">
+              <table class="data-table" id="tacoKpiTable">
+                <thead>
+                  <tr>
+                    <th>Indicador KPI</th>
+                    <th class="num">Real</th>
+                    <th class="num">Objetivo</th>
+                    <th class="num">Alcance %</th>
+                    <th class="num">Tendencia %</th>
+                    <th style="text-align:center;min-width:130px;">Estado</th>
+                  </tr>
+                </thead>
+                <tbody id="tacoKpiTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel" style="margin-bottom:0;">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title" id="tacoRtoTableTitle">Bloque TACO Resultados (Volumen HL & Facturación)</div>
+                <small style="color:var(--text-muted)">Proyección de Cierre LE (Día 12 de 26 hábiles = ×2.1667)</small>
+              </div>
+            </div>
+            <div class="table-wrapper">
+              <table class="data-table" id="tacoRtoTable">
+                <thead>
+                  <tr>
+                    <th>Categoría / Indicador</th>
+                    <th class="num">Real</th>
+                    <th class="num">Objetivo</th>
+                    <th class="num">Alcance %</th>
+                    <th class="num">Proyección LE</th>
+                    <th style="text-align:center;min-width:130px;">Estado</th>
+                  </tr>
+                </thead>
+                <tbody id="tacoRtoTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Matriz Comparativa de los 18 Vendedores (Octubre 2026) -->
+        <div class="panel" style="margin-top:20px;">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Matriz Comparativa de la Fuerza de Ventas (16 Promotores + 2 Merchands)</div>
+              <small style="color:var(--text-muted)">Consolidación de las 10 hojas de promotores de Tablero Ventas.xlsb cruzadas con DetallePersonal.xlsx</small>
+            </div>
+          </div>
+          <div class="table-wrapper">
+            <table class="data-table" id="tacoVendedoresTable">
+              <thead>
+                <tr>
+                  <th>Vnd.</th>
+                  <th>Promotor / Colaborador</th>
+                  <th>Supervisor</th>
+                  <th>Tipo FDV</th>
+                  <th class="num">TACO Total %</th>
+                  <th class="num">Total CZA (HL)</th>
+                  <th class="num">Above Core</th>
+                  <th class="num">Core + Value</th>
+                  <th class="num">Total UNG</th>
+                  <th class="num">TOP UNG</th>
+                  <th class="num">GMV Mktp ($)</th>
+                  <th class="num">CCC Cza</th>
+                  <th class="num">CCC UNG</th>
+                  <th class="num">Censo Avance</th>
+                  <th>Semáforo</th>
+                </tr>
+              </thead>
+              <tbody id="tacoVendedoresTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Drill-Down Jerárquico de Clientes -->
+        <div class="panel" style="margin-top:20px;">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Drill-Down Jerárquico: Distribuidor → Supervisor → Promotor → Canal/Subcanal → Clientes</div>
+              <small style="color:var(--text-muted)" id="tacoDrillDownSummary">Cruce relacional entre Tablero Ventas.xlsb, Base a la fecha.xlsx y Base de Clientes.xlsx</small>
+            </div>
+          </div>
+
+          <div class="pillar-tabs" id="tacoDrillTabs">
+            <button class="pillar-tab-btn active" data-tab="drill-supervisor">1. Por Supervisor</button>
+            <button class="pillar-tab-btn" data-tab="drill-promotor">2. Por Promotor</button>
+            <button class="pillar-tab-btn" data-tab="drill-canal">3. Por Canal Comercial</button>
+            <button class="pillar-tab-btn" data-tab="drill-subcanal">4. Por Subcanal Mkt</button>
+            <button class="pillar-tab-btn" data-tab="drill-clientes">5. Cartera Detallada de Clientes</button>
+          </div>
+
+          <div id="tacoDrillPanesContainer">
+            <div class="pillar-pane active" id="pane-drill-supervisor">
+              <div class="table-wrapper"><table class="data-table"><thead><tr><th>Supervisor</th><th class="num">PDVs Cartera</th><th class="num">Compradores</th><th class="num">Cobertura %</th><th class="num">Volumen YTD (HL)</th><th class="num">Bultos</th></tr></thead><tbody id="drillSupervisorTbody"></tbody></table></div>
+            </div>
+            <div class="pillar-pane" id="pane-drill-promotor">
+              <div class="table-wrapper"><table class="data-table"><thead><tr><th>Promotor</th><th>Supervisor</th><th class="num">PDVs Cartera</th><th class="num">Compradores</th><th class="num">Cobertura %</th><th class="num">Volumen YTD (HL)</th><th class="num">Bultos</th></tr></thead><tbody id="drillPromotorTbody"></tbody></table></div>
+            </div>
+            <div class="pillar-pane" id="pane-drill-canal">
+              <div class="table-wrapper"><table class="data-table"><thead><tr><th>Canal Comercial</th><th class="num">PDVs Cartera</th><th class="num">Compradores</th><th class="num">Cobertura %</th><th class="num">Volumen YTD (HL)</th><th class="num">Bultos</th></tr></thead><tbody id="drillCanalTbody"></tbody></table></div>
+            </div>
+            <div class="pillar-pane" id="pane-drill-subcanal">
+              <div class="table-wrapper"><table class="data-table"><thead><tr><th>Subcanal Mkt</th><th>Canal</th><th class="num">PDVs Cartera</th><th class="num">Compradores</th><th class="num">Cobertura %</th><th class="num">Volumen YTD (HL)</th><th class="num">Bultos</th></tr></thead><tbody id="drillSubcanalTbody"></tbody></table></div>
+            </div>
+            <div class="pillar-pane" id="pane-drill-clientes">
+              <div class="table-wrapper"><table class="data-table"><thead><tr><th>Cód.</th><th>Razón Social</th><th>Canal</th><th>Subcanal</th><th>Promotor</th><th>Ruta</th><th>Días Visita</th><th class="num">HL YTD</th><th class="num">HL Sep 26</th><th>Clúster Censo</th><th>Plan CZA</th></tr></thead><tbody id="drillClientesTbody"></tbody></table></div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- VISTA NUEVA: PROGRAMA GALAXIA 2026 (CMQ) -->
+      <main class="view-container" id="view-galaxia2026">
+        <div class="section-header">
+          <div>
+            <h1 class="section-title">🌌 Programa Galaxia 2026 — Cervecería y Maltería Quilmes (CMQ)</h1>
+            <p style="color:var(--text-secondary);font-size:12.5px;margin-top:2px;">
+              Auditoría y gobernanza comercial según el <strong>Manual Externo de Distribuidores 2026 (212 páginas)</strong>. Evaluación oficial de 11.000 puntos con la Escala CMQ (&lt;70%: 0% | 70-79%: 50% | 80-89%: 60% | 90-99%: 80% | 100-104%: 100% | ≥105%: 110%).
+            </p>
+          </div>
+          <div>
+            <span class="badge" id="galaxiaRankingBadge" style="font-size:13px;padding:6px 14px;background:#8b5cf6;color:#fff;font-weight:700;">
+              GALAXIA PLATA
+            </span>
+          </div>
+        </div>
+
+        <!-- Banner Hero del Scorecard 11.000 Puntos -->
+        <div class="galaxia-score-hero" id="galaxiaScoreHero">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:14px;">
+            <div>
+              <div style="font-size:12px;text-transform:uppercase;color:#c4b5fd;letter-spacing:0.8px;font-weight:700;">Puntaje Global Galaxia 2026</div>
+              <div class="galaxia-points-display">
+                <span class="galaxia-big-points" id="galaxiaTotalPtsDisplay">8.245</span>
+                <span class="galaxia-max-points">/ 11.000 Pts Oficiales</span>
+                <span class="badge badge-positive" id="galaxiaPctBadge" style="margin-left:8px;font-size:13px;">74.95%</span>
+              </div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:11.5px;color:var(--text-muted);">Ponderación de Bloques CMQ</div>
+              <div style="font-size:12px;color:var(--text-secondary);margin-top:4px;">
+                <strong>55%</strong> Gestión Manual (6.050 pts) | <strong>40%</strong> Resultados TACO (4.400 pts) | <strong>5%</strong> Bonus (550 pts)
+              </div>
+            </div>
+          </div>
+
+          <div class="cmq-scale-bar">
+            <div class="cmq-scale-fill" id="cmqScaleFillBar" style="width: 74.95%;"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-muted);font-family:var(--font-mono);">
+            <span>0% (&lt;70%: 0 pts)</span>
+            <span>70% (50%)</span>
+            <span>80% (60%)</span>
+            <span>90% (80%)</span>
+            <span>100% (100%)</span>
+            <span>≥105% (110% Bonus)</span>
+          </div>
+        </div>
+
+        <!-- 3 Tarjetas de Resumen de los Bloques -->
+        <div class="taco-scores-summary" id="galaxiaBloquesSummary"></div>
+
+        <!-- Pestañas de los 8 Pilares de Gobernanza -->
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Auditoría Operativa de los 8 Pilares de Excelencia Galaxia 2026</div>
+              <small style="color:var(--text-muted)">Haga clic en cada pilar para explorar la verificación sobre las bases de datos reales</small>
+            </div>
+          </div>
+
+          <div class="pillar-tabs" id="galaxiaPillarsTabs">
+            <button class="pillar-tab-btn active" data-tab="pilar-1">Pilar 1: Estructura & On Premise</button>
+            <button class="pillar-tab-btn" data-tab="pilar-2">Pilar 2: Frecuencias & Maestro</button>
+            <button class="pillar-tab-btn" data-tab="pilar-3">Pilar 3: CNC Multi-Horizonte</button>
+            <button class="pillar-tab-btn" data-tab="pilar-4">Pilar 4: Objetivación (66/33 ±10%)</button>
+            <button class="pillar-tab-btn" data-tab="pilar-5">Pilar 5: Censo Thomas & Matinal SPV</button>
+            <button class="pillar-tab-btn" data-tab="pilar-6">Pilar 6: Ecosistema BEES & D+</button>
+            <button class="pillar-tab-btn" data-tab="pilar-7">Pilar 7: CAPEX Coolers & Chopp</button>
+            <button class="pillar-tab-btn" data-tab="pilar-8">Pilar 8: Revenue & TOP 5 (R3/MMAA)</button>
+          </div>
+
+          <div id="galaxiaPillarsPanes">
+            <!-- Pilar 1 -->
+            <div class="pillar-pane active" id="pane-pilar-1">
+              <div id="pilar1Content"></div>
+            </div>
+            <!-- Pilar 2 -->
+            <div class="pillar-pane" id="pane-pilar-2">
+              <div id="pilar2Content"></div>
+            </div>
+            <!-- Pilar 3 -->
+            <div class="pillar-pane" id="pane-pilar-3">
+              <div id="pilar3Content"></div>
+            </div>
+            <!-- Pilar 4 -->
+            <div class="pillar-pane" id="pane-pilar-4">
+              <div id="pilar4Content"></div>
+            </div>
+            <!-- Pilar 5 -->
+            <div class="pillar-pane" id="pane-pilar-5">
+              <div id="pilar5Content"></div>
+            </div>
+            <!-- Pilar 6 -->
+            <div class="pillar-pane" id="pane-pilar-6">
+              <div id="pilar6Content"></div>
+            </div>
+            <!-- Pilar 7 -->
+            <div class="pillar-pane" id="pane-pilar-7">
+              <div id="pilar7Content"></div>
+            </div>
+            <!-- Pilar 8 -->
+            <div class="pillar-pane" id="pane-pilar-8">
+              <div id="pilar8Content"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- VISTA 2: INGESTA INTELIGENTE DE HASTA 10 ARCHIVOS + INVENTARIO DE BASES -->
+            <section class="view-container" id="view-ingesta">
+        <div class="section-header">
+          <h1 class="section-title">Ingesta y Actualización de Bases</h1>
+        </div>
+
+        <!-- Área Protegida para Usuarios No Autenticados (Sección 5, 8, 33) -->
+        <div class="auth-protected-card" id="ingestaAuthCard">
+          <div class="auth-protected-icon">🛡️</div>
+          <div class="auth-protected-title">Área protegida</div>
+          <div class="auth-protected-subtitle">Iniciá sesión para actualizar las bases.</div>
+
+          <div id="ingestaLoginAlert" class="panel" style="display:none;border-color:var(--status-negative);color:var(--status-negative);font-size:12.5px;margin-bottom:14px;text-align:left;"></div>
+
+          <form id="formAdminLogin" onsubmit="return false;">
+            <div class="auth-field-group">
+              <label class="auth-field-label" for="inputAdminEmail">Correo electrónico</label>
+              <input type="email" id="inputAdminEmail" class="auth-input-field" placeholder="admin@luanbeer.com" required autocomplete="username" />
+            </div>
+
+            <div class="auth-field-group">
+              <label class="auth-field-label" for="inputAdminPassword">Contraseña</label>
+              <input type="password" id="inputAdminPassword" class="auth-input-field" placeholder="••••••••" required autocomplete="current-password" />
+            </div>
+
+            <button type="button" class="btn btn-primary" id="btnAdminSignIn" style="width:100%;margin-top:8px;padding:11px;font-size:14px;">
+              Iniciar sesión
+            </button>
+          </form>
+
+          <div class="auth-note">
+            🔒 Seguridad basada en Supabase Auth y Row Level Security (RLS). Los usuarios lectores pueden consultar libremente todos los tableros sin necesidad de iniciar sesión.
+          </div>
+        </div>
+
+        <!-- Panel de Administración de Ingesta (Visible solo para administradores autenticados) -->
+        <div id="ingestaAdminContent" style="display:none;">
+          <div style="display:flex;justify-content:space-between;align-items:center;background:var(--bg-surface-elevated);padding:12px 18px;border-radius:var(--radius-sm);border-left:4px solid var(--accent-orange);margin-bottom:18px;">
+            <div>
+              <span class="badge badge-primary">ADMINISTRADOR AUTENTICADO</span>
+              <span style="margin-left:8px;font-size:13px;color:var(--text-secondary);">
+                Sesión activa: <strong id="adminUserEmailDisplay" style="color:var(--text-primary);"></strong>
+              </span>
+            </div>
+            <button class="btn btn-sm" id="btnAdminSignOut" style="border-color:var(--border-color);padding:6px 12px;font-size:12px;">
+              Cerrar sesión
+            </button>
+          </div>
+
+          <div class="dropzone" id="uploadDropzone">
+            <input type="file" id="multiFileInput" multiple accept=".xlsx,.xls,.xlsb,.csv" style="display:none;" />
+            <div style="font-size:26px;margin-bottom:6px;">📂</div>
+            <div style="font-size:15px;font-weight:700;color:var(--text-primary);">
+              Arrastre aquí entre 1 y 10 archivos comerciales (.XLSX, .XLS, .XLSB, .CSV) o haga clic para seleccionarlos
+            </div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">
+              El motor detecta automáticamente todas las hojas de cada Excel, encabezados desplazados, filas de totales/subtotales, tipos de datos, equivalencias de columnas y relaciones candidatas.
+            </div>
+          </div>
+
+          <div id="ingestStatusBanner"></div>
+
+          <!-- Pantalla de Validación Previa (Sección 5.7) -->
+          <div class="panel" id="validationPreviewPanel" style="display:none;border-color:var(--accent-orange);">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title" style="color:var(--accent-orange)">Vista Previa y Validación Pre-Incorporación</div>
+                <small style="color:var(--text-secondary)">La base activa solamente se actualizará cuando confirme con el botón <strong>VALIDAR E INCORPORAR DATOS</strong>.</small>
+              </div>
+              <button class="btn btn-primary" id="btnValidateAndIncorporate" style="font-size:13.5px;padding:10px 18px;">
+                ✓ VALIDAR E INCORPORAR DATOS
+              </button>
+            </div>
+
+            <div id="previewSummaryMetrics"></div>
+
+            <!-- Ficha de Diagnóstico Pre-Incorporación ("¿Cómo sé qué datos cargué?") -->
+            <div id="auditDiagnosticCardContainer"></div>
+
+            <h3 style="font-size:13px;color:var(--accent-orange);margin:16px 0 8px;font-weight:700;">Hojas Detectadas, Clasificación Automática y Calidad de Registros</h3>
+            <div class="table-wrapper" style="margin-bottom:14px;">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Archivo</th>
+                    <th>Hoja</th>
+                    <th>Clasificación y Confianza</th>
+                    <th class="num">Reg. Válidos</th>
+                    <th class="num">Rechazados / Totales Excl.</th>
+                    <th class="num">Duplicados</th>
+                    <th>Columnas Equivalentes Reconocidas</th>
+                    <th>Advertencias / Errores</th>
+                  </tr>
+                </thead>
+                <tbody id="previewSheetsTableBody"></tbody>
+              </table>
+            </div>
+
+            <!-- Muestra de Datos de Control (Data Sample Preview) -->
+            <div id="previewDataSampleSection" style="margin-top:16px;margin-bottom:16px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin:12px 0 8px;">
+                <h3 style="font-size:13px;color:var(--accent-orange);font-weight:700;display:flex;align-items:center;gap:6px;">
+                  <span>🔬</span> Muestra de Datos de Control (Primeras 10 filas reales interpretadas)
+                </h3>
+                <span class="badge badge-neutral" id="previewDataSampleBadge" style="font-size:11px;">Muestra preliminar</span>
+              </div>
+              <div class="preview-sample-table-container">
+                <table class="data-table" id="previewDataSampleTable">
+                  <thead>
+                    <tr>
+                      <th class="num">Fila #</th>
+                      <th>Período</th>
+                      <th>Cód. Cliente</th>
+                      <th>Cód. Producto</th>
+                      <th>Canal</th>
+                      <th class="num">HL</th>
+                      <th class="num">Importe Neto $</th>
+                    </tr>
+                  </thead>
+                  <tbody id="previewDataSampleBody">
+                    <tr><td colspan="7" style="text-align:center;color:var(--text-muted);padding:14px;">Cargue un archivo para visualizar la muestra.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <h3 style="font-size:13px;color:var(--accent-orange);margin:16px 0 8px;font-weight:700;">Relaciones Propuestas entre las Hojas Inspeccionadas</h3>
+            <div class="table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Tabla Origen (Clave)</th>
+                    <th>Tabla Destino (Clave)</th>
+                    <th>Cardinalidad</th>
+                    <th class="num">% Cobertura</th>
+                    <th class="num">Claves sin Correspondencia</th>
+                    <th>Diagnóstico de Integridad</th>
+                  </tr>
+                </thead>
+                <tbody id="previewRelsTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Auditoría de Ingestas Central (Supabase ingestion_log) -->
+          <div class="panel" style="margin-top:18px;">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">🛡️ Registro Central de Auditoría (Supabase ingestion_log)</div>
+                <small style="color:var(--text-muted)">Historial centralizado e inmutable de operaciones de ingesta y reemplazos mensuales</small>
+              </div>
+              <button class="btn btn-sm" id="btnRefreshAuditLogs" style="font-size:12px;">🔄 Actualizar</button>
+            </div>
+            <div class="table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Fecha / Hora</th>
+                    <th>Usuario Admin</th>
+                    <th>Tipo de Base</th>
+                    <th>Período</th>
+                    <th>Archivo</th>
+                    <th class="num">Filas Insertadas</th>
+                    <th class="num">Filas Reemplazadas</th>
+                    <th>Resultado</th>
+                  </tr>
+                </thead>
+                <tbody id="supabaseAuditLogTableBody">
+                  <tr><td colspan="8" style="text-align:center;color:var(--text-muted);padding:12px;">No hay registros recientes o trabajando en modo local.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Inventario Documentado de los 14 Archivos Originales del Proyecto -->
+          <div class="panel" style="margin-top:18px;">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">Inventario Oficial de las 14 Fuentes Originales del Proyecto (Carpeta Argon Gemini)</div>
+                <small style="color:var(--text-muted)">9 Bases para Actualizar + 5 Bases Fijas (18 hojas inspeccionadas en total, sin modificar los archivos originales)</small>
+              </div>
+            </div>
+            <div class="table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th class="num">#</th>
+                    <th>Nombre del Archivo</th>
+                    <th>Categoría</th>
+                    <th>Formato y Hojas</th>
+                    <th>Clasificación y Rol en el Modelo</th>
+                    <th class="num">Registros</th>
+                    <th>Claves Candidatas</th>
+                    <th>Advertencias Detectadas en Inspección</th>
+                    <th>Uso Previsto en Dashboard</th>
+                  </tr>
+                </thead>
+                <tbody id="realInventoryTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VISTA 3: RELACIONES ENTRE BASES Y MODELO DE DATOS -->
+      <section class="view-container" id="view-relaciones">
+        <div class="section-header">
+          <h1 class="section-title">Modelo de Datos Consolidado y Revisión de Relaciones</h1>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Arquitectura del Modelo Estrella / Constelación de Hechos (Anti-Duplicación)</div>
+              <small style="color:var(--text-muted)">Separación estricta entre Tablas de Hechos, Dimensiones Maestras, Tablas Operativas e Indicadores Calculados</small>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;font-size:12.5px;">
+            <div style="background:var(--bg-surface-elevated);padding:12px;border-radius:var(--radius-sm);border-left:3px solid var(--accent-orange);">
+              <strong style="color:var(--accent-orange)">1. Conciliación de Ventas (Sin Duplicar)</strong>
+              <p style="margin-top:4px;color:var(--text-secondary);">
+                <code>Base Prod. y Vol.</code> (266,041 filas) y <code>Base a la fecha</code> (266,096 filas) comparten exactamente los mismos 266,041 registros de bebidas (96,607.03 HL). El motor los unifica por clave compuesta <code>(Año/Mes + Cliente + Producto + Vendedor)</code> sin duplicar ni un solo hectolitro, incorporando las 55 filas exclusivas de <code>POP</code>.
+              </p>
+            </div>
+            <div style="background:var(--bg-surface-elevated);padding:12px;border-radius:var(--radius-sm);border-left:3px solid var(--accent-yellow);">
+              <strong style="color:var(--accent-yellow)">2. Dimensiones Maestras (1:N Garantizado)</strong>
+              <p style="margin-top:4px;color:var(--text-secondary);">
+                <code>Base Portfolio</code> (1,673 SKUs únicos), <code>Medida Tiempo</code> (24 períodos), <code>DetallePersonal</code> (16 códigos), <code>Canal MKT</code> (19 canales) y <code>Subcanales Mkt</code> (69 subcanales) tienen unicidad primaria verificada para impedir la multiplicación de filas al cruzar.
+              </p>
+            </div>
+            <div style="background:var(--bg-surface-elevated);padding:12px;border-radius:var(--radius-sm);border-left:3px solid var(--status-positive);">
+              <strong style="color:var(--status-positive)">3. Hechos de Granularidad Específica</strong>
+              <p style="margin-top:4px;color:var(--text-secondary);">
+                <code>Base Obj.</code> (591,870 filas), <code>Base CNC</code> (25,893 filas desduplicadas), <code>Base Eficiencia</code> (40,317 filas), <code>Base MXPDV</code> (21,338 filas) y <code>Base Rechazos</code> (5,803 filas) se consultan respetando su propia granularidad sin cruzar muchos-a-muchos contra ventas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Matriz de Relaciones Detectadas y Homologación de Equivalencias Ambiguas</div>
+              <small style="color:var(--text-muted)">Puede revisar y alternar la confirmación de las relaciones con homologación semántica</small>
+            </div>
+          </div>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Tabla / Fuente Origen</th>
+                  <th>Tabla / Maestro Destino</th>
+                  <th>Cardinalidad</th>
+                  <th class="num">Cobertura</th>
+                  <th>Estado</th>
+                  <th>Explicación Técnica y Tratamiento de Claves Huérfanas</th>
+                  <th>Acción</th>
+                </tr>
+              </thead>
+              <tbody id="relationshipsTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- VISTA 4: CONSULTAS SOBRE LOS DATOS -->
+      <section class="view-container" id="view-analisis">
+        <div class="section-header">
+          <h1 class="section-title">Consultas sobre los Datos</h1>
+          <p class="section-subtitle" style="color:var(--text-muted);font-size:13px;margin:4px 0 0 0;">Preguntá sobre ventas, clientes, productos y evolución comercial.</p>
+        </div>
+
+        <!-- Consultas sobre los Datos -->
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Consultas sobre los Datos</div>
+              <small style="color:var(--text-muted)">Preguntá sobre ventas, clientes, productos y evolución comercial.</small>
+            </div>
+          </div>
+
+          <div class="nlq-box">
+            <input type="text" id="nlqInput" class="nlq-input" placeholder="Escriba su pregunta comercial (ej: ¿Qué canal perdió más volumen? o ¿Cuál fue la facturación de septiembre?)..." />
+            <button class="btn btn-primary" id="btnRunNLQ">Consultar</button>
+          </div>
+
+          <div class="nlq-chips">
+            <button class="nlq-chip" data-q="¿Qué canal perdió más volumen?">¿Qué canal perdió más volumen?</button>
+            <button class="nlq-chip" data-q="¿Cuál fue el mejor trimestre?">¿Cuál fue el mejor trimestre?</button>
+            <button class="nlq-chip" data-q="¿Qué unidad de negocio creció más?">¿Qué unidad de negocio creció más?</button>
+            <button class="nlq-chip" data-q="¿Qué meses cayeron más del 10%?">¿Qué meses cayeron más del 10%?</button>
+            <button class="nlq-chip" data-q="¿Cuántos clientes únicos compraron?">¿Cuántos clientes únicos compraron?</button>
+            <button class="nlq-chip" data-q="¿Qué canal perdió más clientes?">¿Qué canal perdió más clientes?</button>
+            <button class="nlq-chip" data-q="¿Cuál fue la facturación de septiembre?">¿Cuál fue la facturación de septiembre?</button>
+            <button class="nlq-chip" data-q="¿Qué productos explican la caída de volumen?">¿Qué productos explican la caída de volumen?</button>
+            <button class="nlq-chip" data-q="¿Cuál es el cumplimiento de objetivos?">¿Cuál es el cumplimiento de objetivos?</button>
+            <button class="nlq-chip" data-q="¿Cuántas heladeras y litros de repago hay en activos fijos?">¿Parque de heladeras y repago en HL?</button>
+          </div>
+
+          <div id="nlqResponseContainer"></div>
+        </div>
+
+        <!-- Motor de Análisis Comercial Automático -->
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Hallazgos y Conclusiones Automáticas Verificables (Sin Causas Inventadas)</div>
+              <small style="color:var(--text-muted)">Cada conclusión incluye: Indicador, Período, Segmento, Valor Actual, Valor Anterior, Variación, Fuente y Regla.</small>
+            </div>
+            <div>
+              <select id="insightTypeFilter" class="filter-control" style="width:auto;">
+                <option value="ALL">Todas las Conclusiones</option>
+                <option value="negativo">Alertas de Caída / Desempeño Inferior</option>
+                <option value="positivo">Crecimientos > 15%</option>
+                <option value="advertencia">Divergencias / Participación / Inactividad</option>
+                <option value="auditoria">Inconsistencias entre Fuentes</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="insight-grid" id="insightsGridContainer"></div>
+        </div>
+      </section>
+
+      <!-- VISTA 5: AUDITORÍA OPERATIVA Y PERSISTENCIA LOCAL -->
+      <section class="view-container" id="view-auditoria">
+        <div class="section-header">
+          <h1 class="section-title">Auditoría Operativa (Activos Fijos, Negociaciones, Rechazos) y Persistencia IndexedDB</h1>
+          <button class="btn btn-danger" id="btnClearTestSourcesAudit">
+            🗑️ Limpiar Datos de Prueba y Restaurar Originales
+          </button>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div class="panel-title">Parque de Frío — <code>(Actualizar) Activos Fijos.xlsx</code> (Conversión Automática Litros → HL)</div>
+          </div>
+          <div id="auditActivosFijosSummary"></div>
+        </div>
+
+        <div class="share-grid">
+          <div class="panel" style="margin-bottom:0;">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">Acuerdos Vigentes por Grupo — <code>(Actualizar) Negociaciones.xlsx</code></div>
+                <small style="color:var(--text-muted)">630 acuerdos reales (fila descriptora de tipos filtrada automáticamente)</small>
+              </div>
+            </div>
+            <div class="table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Grupo de Producto / Artículo</th>
+                    <th class="num">Acuerdos</th>
+                    <th class="num">Clientes Únicos</th>
+                    <th class="num">% Bonif. Promedio</th>
+                  </tr>
+                </thead>
+                <tbody id="auditNegociacionesBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel" style="margin-bottom:0;">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">Desglose de Rechazos por Motivo — <code>(Actualizar) Base Rechazos.xlsx</code></div>
+                <small style="color:var(--text-muted)">Incluye los 2,707 registros sin motivo informado en origen</small>
+              </div>
+            </div>
+            <div class="table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Motivo de Rechazo</th>
+                    <th class="num">Casos 2026</th>
+                    <th class="num">HL 2026</th>
+                    <th class="num">Importe 2026</th>
+                    <th class="num">Casos 2025</th>
+                    <th class="num">HL 2025</th>
+                  </tr>
+                </thead>
+                <tbody id="auditRechazosMotivosBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" style="margin-top:20px;">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Historial de Importaciones y Estado de Persistencia Local (IndexedDB)</div>
+              <small style="color:var(--text-muted)">Conserva configuración, mapeos, relaciones confirmadas y respaldos ante fallos</small>
+            </div>
+          </div>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Fecha / Hora</th>
+                  <th>Universo</th>
+                  <th>Operación</th>
+                  <th class="num">Archivos</th>
+                  <th class="num">Registros</th>
+                  <th>Detalle de Auditoría</th>
+                </tr>
+              </thead>
+              <tbody id="importHistoryTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- VISTA 6: CENTRO DE EXPORTACIONES -->
+      <section class="view-container" id="view-exportaciones">
+        <div class="section-header">
+          <h1 class="section-title">Centro de Exportaciones Comerciales Verificables</h1>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Generación Local de Informes (Respeta los Filtros Activos y Período Seleccionado)</div>
+              <small style="color:var(--text-muted)">Todos los archivos generados incluyen metadatos de período, filtros activos y listado de las fuentes utilizadas.</small>
+            </div>
+          </div>
+
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-header"><span>1. Datos Filtrados CSV</span><span>UTF-8 con BOM</span></div>
+              <div style="font-size:14px;font-weight:700;margin:8px 0;">Archivo CSV Compatible con Excel</div>
+              <p style="font-size:12px;color:var(--text-secondary);margin-bottom:12px;">
+                Exporta los indicadores principales y la tabla comercial activa agrupada según su selección actual, con separador punto y coma (<code>;</code>).
+              </p>
+              <button class="btn btn-primary" id="btnExportCSV">⬇️ Descargar CSV Filtrado (.csv)</button>
+            </div>
+
+            <div class="kpi-card secondary-accent">
+              <div class="kpi-header"><span>2. Libro Excel Multi-Hoja</span><span>SheetJS (.xlsx)</span></div>
+              <div style="font-size:14px;font-weight:700;margin:8px 0;">Excel con 8 Hojas de Análisis</div>
+              <p style="font-size:12px;color:var(--text-secondary);margin-bottom:12px;">
+                Incluye: <code>Resumen_KPIs</code>, <code>Evolucion_Mensual</code>, <code>Analisis_Trimestral</code>, <code>Canales_Comerciales</code>, <code>Unidades_Negocio</code>, <code>Top_Productos</code>, <code>Conclusiones</code> e <code>Inventario_Fuentes</code>.
+              </p>
+              <button class="btn btn-primary" id="btnExportXLSX">⬇️ Descargar Excel Completo (.xlsx)</button>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-header"><span>3. Informe Ejecutivo PDF</span><span>jsPDF + AutoTable (.pdf)</span></div>
+              <div style="font-size:14px;font-weight:700;margin:8px 0;">Reporte Corporativo en PDF</div>
+              <p style="font-size:12px;color:var(--text-secondary);margin-bottom:12px;">
+                Documento A4 apaisado con diseño corporativo, tablas de indicadores principales, desempeño trimestral, participación por UN y conclusiones verificables.
+              </p>
+              <button class="btn btn-primary" id="btnExportPDF">⬇️ Descargar Informe PDF (.pdf)</button>
+            </div>
+
+            <div class="kpi-card secondary-accent">
+              <div class="kpi-header"><span>4. Presentación PowerPoint</span><span>PptxGenJS Nativo (.pptx)</span></div>
+              <div style="font-size:14px;font-weight:700;margin:8px 0;">PowerPoint 100% Editable</div>
+              <p style="font-size:12px;color:var(--text-secondary);margin-bottom:12px;">
+                Genera diapositivas panorámicas (16:9) con cuadros de texto y tablas nativas editables en PowerPoint (no imágenes planas).
+              </p>
+              <button class="btn btn-primary" id="btnExportPPTX">⬇️ Descargar PowerPoint Editable (.pptx)</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Modal de Confirmación para Acciones Críticas -->
+  <div class="modal-backdrop" id="confirmModalBackdrop">
+    <div class="modal-card">
+      <h3 id="confirmModalTitle" style="color:var(--accent-orange);font-size:16px;margin-bottom:8px;">Confirmar Acción</h3>
+      <p id="confirmModalMessage" style="color:var(--text-secondary);font-size:13px;margin-bottom:18px;"></p>
+      <div style="display:flex;justify-content:flex-end;gap:10px;">
+        <button class="btn" id="btnModalCancel">Cancelar</button>
+        <button class="btn btn-primary" id="btnModalConfirm">Confirmar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Librerías Locales Vendor (100% Offline) -->
+  <script src="vendor/xlsx.full.min.js"></script>
+  <script src="vendor/chart.umd.min.js"></script>
+  <script src="vendor/jspdf.umd.min.js"></script>
+  <script src="vendor/jspdf.plugin.autotable.min.js"></script>
+  <script src="vendor/pptxgen.bundle.js"></script>
+
+  <!-- Bundles de Datos Reales (14 Archivos del Proyecto) y Lote Sintético Controlado -->
+  <script src="src/data/real_data_bundle.js"></script>
+  <script src="src/data/octubre_sales_bundle.js"></script>
+  <script src="src/data/synthetic_test_bundle.js"></script>
+
+  <script src="vendor/supabase.min.js"></script>
+  <script src="src/config/supabaseConfig.js"></script>
+  <script src="src/modules/supabaseClient.js"></script>
+  <!-- Módulos de Ingeniería de Datos y Business Intelligence -->
+  <script src="src/modules/sanitizer.js"></script>
+  <script src="src/modules/ingestionEngine.js"></script>
+  <script src="src/modules/relationshipEngine.js"></script>
+  <script src="src/modules/channelUniverseConfig.js"></script>
+  <script src="src/modules/commercialMathEngine.js"></script>
+  <script src="src/modules/galaxiaEngine.js"></script>
+  <script src="src/modules/insightEngine.js"></script>
+  <!-- Arquitectura Modular de Agente IA -->
+  <script src="src/modules/aiAgent/querySchema.js"></script>
+  <script src="src/modules/aiAgent/conversationContext.js"></script>
+  <script src="src/modules/aiAgent/commercialQueryEngine.js"></script>
+  <script src="src/modules/aiAgent/queryValidator.js"></script>
+  <script src="src/modules/aiAgent/queryInterpreter.js"></script>
+  <script src="src/modules/aiAgent/responseComposer.js"></script>
+  <script src="src/modules/aiAgent/responseValidator.js"></script>
+  <script src="src/modules/aiAgent/index.js"></script>
+  <script src="src/modules/nlqEngine.js"></script>
+  <script src="src/modules/persistenceEngine.js"></script>
+  <script src="src/modules/exportEngine.js"></script>
+  <script src="src/modules/customConsolidator.js"></script>
+
+  <!-- Contenedor Toast para Notificaciones -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Controlador Principal de la Interfaz -->
+  <script src="src/app.js"></script>
+</body>
+</html>

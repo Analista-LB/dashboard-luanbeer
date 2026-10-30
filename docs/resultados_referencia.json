@@ -1,0 +1,824 @@
+{
+  "generatedAt": "2026-10-19T11:12:45.353Z",
+  "basesDirectory": "1. Bases/",
+  "totalSourcesInspected": 14,
+  "totalSources2026": 20,
+  "totalSpreadsheetSources2026": 19,
+  "totalSheets2026": 77,
+  "activePeriods": [
+    "2025/01",
+    "2025/02",
+    "2025/03",
+    "2025/04",
+    "2025/05",
+    "2025/06",
+    "2025/07",
+    "2025/08",
+    "2025/09",
+    "2025/10",
+    "2025/11",
+    "2025/12",
+    "2026/01",
+    "2026/02",
+    "2026/03",
+    "2026/04",
+    "2026/05",
+    "2026/06",
+    "2026/07",
+    "2026/08",
+    "2026/09"
+  ],
+  "octoberLiveCutInTableroXlsb": "2026/10 (12 de 26 días hábiles = 46.15%)",
+  "inactivePeriodsInMasterTime": [
+    "2026/10",
+    "2026/11",
+    "2026/12"
+  ],
+  "reconciliationSales": {
+    "baseProdYVolRows": 266041,
+    "baseALaFechaRows": 266096,
+    "sharedExactRows": 266041,
+    "exclusiveBaseALaFechaPOPRows": 55,
+    "consolidatedTotalRows": 266096,
+    "totalHLAll21Months": 96607.03,
+    "totalNetoProdYVol": 14823747363.87,
+    "totalNetoConsolidatedWithPOP": 14824765958.71,
+    "totalBonifProdYVol": 5026659272.45
+  },
+  "kpisGlobal": {
+    "fullYear2025": {
+      "hl": 62922.35,
+      "bultos": 598147.03,
+      "neto": 8996338742.74,
+      "bonif": 3650342955.02,
+      "ops": 149377,
+      "ccc": 1350,
+      "clientesAtendidos": 1363,
+      "precioPromHL": 142975.25
+    },
+    "ytd2025_EneSep": {
+      "hl": 44035.71,
+      "bultos": 421760.22,
+      "neto": 5998047250.72,
+      "bonif": 2767164583.91,
+      "ops": 106192,
+      "ccc": 1268,
+      "clientesAtendidos": 1281,
+      "precioPromHL": 136208.7
+    },
+    "ytd2026_EneSep": {
+      "hl": 33684.68,
+      "bultos": 325845.91,
+      "neto": 5828427215.97,
+      "bonif": 1376316317.44,
+      "ops": 116719,
+      "ccc": 1482,
+      "clientesAtendidos": 1491,
+      "precioPromHL": 173029.02
+    },
+    "yoyYTD": {
+      "hlDiff": -10351.03,
+      "hlVarPct": -23.51,
+      "netoDiff": -169620034.75,
+      "netoVarPct": -2.83,
+      "cccDiff": 214,
+      "cccVarPct": 16.88,
+      "bultosDiff": -95914.31,
+      "bultosVarPct": -22.74
+    }
+  },
+  "quarterly": {
+    "1Q": {
+      "2025": {
+        "hl": 20176.78,
+        "bultos": 193378.88,
+        "neto": 2858462508.82,
+        "bonif": 1201156802.55,
+        "ops": 38576,
+        "ccc": 1084,
+        "clientesAtendidos": 1101,
+        "precioPromHL": 141670.93
+      },
+      "2026": {
+        "hl": 15746.85,
+        "bultos": 149815.76,
+        "neto": 2736940487.8,
+        "bonif": 562064763.2,
+        "ops": 42520,
+        "ccc": 1238,
+        "clientesAtendidos": 1246,
+        "precioPromHL": 173808.75
+      },
+      "hlDiff": -4429.93,
+      "hlVarPct": -21.96,
+      "netoDiff": -121522021.02,
+      "netoVarPct": -4.25,
+      "cccDiff": 154,
+      "cccVarPct": 14.21
+    },
+    "2Q": {
+      "2025": {
+        "hl": 9765.5,
+        "bultos": 96186.83,
+        "neto": 1320119793.49,
+        "bonif": 610312358.88,
+        "ops": 29411,
+        "ccc": 1030,
+        "clientesAtendidos": 1054,
+        "precioPromHL": 135181.98
+      },
+      "2026": {
+        "hl": 8379.5,
+        "bultos": 82422.93,
+        "neto": 1413578530.76,
+        "bonif": 326282550.43,
+        "ops": 33917,
+        "ccc": 1244,
+        "clientesAtendidos": 1264,
+        "precioPromHL": 168694.93
+      },
+      "hlDiff": -1386,
+      "hlVarPct": -14.19,
+      "netoDiff": 93458737.27,
+      "netoVarPct": 7.08,
+      "cccDiff": 214,
+      "cccVarPct": 20.78
+    },
+    "3Q": {
+      "2025": {
+        "hl": 14093.44,
+        "bultos": 132194.51,
+        "neto": 1819464948.41,
+        "bonif": 955695422.48,
+        "ops": 38205,
+        "ccc": 1154,
+        "clientesAtendidos": 1166,
+        "precioPromHL": 129100.17
+      },
+      "2026": {
+        "hl": 9558.33,
+        "bultos": 93607.21,
+        "neto": 1677908197.42,
+        "bonif": 487969003.81,
+        "ops": 40282,
+        "ccc": 1285,
+        "clientesAtendidos": 1302,
+        "precioPromHL": 175544.01
+      },
+      "hlDiff": -4535.11,
+      "hlVarPct": -32.18,
+      "netoDiff": -141556750.99,
+      "netoVarPct": -7.78,
+      "cccDiff": 131,
+      "cccVarPct": 11.35
+    },
+    "4Q": {
+      "2025": {
+        "hl": 18886.64,
+        "bultos": 176386.81,
+        "neto": 2998291492.02,
+        "bonif": 883178371.11,
+        "ops": 43185,
+        "ccc": 1180,
+        "clientesAtendidos": 1195,
+        "precioPromHL": 158751.99
+      },
+      "2026": {
+        "hl": 0,
+        "bultos": 0,
+        "neto": 0,
+        "bonif": 0,
+        "ops": 0,
+        "ccc": 0,
+        "clientesAtendidos": 0,
+        "precioPromHL": 0
+      },
+      "hlDiff": -18886.64,
+      "hlVarPct": -100,
+      "netoDiff": -2998291492.02,
+      "netoVarPct": -100,
+      "cccDiff": -1180,
+      "cccVarPct": -100
+    }
+  },
+  "byCanalYTD": {
+    "Autoservicio": {
+      "canalUnificado": "Autoservicios",
+      "segmentoCanal": "AS",
+      "ytd2025": {
+        "hl": 6611.6,
+        "bultos": 57257.55,
+        "neto": 845504040.4,
+        "bonif": 488544961.05,
+        "ops": 3353,
+        "ccc": 39,
+        "clientesAtendidos": 39,
+        "precioPromHL": 127881.85
+      },
+      "ytd2026": {
+        "hl": 4841.08,
+        "bultos": 41790.41,
+        "neto": 787927644.61,
+        "bonif": 229098298.43,
+        "ops": 4500,
+        "ccc": 32,
+        "clientesAtendidos": 32,
+        "precioPromHL": 162758.61
+      },
+      "hlDiff": -1770.52,
+      "hlVarPct": -26.78,
+      "shareHL2026Pct": 14.37
+    },
+    "BEBIDA": {
+      "canalUnificado": "Refrigerado",
+      "segmentoCanal": "REFRIG",
+      "ytd2025": {
+        "hl": 7.52,
+        "bultos": 72.25,
+        "neto": 1493307.47,
+        "bonif": 363204.9,
+        "ops": 29,
+        "ccc": 1,
+        "clientesAtendidos": 1,
+        "precioPromHL": 198560.96
+      },
+      "ytd2026": {
+        "hl": 0,
+        "bultos": 0,
+        "neto": 0,
+        "bonif": 0,
+        "ops": 0,
+        "ccc": 0,
+        "clientesAtendidos": 0,
+        "precioPromHL": 0
+      },
+      "hlDiff": -7.52,
+      "hlVarPct": -100,
+      "shareHL2026Pct": 0
+    },
+    "COMIDA": {
+      "canalUnificado": "Refrigerado",
+      "segmentoCanal": "REFRIG",
+      "ytd2025": {
+        "hl": 0.67,
+        "bultos": 6.75,
+        "neto": 275491.8,
+        "bonif": 1094.82,
+        "ops": 16,
+        "ccc": 2,
+        "clientesAtendidos": 2,
+        "precioPromHL": 411550.35
+      },
+      "ytd2026": {
+        "hl": 0,
+        "bultos": 0,
+        "neto": 0,
+        "bonif": 0,
+        "ops": 0,
+        "ccc": 0,
+        "clientesAtendidos": 0,
+        "precioPromHL": 0
+      },
+      "hlDiff": -0.67,
+      "hlVarPct": -100,
+      "shareHL2026Pct": 0
+    },
+    "Clie Institucional": {
+      "canalUnificado": "Clie Institucion",
+      "segmentoCanal": "CLIE INST",
+      "ytd2025": {
+        "hl": 0,
+        "bultos": 0,
+        "neto": 0,
+        "bonif": 0,
+        "ops": 0,
+        "ccc": 0,
+        "clientesAtendidos": 0,
+        "precioPromHL": 0
+      },
+      "ytd2026": {
+        "hl": 0.77,
+        "bultos": 6,
+        "neto": 46663.38,
+        "bonif": 0,
+        "ops": 3,
+        "ccc": 1,
+        "clientesAtendidos": 1,
+        "precioPromHL": 60759.61
+      },
+      "hlDiff": 0.77,
+      "hlVarPct": null,
+      "shareHL2026Pct": 0
+    },
+    "Clie People": {
+      "canalUnificado": "Clie People",
+      "segmentoCanal": "EMPLEADOS",
+      "ytd2025": {
+        "hl": 57.19,
+        "bultos": 514.51,
+        "neto": 13173125.28,
+        "bonif": 217091.95,
+        "ops": 843,
+        "ccc": 48,
+        "clientesAtendidos": 51,
+        "precioPromHL": 230321.57
+      },
+      "ytd2026": {
+        "hl": 101.28,
+        "bultos": 1021.87,
+        "neto": 25194434.74,
+        "bonif": 103409.35,
+        "ops": 999,
+        "ccc": 59,
+        "clientesAtendidos": 60,
+        "precioPromHL": 248768.05
+      },
+      "hlDiff": 44.09,
+      "hlVarPct": 77.09,
+      "shareHL2026Pct": 0.3
+    },
+    "Instituciones": {
+      "canalUnificado": "Refrigerado",
+      "segmentoCanal": "REFRIG",
+      "ytd2025": {
+        "hl": 0.9,
+        "bultos": 9.75,
+        "neto": 307241.77,
+        "bonif": 23782.6,
+        "ops": 16,
+        "ccc": 1,
+        "clientesAtendidos": 1,
+        "precioPromHL": 341341.82
+      },
+      "ytd2026": {
+        "hl": 0,
+        "bultos": 0,
+        "neto": 0,
+        "bonif": 0,
+        "ops": 0,
+        "ccc": 0,
+        "clientesAtendidos": 0,
+        "precioPromHL": 0
+      },
+      "hlDiff": -0.9,
+      "hlVarPct": -100,
+      "shareHL2026Pct": 0
+    },
+    "KA NOCTURNO": {
+      "canalUnificado": "Refrigerado",
+      "segmentoCanal": "REFRIG",
+      "ytd2025": {
+        "hl": 0,
+        "bultos": 0,
+        "neto": 0,
+        "bonif": 0,
+        "ops": 0,
+        "ccc": 0,
+        "clientesAtendidos": 0,
+        "precioPromHL": 0
+      },
+      "ytd2026": {
+        "hl": 3.69,
+        "bultos": 32.5,
+        "neto": 808124.21,
+        "bonif": 444221,
+        "ops": 2,
+        "ccc": 1,
+        "clientesAtendidos": 1,
+        "precioPromHL": 219078.06
+      },
+      "hlDiff": 3.69,
+      "hlVarPct": null,
+      "shareHL2026Pct": 0.01
+    },
+    "Kioscos/Maxikioscos": {
+      "canalUnificado": "Tradicional",
+      "segmentoCanal": "K+T",
+      "ytd2025": {
+        "hl": 4474.94,
+        "bultos": 48921.68,
+        "neto": 649360828.9,
+        "bonif": 272904896.29,
+        "ops": 25015,
+        "ccc": 291,
+        "clientesAtendidos": 295,
+        "precioPromHL": 145110.46
+      },
+      "ytd2026": {
+        "hl": 3961.07,
+        "bultos": 41392.44,
+        "neto": 727887699.72,
+        "bonif": 131880720.67,
+        "ops": 24791,
+        "ccc": 331,
+        "clientesAtendidos": 331,
+        "precioPromHL": 183760.21
+      },
+      "hlDiff": -513.87,
+      "hlVarPct": -11.48,
+      "shareHL2026Pct": 11.76
+    },
+    "Mayorista": {
+      "canalUnificado": "Mayoristas",
+      "segmentoCanal": "MAYORISTAS",
+      "ytd2025": {
+        "hl": 13746.54,
+        "bultos": 117860.08,
+        "neto": 1906038988.88,
+        "bonif": 932647720.44,
+        "ops": 1007,
+        "ccc": 30,
+        "clientesAtendidos": 31,
+        "precioPromHL": 138655.88
+      },
+      "ytd2026": {
+        "hl": 6646.81,
+        "bultos": 56020.75,
+        "neto": 1187070961.64,
+        "bonif": 211445527.67,
+        "ops": 820,
+        "ccc": 31,
+        "clientesAtendidos": 32,
+        "precioPromHL": 178592.51
+      },
+      "hlDiff": -7099.73,
+      "hlVarPct": -51.65,
+      "shareHL2026Pct": 19.73
+    },
+    "REF ENTRETENIMIENTO": {
+      "canalUnificado": "Refrigerado",
+      "segmentoCanal": "REFRIG",
+      "ytd2025": {
+        "hl": 917.2,
+        "bultos": 10888.35,
+        "neto": 112641031.91,
+        "bonif": 48888392.51,
+        "ops": 2008,
+        "ccc": 34,
+        "clientesAtendidos": 34,
+        "precioPromHL": 122809.06
+      },
+      "ytd2026": {
+        "hl": 1176.31,
+        "bultos": 12678.63,
+        "neto": 199359937.25,
+        "bonif": 90424134.29,
+        "ops": 2666,
+        "ccc": 57,
+        "clientesAtendidos": 57,
+        "precioPromHL": 169479.15
+      },
+      "hlDiff": 259.11,
+      "hlVarPct": 28.25,
+      "shareHL2026Pct": 3.49
+    },
+    "REF GASTRONOMICO": {
+      "canalUnificado": "Refrigerado",
+      "segmentoCanal": "REFRIG",
+      "ytd2025": {
+        "hl": 1461.07,
+        "bultos": 17927.63,
+        "neto": 200686198.6,
+        "bonif": 68860761.32,
+        "ops": 5432,
+        "ccc": 76,
+        "clientesAtendidos": 77,
+        "precioPromHL": 137355.18
+      },
+      "ytd2026": {
+        "hl": 1905.86,
+        "bultos": 24653.44,
+        "neto": 302754860.13,
+        "bonif": 125315640.28,
+        "ops": 8364,
+        "ccc": 109,
+        "clientesAtendidos": 111,
+        "precioPromHL": 158854.39
+      },
+      "hlDiff": 444.79,
+      "hlVarPct": 30.44,
+      "shareHL2026Pct": 5.66
+    },
+    "REF NOCTURNO": {
+      "canalUnificado": "Refrigerado",
+      "segmentoCanal": "REFRIG",
+      "ytd2025": {
+        "hl": 2179.64,
+        "bultos": 26191.16,
+        "neto": 329967766.17,
+        "bonif": 169974565.88,
+        "ops": 3998,
+        "ccc": 45,
+        "clientesAtendidos": 45,
+        "precioPromHL": 151386.04
+      },
+      "ytd2026": {
+        "hl": 1773.85,
+        "bultos": 20457.28,
+        "neto": 332121411.2,
+        "bonif": 150705440.11,
+        "ops": 4431,
+        "ccc": 47,
+        "clientesAtendidos": 47,
+        "precioPromHL": 187231.76
+      },
+      "hlDiff": -405.79,
+      "hlVarPct": -18.62,
+      "shareHL2026Pct": 5.27
+    },
+    "Supermercados": {
+      "canalUnificado": "Supermercados",
+      "segmentoCanal": "SMK",
+      "ytd2025": {
+        "hl": 3544.61,
+        "bultos": 32463.48,
+        "neto": 441656950.38,
+        "bonif": 185642625.63,
+        "ops": 4232,
+        "ccc": 12,
+        "clientesAtendidos": 12,
+        "precioPromHL": 124599.6
+      },
+      "ytd2026": {
+        "hl": 3185.36,
+        "bultos": 28443.94,
+        "neto": 513680477.03,
+        "bonif": 124735540.89,
+        "ops": 4218,
+        "ccc": 12,
+        "clientesAtendidos": 13,
+        "precioPromHL": 161263.11
+      },
+      "hlDiff": -359.25,
+      "hlVarPct": -10.14,
+      "shareHL2026Pct": 9.46
+    },
+    "Tradicional": {
+      "canalUnificado": "Tradicional",
+      "segmentoCanal": "K+T",
+      "ytd2025": {
+        "hl": 11033.81,
+        "bultos": 109647.02,
+        "neto": 1496942279.16,
+        "bonif": 599095486.5,
+        "ops": 60243,
+        "ccc": 689,
+        "clientesAtendidos": 693,
+        "precioPromHL": 135668.72
+      },
+      "ytd2026": {
+        "hl": 10088.6,
+        "bultos": 99348.64,
+        "neto": 1751575002.06,
+        "bonif": 312163384.74,
+        "ops": 65925,
+        "ccc": 802,
+        "clientesAtendidos": 806,
+        "precioPromHL": 173619.27
+      },
+      "hlDiff": -945.21,
+      "hlVarPct": -8.57,
+      "shareHL2026Pct": 29.95
+    }
+  },
+  "byUnidadNegocioYTD": {
+    "ADYACENCIAS": {
+      "ytd2025": {
+        "hl": -2.89,
+        "bultos": -62.17,
+        "neto": -512729.14,
+        "bonif": -1143303.94,
+        "ops": 57,
+        "ccc": 31,
+        "clientesAtendidos": 45,
+        "precioPromHL": 0
+      },
+      "ytd2026": {
+        "hl": 1.2,
+        "bultos": 55.83,
+        "neto": 2202302.45,
+        "bonif": 1379416.72,
+        "ops": 38,
+        "ccc": 33,
+        "clientesAtendidos": 35,
+        "precioPromHL": 1835252.04
+      },
+      "hlDiff": 4.09,
+      "hlVarPct": null,
+      "shareHL2026Pct": 0
+    },
+    "AGUAS": {
+      "ytd2025": {
+        "hl": 2098.14,
+        "bultos": 22985.33,
+        "neto": 134150046.12,
+        "bonif": 96056240,
+        "ops": 4491,
+        "ccc": 638,
+        "clientesAtendidos": 654,
+        "precioPromHL": 63937.73
+      },
+      "ytd2026": {
+        "hl": 1738,
+        "bultos": 19929.75,
+        "neto": 146158109.21,
+        "bonif": 68546692.67,
+        "ops": 4744,
+        "ccc": 645,
+        "clientesAtendidos": 669,
+        "precioPromHL": 84095.67
+      },
+      "hlDiff": -360.14,
+      "hlVarPct": -17.16,
+      "shareHL2026Pct": 5.16
+    },
+    "CERVEZAS": {
+      "ytd2025": {
+        "hl": 31310.78,
+        "bultos": 275614.15,
+        "neto": 4824382312.52,
+        "bonif": 2318115103.48,
+        "ops": 49503,
+        "ccc": 1216,
+        "clientesAtendidos": 1236,
+        "precioPromHL": 154080.56
+      },
+      "ytd2026": {
+        "hl": 22839.02,
+        "bultos": 201024.79,
+        "neto": 4686329226.82,
+        "bonif": 981577814.97,
+        "ops": 61211,
+        "ccc": 1439,
+        "clientesAtendidos": 1453,
+        "precioPromHL": 205189.64
+      },
+      "hlDiff": -8471.76,
+      "hlVarPct": -27.06,
+      "shareHL2026Pct": 67.8
+    },
+    "MARKETPLACE": {
+      "ytd2025": {
+        "hl": 486.61,
+        "bultos": 5970.99,
+        "neto": 83927000.61,
+        "bonif": 40281901.14,
+        "ops": 4382,
+        "ccc": 901,
+        "clientesAtendidos": 919,
+        "precioPromHL": 172473.07
+      },
+      "ytd2026": {
+        "hl": 101.76,
+        "bultos": 1476.49,
+        "neto": 24726904.32,
+        "bonif": 8463790.19,
+        "ops": 1385,
+        "ccc": 493,
+        "clientesAtendidos": 520,
+        "precioPromHL": 242998.12
+      },
+      "hlDiff": -384.85,
+      "hlVarPct": -79.09,
+      "shareHL2026Pct": 0.3
+    },
+    "MARKETPLACE ALIMENTOS": {
+      "ytd2025": {
+        "hl": 0,
+        "bultos": 0,
+        "neto": 0,
+        "bonif": 0,
+        "ops": 0,
+        "ccc": 0,
+        "clientesAtendidos": 0,
+        "precioPromHL": 0
+      },
+      "ytd2026": {
+        "hl": 5.08,
+        "bultos": 508,
+        "neto": 10171646.39,
+        "bonif": 162746.33,
+        "ops": 223,
+        "ccc": 158,
+        "clientesAtendidos": 169,
+        "precioPromHL": 2002292.6
+      },
+      "hlDiff": 5.08,
+      "hlVarPct": null,
+      "shareHL2026Pct": 0.02
+    },
+    "RETORNO COMERCIAL": {
+      "ytd2025": {
+        "hl": 0,
+        "bultos": 9,
+        "neto": 0,
+        "bonif": 0,
+        "ops": 1,
+        "ccc": 1,
+        "clientesAtendidos": 1,
+        "precioPromHL": 0
+      },
+      "ytd2026": {
+        "hl": 0,
+        "bultos": 0,
+        "neto": 0,
+        "bonif": 0,
+        "ops": 0,
+        "ccc": 0,
+        "clientesAtendidos": 0,
+        "precioPromHL": 0
+      },
+      "hlDiff": 0,
+      "hlVarPct": null,
+      "shareHL2026Pct": 0
+    },
+    "UNG": {
+      "ytd2025": {
+        "hl": 10085.31,
+        "bultos": 115959.08,
+        "neto": 942556557.72,
+        "bonif": 294092923.45,
+        "ops": 47156,
+        "ccc": 1199,
+        "clientesAtendidos": 1210,
+        "precioPromHL": 93458.37
+      },
+      "ytd2026": {
+        "hl": 8989.39,
+        "bultos": 102623.54,
+        "neto": 955633036.85,
+        "bonif": 314522255.6,
+        "ops": 48986,
+        "ccc": 1381,
+        "clientesAtendidos": 1397,
+        "precioPromHL": 106306.74
+      },
+      "hlDiff": -1095.92,
+      "hlVarPct": -10.87,
+      "shareHL2026Pct": 26.69
+    },
+    "VINO": {
+      "ytd2025": {
+        "hl": 57.77,
+        "bultos": 1283.83,
+        "neto": 13544062.89,
+        "bonif": 19761719.77,
+        "ops": 602,
+        "ccc": 239,
+        "clientesAtendidos": 249,
+        "precioPromHL": 234437.89
+      },
+      "ytd2026": {
+        "hl": 10.24,
+        "bultos": 227.5,
+        "neto": 3205989.93,
+        "bonif": 1663600.95,
+        "ops": 132,
+        "ccc": 95,
+        "clientesAtendidos": 102,
+        "precioPromHL": 313161.41
+      },
+      "hlDiff": -47.53,
+      "hlVarPct": -82.27,
+      "shareHL2026Pct": 0.03
+    }
+  },
+  "tableroVentasSummary": {
+    "fechaCorte": {
+      "mesActual": "Octubre",
+      "periodo": "2026/10",
+      "diasActivos": 26,
+      "diasTranscurridos": 12,
+      "diasRestantes": 14,
+      "avanceMesPct": 46.15,
+      "factorTendenciaCierre": 2.1667
+    },
+    "mandoIntegralScores": {
+      "tacoKpiPct": 72.69,
+      "tacoRtoPct": 30.37,
+      "tacoTotalPct": 46.77
+    },
+    "mesaJulioScores": {
+      "tacoKpiPct": 67.13,
+      "tacoRtoPct": 0,
+      "tacoTotalPct": 67.13
+    },
+    "mesaGonzaScores": {
+      "tacoKpiPct": 69.33,
+      "tacoRtoPct": 0,
+      "tacoTotalPct": 69.33
+    }
+  },
+  "galaxia2026Summary": {
+    "padronTotal": 8071,
+    "padronActivos": 1485,
+    "padronAnulados": 6586,
+    "coordenadasValidasPct": 92.05,
+    "clientesPresencialTotal": 1491,
+    "excesoFrecuenciaCount": 16,
+    "censoAvancePct": 52.95,
+    "coolersStockPct": 22.81,
+    "coolersVentaCeroPct": 2.97,
+    "tradeSpendPorHL2026": 40858.82
+  }
+}

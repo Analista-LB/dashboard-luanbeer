@@ -1,0 +1,7295 @@
+[
+  {
+    "sheetName": "0-Base objetivos",
+    "status": "OK",
+    "ref": "A1:M35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          11,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Nombre",
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre"
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "CCC CERVEZA",
+          1100,
+          1000,
+          1000,
+          1000,
+          1000,
+          1000,
+          1000,
+          1025,
+          1030,
+          1040,
+          1040,
+          1045
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "CCC VINOS",
+          57,
+          57,
+          60,
+          60,
+          130,
+          219,
+          219,
+          188,
+          188,
+          144,
+          144,
+          144
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          "CCC AGUAS",
+          229,
+          229,
+          300,
+          300,
+          300,
+          300,
+          300,
+          300,
+          300,
+          400,
+          300,
+          300
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "CCC UNG",
+          806,
+          810,
+          800,
+          800,
+          800,
+          800,
+          800,
+          800,
+          880,
+          880,
+          880,
+          880
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "1- Base Dinam Taco",
+    "status": "OK",
+    "ref": "A1:Q35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Dinam VOL x UDN",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Unidad de Negocio",
+          "Vol total",
+          "Vol tendencia al cierre",
+          "Media actual",
+          "Media*Días falt",
+          null,
+          "Etiquetas de fila",
+          "Suma de Cantidad Total en HL",
+          null,
+          null,
+          null,
+          null,
+          "Etiquetas de fila",
+          "Suma de Cantidad Total en HL",
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "CERVEZAS",
+          1062.560299999999,
+          2302.2139833333313,
+          88.54669166666658,
+          1239.653683333332,
+          null,
+          "TOP UNG",
+          138.19240000000002,
+          299.4168666666667,
+          11.516033333333334,
+          161.22446666666667,
+          null,
+          "BEBIDAS SABORIZADAS",
+          37.85999999999999,
+          82.02999999999997,
+          3.1549999999999994,
+          44.16999999999999
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "UNG",
+          500.3224000000002,
+          1084.0318666666672,
+          41.69353333333335,
+          583.7094666666669,
+          null,
+          "Total general",
+          138.19240000000002,
+          null,
+          null,
+          null,
+          null,
+          "Total general",
+          37.85999999999999,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          "AGUAS",
+          70.21300000000001,
+          152.1281666666667,
+          5.851083333333334,
+          81.91516666666668,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "VINO",
+          4.050000000000001,
+          8.775000000000002,
+          0.3375000000000001,
+          4.725000000000001,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "Base Cliente Censo",
+    "status": "OK",
+    "ref": "A1:AD35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "#",
+          "Codigo Cliente",
+          "Razon Social",
+          "Codigo Vendedor",
+          "Zona",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          1,
+          1004,
+          "SAAVEDRA ESTELA NOEMI",
+          8,
+          106,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          2,
+          1008,
+          "TUKANOSSRL",
+          8,
+          106,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          3,
+          1038,
+          "CAMARGO MARIA ALEJANDRA",
+          7,
+          128,
+          null,
+          null,
+          null,
+          null,
+          "Codigo Cliente",
+          "Codigo Vendedor",
+          "Zona",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          4,
+          1067,
+          "REIN ROLANDO",
+          8,
+          106,
+          null,
+          null,
+          null,
+          null,
+          1516,
+          13,
+          107,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          5,
+          1075,
+          "ARIAS ROSA CAMILA",
+          7,
+          128,
+          null,
+          null,
+          null,
+          null,
+          1654,
+          13,
+          127,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "0-BT MKTP",
+    "status": "OK",
+    "ref": "A1:AD35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Listado de Coberturas-Luan Beer",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 7,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 8,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 9,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 10,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 11,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "0-BT Cobertura Reco",
+    "status": "OK",
+    "ref": "A1:H35",
+    "sample": [
+      {
+        "r": 1,
+        "vals": [
+          "Año/Mes",
+          "All",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Anulado",
+          "NO",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "Descripcion subcanal",
+          "All",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "Batalla",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Calibre tipo"
+        ]
+      },
+      {
+        "r": 6,
+        "vals": [
+          "Cliente",
+          "Razon social",
+          "Domicilio",
+          "Ven",
+          "Zona",
+          "Planes Cerveza#Planes",
+          "Dia Visita",
+          "RECO"
+        ]
+      },
+      {
+        "r": 7,
+        "vals": [
+          14,
+          "QUIROGA SANDRA NOEMI",
+          "BALCARCE Y MITRE 122",
+          7,
+          122,
+          "HE-LT-",
+          "LU",
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "0-BT Coberturas Innov",
+    "status": "OK",
+    "ref": "A2:AA35",
+    "sample": [
+      {
+        "r": 1,
+        "vals": [
+          "Año/Mes",
+          "All",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Anulado",
+          "NO",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "Descripcion subcanal",
+          "All",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "CCC Actual",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Marca",
+          "Producto",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 6,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "RED BULL",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 7,
+        "vals": [
+          "Cliente",
+          "Razon social",
+          "Domicilio",
+          "Ven",
+          "Zona",
+          "Planes Cerveza#Planes",
+          "Dia Visita",
+          "RB WINT ICED VANI BERRY CAN 6X4 250CC",
+          "RED BULL APRICOT CAN 6X4 250CC DES",
+          "RED BULL CAN 4X6 250",
+          "RED BULL CAN 6X4 250",
+          "RED BULL CAN 6X4 TROP EDITION 0,250 L",
+          "RED BULL CAN X24 250",
+          "RED BULL CAN X4 250",
+          "RED BULL CAN X4 TROP EDITION 0,250 L",
+          "RED BULL CAN X6 250",
+          "RED BULL FRUTA DEL DRAGON CAN 6X4 250CC",
+          "RED BULL PR BDG CAN 6X4 250",
+          "RED BULL PR BDG CAN X4 250",
+          "RED BULL RED EDITION CAN 6X4 250CC",
+          "RED BULL RED EDITION CAN X4 250CC",
+          "RED BULL REGULAR CAN 4X6 355CC"
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "0-BT AO Rubia",
+    "status": "OK",
+    "ref": "A1:N35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Listado de Coberturas-Luan Beer",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Año/Mes",
+          "All",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "Anulado",
+          "NO",
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "CCC CZA",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Marca",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 6,
+        "vals": [
+          "Cliente",
+          "Razon social",
+          "Domicilio",
+          "Ven",
+          "Zona",
+          "Planes Cerveza#Planes",
+          "Dia Visita",
+          "ANDES ORIGEN FRESQUITA",
+          "ANDES ORIGEN IPA",
+          "ANDES ORIGEN NEGRA",
+          "ANDES ORIGEN ROJA",
+          "ANDES ORIGEN RUBIA",
+          "STELLA ARTOIS 0.0%",
+          "STELLA ARTOIS PURE GOLD"
+        ]
+      },
+      {
+        "r": 7,
+        "vals": [
+          14,
+          "QUIROGA SANDRA NOEMI",
+          "BALCARCE Y MITRE 122",
+          7,
+          122,
+          "HE-LT-",
+          "LU",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "0-BT Vinos",
+    "status": "OK",
+    "ref": "A1:AV35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Listado de Coberturas-Luan Beer",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Año/Mes",
+          "All",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Anulado",
+          "NO",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "Descripcion subcanal",
+          "All",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "Batalla",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Unidad de Negocio",
+          "Marca",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 6,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "VINO",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "0-BT BS BEER",
+    "status": "OK",
+    "ref": "A4:BH35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Anulado",
+          "NO",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Bimestre",
+          "3B",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          "Batalla",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "BS Beer",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "Cliente",
+          "Razon social",
+          "Domicilio",
+          "Fuerza de venta 1 Personal comercial",
+          "Fuerza de venta 1 Ruta de venta",
+          "Planes Cerveza#Planes",
+          "Dia Visita",
+          "Descripcion subcanal",
+          "(en blanco)",
+          "M1 LITRO",
+          "M1 LATA",
+          "M2 LITRO",
+          "M2 LATA",
+          "AO RUBIA LITRO",
+          "AO RUBIA LATA",
+          "CORONA 330",
+          "CORONA 710",
+          "SA LATA",
+          "SA LITRO",
+          "0.0",
+          "Innov.IP",
+          null
+        ]
+      },
+      {
+        "r": 6,
+        "vals": [
+          14,
+          "QUIROGA SANDRA NOEMI",
+          "BALCARCE Y MITRE 122",
+          7,
+          122,
+          "HE-LT-",
+          "LU",
+          "ALMACEN",
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "0-BT Coberturas",
+    "status": "OK",
+    "ref": "A1:BX35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Listado de Coberturas-Luan Beer",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Año/Mes",
+          "All",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Anulado",
+          "NO",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "Descripcion subcanal",
+          "All",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "Batalla",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "S.",
+          "M",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 6,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "CORE",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "LOW",
+          null,
+          "CORE PLUS",
+          null,
+          "HIGH END",
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "BT 0.0%",
+    "status": "OK",
+    "ref": "A1:J35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Listado de Coberturas-Luan Beer",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Año/Mes",
+          "All",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Anulado",
+          "NO",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "Descripcion subcanal",
+          "All",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "Batalla",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "S.",
+          "M",
+          null
+        ]
+      },
+      {
+        "r": 6,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "0.0",
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "Dimension FDV",
+    "status": "OK",
+    "ref": "A1:K35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "DIMENSIONAMIENTO FUERZA DE VENTAS",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "PRESENCIAL",
+          "LU",
+          "MA",
+          "MI",
+          "JU",
+          "VI",
+          "SA",
+          "Tipo preventa",
+          null,
+          "Conjunta",
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          6,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AXEL SOSA ",
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          70,
+          null,
+          null,
+          52,
+          null,
+          null,
+          20,
+          "INTERIOR",
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          112,
+          null,
+          34,
+          null,
+          null,
+          32,
+          null,
+          "Conjunta",
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 6,
+        "vals": [
+          118,
+          54,
+          null,
+          null,
+          37,
+          null,
+          null,
+          "Conjunta",
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "1- Base Cartera",
+    "status": "OK",
+    "ref": "A1:I35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Cliente",
+          "Razon social",
+          "Domicilio",
+          "Fuerza de venta 1 Personal comercial",
+          "Fuerza de venta 1 Ruta de venta",
+          "Anulado",
+          "Dia Visita",
+          "Segmento Canal BS",
+          "Descripcion subcanal"
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          1,
+          "MORANDI TERESA",
+          "Bº 114 VIV M. 193 C. 21 1",
+          12,
+          117,
+          "SI",
+          "(en blanco)",
+          "K+T",
+          "ALMACEN"
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          2,
+          "GOLKE NOEMI",
+          "Bº 134 VIV M.289 C.2 1",
+          16,
+          127,
+          "SI",
+          "(en blanco)",
+          "K+T",
+          "ALMACEN"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          3,
+          "POGGIO MOYANO MARIA GRACIELA",
+          "(113) RIVADAVIA 1093 1",
+          0,
+          111,
+          "SI",
+          "(en blanco)",
+          "REF",
+          "COMIDA AL PASO"
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          4,
+          "ESPINOSA DARIO",
+          "RIOBAMBA 2140 1",
+          8,
+          105,
+          "SI",
+          "(en blanco)",
+          "K+T",
+          "ALMACEN"
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          5,
+          "FLORES MARIA ISOLINA",
+          "Bº JARDIN SL F PASTORE 31 1",
+          8,
+          101,
+          "SI",
+          "(en blanco)",
+          "K+T",
+          "ALMACEN"
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "0-BT Coberturas Laton",
+    "status": "OK",
+    "ref": "A1:Y35",
+    "sample": [
+      {
+        "r": 1,
+        "vals": [
+          "Año/Mes",
+          "All",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Anulado",
+          "NO",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "Descripcion subcanal",
+          "All",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          "Calibre",
+          "710 CC LATAS",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 6,
+        "vals": [
+          "CCC Actual",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Marca",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 7,
+        "vals": [
+          "Cliente",
+          "Razon social",
+          "Domicilio",
+          "Ven",
+          "Zona",
+          "Planes Cerveza#Planes",
+          "Dia Visita",
+          "ANDES ORIGEN RUBIA",
+          "BUDWEISER",
+          "STELLA ARTOIS LAGER",
+          "QUILMES CLASICA",
+          "BRAHMA",
+          "ANDES CLASICA",
+          "QUILMES 1890",
+          "QUILMES BAJO CERO",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "Elige MES",
+    "status": "OK",
+    "ref": "A1:C13",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Octubre",
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "Cierre Diario",
+    "status": "OK",
+    "ref": "A1:W35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Etiquetas de fila",
+          "Suma de Cantidades Totales",
+          "Comprador?",
+          "Nuevo?",
+          "Vendedor",
+          null,
+          "Vendedor",
+          "Hoy",
+          null,
+          "Vendedor",
+          "08-jul",
+          "11-jul",
+          "12-jul",
+          "14-jul",
+          "15-jul",
+          "19-jul",
+          "21-jul",
+          "22-jul",
+          "24-jul",
+          "26-jul",
+          "28-jul",
+          "29-jul"
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          15,
+          -2.3333,
+          1,
+          0,
+          9,
+          null,
+          3,
+          2,
+          null,
+          3,
+          1,
+          6,
+          7,
+          4,
+          5,
+          1,
+          4,
+          1,
+          1,
+          1,
+          3,
+          0
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          198,
+          2.75,
+          0,
+          1,
+          6,
+          null,
+          6,
+          5,
+          null,
+          6,
+          11,
+          6,
+          1,
+          4,
+          4,
+          0,
+          0,
+          0,
+          4,
+          0,
+          4,
+          4
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          253,
+          -3.2084,
+          1,
+          0,
+          9,
+          null,
+          7,
+          9,
+          null,
+          7,
+          13,
+          0,
+          14,
+          6,
+          0,
+          8,
+          1,
+          0,
+          1,
+          2,
+          2,
+          0
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          272,
+          40,
+          1,
+          0,
+          9,
+          null,
+          8,
+          5,
+          null,
+          8,
+          11,
+          5,
+          1,
+          1,
+          7,
+          1,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          324,
+          2,
+          0,
+          1,
+          null,
+          null,
+          9,
+          0,
+          null,
+          9,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "BT Cordero",
+    "status": "OK",
+    "ref": "C3:H35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Código Producto",
+          "All",
+          null,
+          null,
+          "Código Producto",
+          "All"
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Código Cliente",
+          "Suma de Cantidad Total en Bultos",
+          null,
+          null,
+          "Código Cliente",
+          "CCC Actual"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          14,
+          3,
+          null,
+          null,
+          14,
+          1
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          15,
+          48,
+          null,
+          null,
+          15,
+          1
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          17,
+          9,
+          null,
+          null,
+          17,
+          1
+        ]
+      },
+      {
+        "r": 6,
+        "vals": [
+          20,
+          1.25,
+          null,
+          null,
+          20,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "BATALLA FDV",
+    "status": "OK",
+    "ref": "A1:CI35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Listado de Coberturas",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "CERVEZA",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Cliente",
+          "Razon social",
+          "Domicilio",
+          "Vend",
+          "Zona",
+          "Potencial",
+          "Dia Visita",
+          "Segmento Canal",
+          "ANDES",
+          "QUILMES",
+          "BRAHMA",
+          "STOUT QUILMES",
+          "BUDWEISER",
+          null,
+          null,
+          "QUILMES IPA",
+          "QUILMES BAJO CERO",
+          "QUILMES 1890",
+          "ANDES ORIGEN",
+          "MICHELOB ULTRA",
+          "STELLA ARTOIS",
+          "CORONA"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          14,
+          "QUIROGA SANDRA NOEMI",
+          "BALCARCE Y MITRE 122",
+          7,
+          122,
+          "NO",
+          "LU",
+          "ALMACEN",
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          15,
+          "AIELLO SUPERMERCADOS S.A.",
+          "(117)JUAN T. ZAVALA S/Nº B° EL",
+          9,
+          121,
+          "NO",
+          "LUJUMAVIMISA",
+          "CADENITAS SMK",
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          17,
+          "REA ESMILSE LUISA",
+          "M.C C.16  B° 544 VIVI. 16",
+          12,
+          117,
+          "NO",
+          "MA",
+          "ALMACEN",
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "CNC Mes Actual",
+    "status": "OK",
+    "ref": "A1:Q35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "CCC VINOS ֎",
+          0,
+          null,
+          "CCC Cza ֎",
+          0,
+          null,
+          "CCC UNG ֎",
+          0,
+          null,
+          "CCC Agua ֎",
+          0,
+          null,
+          "BALANCED CHOICES ֎",
+          0,
+          null,
+          "LATONES ֎",
+          0
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Cte",
+          null,
+          null,
+          "Cte",
+          null,
+          null,
+          "Cte",
+          null,
+          null,
+          "Cte",
+          null,
+          null,
+          "Cte",
+          null,
+          null,
+          "Cte",
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          14,
+          null,
+          null,
+          31,
+          null,
+          null,
+          14,
+          null,
+          null,
+          14,
+          null,
+          null,
+          14,
+          null,
+          null,
+          14,
+          null
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          15,
+          null,
+          null,
+          65,
+          null,
+          null,
+          17,
+          null,
+          null,
+          15,
+          null,
+          null,
+          17,
+          null,
+          null,
+          17,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          17,
+          null,
+          null,
+          76,
+          null,
+          null,
+          20,
+          null,
+          null,
+          17,
+          null,
+          null,
+          31,
+          null,
+          null,
+          20,
+          null
+        ]
+      },
+      {
+        "r": 6,
+        "vals": [
+          20,
+          null,
+          null,
+          198,
+          null,
+          null,
+          31,
+          null,
+          null,
+          20,
+          null,
+          null,
+          36,
+          null,
+          null,
+          28,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "1-BASE FECHA",
+    "status": "OK",
+    "ref": "A1:P27",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          null,
+          null,
+          "Mes actual",
+          "Octubre",
+          "Dias activos del mes",
+          26,
+          "Mes Inicia",
+          46296,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          null,
+          null,
+          "Mes finaliza",
+          46326,
+          "Dias transcurridos",
+          12,
+          "No laborables",
+          5,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          null,
+          null,
+          "Dias restantes ",
+          14,
+          "Fecha Actual",
+          46311,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          null,
+          "Nombre del mes",
+          "Fecha venta realizada",
+          "Fecha inicial",
+          "Fecha final ",
+          "Dias del mes",
+          "Dias inactivos",
+          "Fin de semana",
+          "Dias activos del mes",
+          "Numero del mes",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          null,
+          "Enero",
+          46310,
+          46023,
+          46053,
+          31,
+          0,
+          5,
+          26,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          null,
+          "Febrero",
+          365,
+          46054,
+          46081,
+          28,
+          1,
+          4,
+          23,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "0-BT INNOV.",
+    "status": "OK",
+    "ref": "A1:J35",
+    "sample": [
+      {
+        "r": 1,
+        "vals": [
+          "Innov#",
+          "Taco",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Año/Mes",
+          "All",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "Anulado",
+          "NO",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "CCC Actual",
+          null,
+          null,
+          null,
+          null,
+          "M",
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 6,
+        "vals": [
+          "Cliente",
+          "Razon social",
+          "Domicilio",
+          "Ven",
+          "Zona",
+          "ANDES ORIGEN",
+          "STELLA ARTOIS",
+          "MICHELOB ULTRA",
+          "PATAGONIA",
+          "CORONA"
+        ]
+      },
+      {
+        "r": 7,
+        "vals": [
+          14,
+          "QUIROGA SANDRA NOEMI",
+          "BALCARCE Y MITRE 122",
+          7,
+          122,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "Mando Integral",
+    "status": "OK",
+    "ref": "A1:P26",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "OCTUBRE",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "GESTION INTERNA",
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "KPI GALAXIA",
+          "REAL",
+          "OBJETIVO",
+          "ALCANCE",
+          "TENDENCIA",
+          "FLAG",
+          "Valor del Indicador",
+          "Peso %",
+          null,
+          "Restan",
+          null,
+          null,
+          "KPI GALAXIA",
+          "Mejor Mesa",
+          "Mejor Vendedor",
+          "Bottom"
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "CCC CERVEZA",
+          874,
+          1040,
+          0.8403846153846154,
+          1.2125,
+          "Mantener",
+          154,
+          0.11290322580645161,
+          0.04375,
+          -166,
+          null,
+          null,
+          "CCC CERVEZA",
+          "JULIO BASUALDO",
+          "JEREMIAS PICON",
+          "ALAN BAEZ"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "TOTAL DISTRIBUTION CZA",
+          4419,
+          7700,
+          0.5738961038961039,
+          0.8277922077922077,
+          "Levantar",
+          374,
+          0.27419354838709675,
+          0.10625,
+          -3281,
+          null,
+          null,
+          "TOTAL DISTRIBUTION CZA",
+          "JULIO BASUALDO",
+          "ABEL ZALEH",
+          "AGUSTIN RETA"
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          "TOTAL DISTRIBUTION NABS",
+          3493,
+          5650,
+          0.6182300884955753,
+          0.8916814159292036,
+          "Gestionar",
+          132,
+          0.0967741935483871,
+          0.0375,
+          -2157,
+          null,
+          null,
+          "TOTAL DISTRIBUTION NABS",
+          "JULIO BASUALDO",
+          "GONZALO DIEZ",
+          "AGUSTIN RETA"
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "CCC UNG",
+          645,
+          880,
+          0.7329545454545454,
+          1.0579545454545454,
+          "Mantener",
+          154,
+          0.11290322580645161,
+          0.04375,
+          -235,
+          null,
+          null,
+          "CCC UNG",
+          "JULIO BASUALDO",
+          "JEREMIAS PICON",
+          "AGUSTIN RETA"
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "Base P-90",
+    "status": "OK",
+    "ref": "A2:D35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "CLIENTE",
+          "RAZÓN SOCIAL",
+          "COMBO CONSUMIDO",
+          "Combos Posibles"
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          633,
+          "GUZMAN VALLE JABAN ENRIQUE",
+          0,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          2492,
+          "CALDERON CRISTIAN JAVIER",
+          0,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          3084,
+          "PAEZ GUSTAVO",
+          0,
+          null
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          3317,
+          "ALCARAZ JUAN DOMINGO",
+          0,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          3342,
+          "ALBARRACIN CRISTIAN BARTOLOME",
+          0,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "Base P-AO",
+    "status": "OK",
+    "ref": "A2:D35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "CLIENTE",
+          "RAZÓN SOCIAL",
+          "COMBO CONSUMIDO",
+          "Combos Posibles"
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          14,
+          "QUIROGA SANDRA NOEMI",
+          0,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          17,
+          "REA ESMILSE LUISA",
+          0,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          20,
+          "AGUERO PRIMA MARIA",
+          0,
+          null
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          28,
+          "ROMERA UVILLA JUAN FRANCISCO",
+          0,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          31,
+          "AGUERO ANA M.",
+          0,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "Mesa Julio",
+    "status": "OK",
+    "ref": "A1:J10",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "OCTUBRE",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "KPI GALAXIA",
+          "REAL",
+          "OBJETIVO",
+          "ALCANCE",
+          "TENDENCIA",
+          "FLAG",
+          "Valor del Indicador",
+          "Peso %",
+          null,
+          "Restan"
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "CCC CERVEZA",
+          461,
+          569,
+          0.8101933216168717,
+          1.1687170474516695,
+          "Mantener",
+          154,
+          0.11290322580645161,
+          0.11290322580645161,
+          -108
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "TOTAL DISTRIBUTION CZA",
+          2223,
+          3931,
+          0.5655049605698296,
+          0.8158229458153141,
+          "Levantar",
+          374,
+          0.27419354838709675,
+          0.27419354838709675,
+          -1708
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          "TOTAL DISTRIBUTION NABS",
+          1794,
+          2849,
+          0.6296946296946297,
+          0.9083889083889084,
+          "Gestionar",
+          132,
+          0.0967741935483871,
+          0.0967741935483871,
+          -1055
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "CCC UNG",
+          336,
+          482,
+          0.6970954356846473,
+          1.0062240663900415,
+          "Mantener",
+          154,
+          0.11290322580645161,
+          0.11290322580645161,
+          -146
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "Mesa Gonza",
+    "status": "OK",
+    "ref": "A1:J10",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "OCTUBRE",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "KPI GALAXIA",
+          "REAL",
+          "OBJETIVO",
+          "ALCANCE",
+          "TENDENCIA",
+          "FLAG",
+          "Valor del Indicador",
+          "Peso %",
+          null,
+          "Restan"
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "CCC CERVEZA",
+          384,
+          439,
+          0.8747152619589977,
+          1.2619589977220957,
+          "Mantener",
+          154,
+          0.11290322580645161,
+          0.11290322580645161,
+          -55
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "TOTAL DISTRIBUTION CZA",
+          2127,
+          3644,
+          0.5836992316136114,
+          0.8419319429198683,
+          "Levantar",
+          374,
+          0.27419354838709675,
+          0.27419354838709675,
+          -1517
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          "TOTAL DISTRIBUTION NABS",
+          1626,
+          2674,
+          0.6080777860882572,
+          0.8773373223635004,
+          "Gestionar",
+          132,
+          0.0967741935483871,
+          0.0967741935483871,
+          -1048
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "CCC UNG",
+          285,
+          371,
+          0.7681940700808625,
+          1.110512129380054,
+          "Mantener",
+          154,
+          0.11290322580645161,
+          0.11290322580645161,
+          -86
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "CCC Cerveza",
+    "status": "OK",
+    "ref": "A1:Y35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          3,
+          null,
+          "CCC CERVEZA",
+          "Objetivo LB",
+          1040,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "CCC Actual",
+          ".",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Código Sector de Venta",
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
+          null,
+          "Trimestre",
+          "Peso %",
+          "Objetivo",
+          "% Cart",
+          "Ven Presencial",
+          "Cte Act",
+          "Efect Real",
+          "Tendencia"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          18,
+          29,
+          29,
+          28,
+          29,
+          25,
+          29,
+          29,
+          28,
+          30,
+          27,
+          null,
+          null,
+          null,
+          29,
+          0.02783109404990403,
+          23.300970873786408,
+          0.022404779686333084,
+          18,
+          30,
+          30,
+          1.15875
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          16,
+          119,
+          130,
+          136,
+          132,
+          123,
+          133,
+          144,
+          153,
+          167,
+          141,
+          null,
+          null,
+          null,
+          160,
+          0.15355086372360843,
+          155.3398058252427,
+          0.14936519790888722,
+          16,
+          200,
+          200,
+          0.9076875000000001
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          12,
+          157,
+          161,
+          150,
+          139,
+          123,
+          142,
+          150,
+          150,
+          166,
+          122,
+          null,
+          null,
+          null,
+          158,
+          0.15163147792706333,
+          146.79611650485438,
+          0.14115011202389843,
+          12,
+          189,
+          189,
+          0.831084656084656
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "Total Dist Cza",
+    "status": "OK",
+    "ref": "A1:Y35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          3,
+          null,
+          "TOTAL DISTRIBUTION CZA",
+          "Objetivo LB",
+          7700,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Brand Dist",
+          ".",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Código Sector de Venta",
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
+          null,
+          "Trimestre",
+          "Peso %",
+          "Objetivo",
+          "% Cart",
+          "Ven Presencial",
+          "Cte Act",
+          "Efect Real",
+          "Tendencia"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          18,
+          325,
+          345,
+          327,
+          261,
+          225,
+          276,
+          351,
+          269,
+          368,
+          223,
+          null,
+          null,
+          null,
+          329.3333333333333,
+          0.049326010983524717,
+          379.81028457314034,
+          0.022404779686333084,
+          18,
+          30,
+          30,
+          0.5871352331878646
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          16,
+          834,
+          832,
+          932,
+          654,
+          806,
+          807,
+          899,
+          917,
+          1020,
+          645,
+          null,
+          null,
+          null,
+          945.3333333333334,
+          0.1415876185721418,
+          1090.224663005492,
+          0.14936519790888722,
+          16,
+          200,
+          200,
+          0.5916211785393731
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          12,
+          1135,
+          956,
+          869,
+          722,
+          609,
+          669,
+          949,
+          848,
+          946,
+          557,
+          null,
+          null,
+          null,
+          914.3333333333334,
+          0.13694458312531205,
+          1054.4732900649028,
+          0.14115011202389843,
+          12,
+          189,
+          189,
+          0.5282258026333855
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "Total Dist NABS",
+    "status": "OK",
+    "ref": "A1:Y35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          3,
+          null,
+          "TOTAL DISTRIBUTION NABS",
+          "Objetivo LB",
+          5650,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Brand Dist",
+          ".",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Código Sector de Venta",
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
+          null,
+          "Trimestre",
+          "Peso %",
+          "Objetivo",
+          "% Cart",
+          "Ven Presencial",
+          "Cte Act",
+          "Efect Real",
+          "Tendencia"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          18,
+          247,
+          181,
+          282,
+          192,
+          209,
+          281,
+          373,
+          265,
+          394,
+          216,
+          null,
+          null,
+          null,
+          344,
+          0.058278744070476625,
+          329.27490399819294,
+          0.022404779686333084,
+          18,
+          30,
+          30,
+          0.6559868285655484
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          16,
+          946,
+          800,
+          835,
+          730,
+          643,
+          728,
+          805,
+          834,
+          884,
+          436,
+          null,
+          null,
+          null,
+          841,
+          0.1424779760560199,
+          805.0005647165124,
+          0.14936519790888722,
+          16,
+          200,
+          200,
+          0.5416145268836439
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          12,
+          808,
+          698,
+          614,
+          611,
+          480,
+          570,
+          751,
+          648,
+          703,
+          390,
+          null,
+          null,
+          null,
+          700.6666666666666,
+          0.11870341088773437,
+          670.6742715156992,
+          0.14115011202389843,
+          12,
+          189,
+          189,
+          0.5815043405774525
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "CCC UNG",
+    "status": "OK",
+    "ref": "A1:Y35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          3,
+          null,
+          "CCC UNG",
+          "Objetivo LB",
+          880,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "CCC Actual",
+          ".",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Código Sector de Venta",
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
+          null,
+          "Trimestre",
+          "Peso %",
+          "Objetivo",
+          "% Cart",
+          "Ven Presencial",
+          "Cte Act",
+          "Efect Real",
+          "Tendencia"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          18,
+          25,
+          26,
+          24,
+          27,
+          26,
+          29,
+          27,
+          25,
+          28,
+          25,
+          null,
+          null,
+          null,
+          26.5,
+          0.029400887573964495,
+          19.716206123973112,
+          0.022404779686333084,
+          18,
+          30,
+          30,
+          1.2679924242424243
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          16,
+          110,
+          125,
+          115,
+          113,
+          113,
+          133,
+          138,
+          140,
+          137,
+          106,
+          null,
+          null,
+          null,
+          138.5,
+          0.1536612426035503,
+          131.44137415982075,
+          0.14936519790888722,
+          16,
+          200,
+          200,
+          0.8064431818181819
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          12,
+          105,
+          112,
+          118,
+          120,
+          97,
+          115,
+          123,
+          111,
+          123,
+          80,
+          null,
+          null,
+          null,
+          117,
+          0.1298076923076923,
+          124.21209858103062,
+          0.14115011202389843,
+          12,
+          189,
+          189,
+          0.6440596440596441
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "TBD AboveCore",
+    "status": "OK",
+    "ref": "A1:Y35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          3,
+          null,
+          "TBD ABOVECORE",
+          "Objetivo LB",
+          3000,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Brand Dist",
+          ".",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Código Sector de Venta",
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
+          null,
+          "Trimestre",
+          "Peso %",
+          "Objetivo",
+          "% Cart",
+          "Ven Presencial",
+          "Cte Act",
+          "Efect Real",
+          "Tendencia"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          18,
+          161,
+          198,
+          176,
+          116,
+          119,
+          112,
+          147,
+          125,
+          218,
+          97,
+          null,
+          null,
+          null,
+          163.33333333333334,
+          0.05753875058713011,
+          172.61625176139032,
+          0.022404779686333084,
+          18,
+          30,
+          30,
+          0.5619401360544218
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          16,
+          369,
+          396,
+          413,
+          216,
+          279,
+          273,
+          338,
+          285,
+          451,
+          214,
+          null,
+          null,
+          null,
+          358,
+          0.12611554720526066,
+          378.346641615782,
+          0.14936519790888722,
+          16,
+          200,
+          200,
+          0.565618870266915
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          12,
+          561,
+          458,
+          400,
+          262,
+          191,
+          256,
+          392,
+          357,
+          454,
+          227,
+          null,
+          null,
+          null,
+          401,
+          0.14126350399248472,
+          423.7905119774542,
+          0.14115011202389843,
+          12,
+          189,
+          189,
+          0.5356420060958714
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "TBD Latones",
+    "status": "OK",
+    "ref": "A1:Y35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          3,
+          null,
+          "TBD LATONES",
+          "Objetivo LB",
+          1839,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Brand Dist",
+          ".",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Código Sector de Venta",
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
+          null,
+          "Trimestre",
+          "Peso %",
+          "Objetivo",
+          "% Cart",
+          "Ven Presencial",
+          "Cte Act",
+          "Efect Real",
+          "Tendencia"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          18,
+          55,
+          81,
+          85,
+          98,
+          60,
+          108,
+          125,
+          97,
+          79,
+          60,
+          null,
+          null,
+          null,
+          100.33333333333333,
+          0.044421487603305776,
+          81.69111570247932,
+          0.022404779686333084,
+          18,
+          30,
+          30,
+          0.7344739937023409
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          16,
+          237,
+          194,
+          327,
+          213,
+          304,
+          365,
+          342,
+          319,
+          287,
+          176,
+          null,
+          null,
+          null,
+          316,
+          0.13990554899645807,
+          257.2863046044864,
+          0.14936519790888722,
+          16,
+          200,
+          200,
+          0.6840628391416175
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          12,
+          286,
+          222,
+          269,
+          236,
+          241,
+          261,
+          347,
+          279,
+          262,
+          183,
+          null,
+          null,
+          null,
+          296,
+          0.13105076741440377,
+          241.00236127508853,
+          0.14115011202389843,
+          12,
+          189,
+          189,
+          0.7593286598180563
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "TBD Balanced Choices",
+    "status": "OK",
+    "ref": "A1:X35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          3,
+          null,
+          "TBD BALANCED CHOICES",
+          "Objetivo LB",
+          650,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Brand Dist",
+          ".",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Código Sector de Venta",
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
+          null,
+          "Trimestre",
+          "Peso %",
+          "Objetivo",
+          "% Cart",
+          "Ven Presencial",
+          "Cte Act",
+          "Efect Real",
+          "Tendencia"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          18,
+          106,
+          112,
+          104,
+          70,
+          76,
+          71,
+          102,
+          84,
+          115,
+          74,
+          null,
+          null,
+          null,
+          100.33333333333333,
+          0.057039984839871126,
+          37.07599014591623,
+          0.022404779686333084,
+          18,
+          30,
+          30,
+          ""
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          16,
+          233,
+          215,
+          239,
+          144,
+          188,
+          166,
+          214,
+          164,
+          280,
+          113,
+          null,
+          null,
+          null,
+          219.33333333333334,
+          0.12469205988250899,
+          81.04983892363084,
+          0.14936519790888722,
+          16,
+          200,
+          200,
+          ""
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          12,
+          341,
+          269,
+          268,
+          183,
+          130,
+          158,
+          272,
+          227,
+          278,
+          145,
+          null,
+          null,
+          null,
+          259,
+          0.14724275156338826,
+          95.70778851620237,
+          0.14115011202389843,
+          12,
+          189,
+          189,
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "TBD NABS TOP",
+    "status": "OK",
+    "ref": "A1:Y35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          3,
+          null,
+          "TBD NABS TOP",
+          "Objetivo LB",
+          3649,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Brand Dist",
+          ".",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Código Sector de Venta",
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
+          null,
+          "Trimestre",
+          "Peso %",
+          "Objetivo",
+          "% Cart",
+          "Ven Presencial",
+          "Cte Act",
+          "Efect Real",
+          "Tendencia"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          18,
+          130,
+          63,
+          132,
+          64,
+          80,
+          80,
+          154,
+          103,
+          159,
+          105,
+          null,
+          null,
+          null,
+          138.66666666666666,
+          0.041783848935315386,
+          152.46926476496586,
+          0.022404779686333084,
+          18,
+          30,
+          30,
+          0.6886633851213187
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          16,
+          593,
+          461,
+          506,
+          463,
+          394,
+          366,
+          474,
+          500,
+          492,
+          250,
+          null,
+          null,
+          null,
+          488.6666666666667,
+          0.14724789071916433,
+          537.3075532342307,
+          0.14936519790888722,
+          16,
+          200,
+          200,
+          0.4652828691783093
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          12,
+          444,
+          396,
+          310,
+          345,
+          246,
+          261,
+          420,
+          340,
+          371,
+          207,
+          null,
+          null,
+          null,
+          377,
+          0.11359983929288872,
+          414.52581357975095,
+          0.14115011202389843,
+          12,
+          189,
+          189,
+          0.49936576497467056
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "CCC Balanced Choices",
+    "status": "OK",
+    "ref": "A1:X35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          3,
+          null,
+          "CCC BALANCED CHOICES",
+          "Objetivo LB",
+          235,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "CCC Actual",
+          ".",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Código Sector de Venta",
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
+          null,
+          "Trimestre",
+          "Peso %",
+          "Objetivo",
+          "% Cart",
+          "Ven Presencial",
+          "Cte Act",
+          "Efect Real",
+          "Tendencia"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          18,
+          23,
+          23,
+          23,
+          13,
+          16,
+          18,
+          23,
+          15,
+          23,
+          17,
+          null,
+          null,
+          null,
+          20.333333333333332,
+          0.04773082942097026,
+          11.21674491392801,
+          0.022404779686333084,
+          18,
+          30,
+          30,
+          ""
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          16,
+          52,
+          36,
+          45,
+          46,
+          48,
+          39,
+          69,
+          32,
+          84,
+          39,
+          null,
+          null,
+          null,
+          61.666666666666664,
+          0.14475743348982786,
+          34.01799687010955,
+          0.14936519790888722,
+          16,
+          200,
+          200,
+          ""
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          12,
+          68,
+          64,
+          79,
+          52,
+          30,
+          36,
+          92,
+          61,
+          62,
+          37,
+          null,
+          null,
+          null,
+          71.66666666666667,
+          0.16823161189358374,
+          39.53442879499218,
+          0.14115011202389843,
+          12,
+          189,
+          189,
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "CCC RedBull",
+    "status": "OK",
+    "ref": "A1:Y35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          3,
+          null,
+          "CCC REDBULL",
+          "Objetivo LB",
+          400,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "CCC Actual",
+          ".",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Código Sector de Venta",
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
+          null,
+          "Trimestre",
+          "Peso %",
+          "Objetivo",
+          "% Cart",
+          "Ven Presencial",
+          "Cte Act",
+          "Efect Real",
+          "Tendencia"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          18,
+          13,
+          11,
+          14,
+          7,
+          6,
+          8,
+          10,
+          8,
+          9,
+          6,
+          null,
+          null,
+          null,
+          9,
+          0.03907380607814761,
+          35,
+          0.022404779686333084,
+          18,
+          30,
+          30,
+          0.17142857142857143
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          16,
+          36,
+          34,
+          51,
+          15,
+          28,
+          24,
+          31,
+          27,
+          26,
+          14,
+          null,
+          null,
+          null,
+          28,
+          0.1215629522431259,
+          40,
+          0.14936519790888722,
+          16,
+          200,
+          200,
+          0.35
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          12,
+          37,
+          36,
+          34,
+          14,
+          21,
+          19,
+          47,
+          17,
+          20,
+          14,
+          null,
+          null,
+          null,
+          28,
+          0.1215629522431259,
+          40,
+          0.14115011202389843,
+          12,
+          189,
+          189,
+          0.35
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "GMV MKTPLACE",
+    "status": "OK",
+    "ref": "A1:X35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "USD",
+          null,
+          "GMV MKTPLACE",
+          "ARS",
+          47958856,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Suma de Importe Neto",
+          ".",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Fuerza de venta 1 Personal comercial",
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
+          null,
+          "Trimestre",
+          "Peso %",
+          "Objetivo",
+          "Efect. Obj",
+          "Ven Presencial",
+          "Cte Act",
+          "Efect Real",
+          "% Alcance"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          18,
+          2115381.061787,
+          667158.660504,
+          4307638.549414,
+          1026891.361213,
+          409961.367097,
+          1285218.524939,
+          919419.3478519998,
+          846523.5627239998,
+          1052407.865475,
+          998927.6423639999,
+          null,
+          null,
+          0.12,
+          939450.2586836666,
+          "",
+          5994857,
+          199828.56666666668,
+          18,
+          30,
+          33297.6,
+          0.16663083039345225
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          16,
+          5147807.692533006,
+          3077094.0507339984,
+          3065123.3803339996,
+          2671004.832469,
+          2922596.186307,
+          2047729.6136679985,
+          2277347.259621,
+          2435947.3208180033,
+          2686698.901121003,
+          997547.6723709997,
+          null,
+          null,
+          0.12,
+          2466664.4938533357,
+          "",
+          5994857,
+          29974.285,
+          16,
+          200,
+          4987.74,
+          0.16640063307598496
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          12,
+          5456584.911639,
+          3258794.731455001,
+          2857510.755122998,
+          1745778.825776999,
+          2718154.5829029996,
+          2625731.8843009984,
+          2149749.1059869993,
+          1687557.4193300004,
+          2597059.908977001,
+          1799024.8163510002,
+          null,
+          null,
+          0.12,
+          2144788.8114313334,
+          "",
+          5994857,
+          30586.005102040817,
+          12,
+          196,
+          9178.698979591836,
+          0.3000947312004273
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "Batalla BD",
+    "status": "OK",
+    "ref": "A1:M35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Anulado",
+          "NO",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Unidad de Negocio",
+          "All",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "CCC Actual",
+          null,
+          null,
+          null,
+          "Marca Unificado",
+          "Producto",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          "CORONA",
+          null,
+          null,
+          null,
+          null,
+          "PATAGONIA",
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "Cliente",
+          "Razon social",
+          "Vendedor",
+          "Zona",
+          "CORONA 0.0 CAN 4X6 473CC CART",
+          "CORONA 0.0 OW 6X4 330CC CLUSTER 4PACK",
+          "CORONA CAN 4X6 473CC AR",
+          "CORONA OW X12 710",
+          "CORONA OW X24 330",
+          "PATAGONIA AMBER OW X6 730",
+          "PATAGONIA LAGER DEL SUR OW X6 730CC TERM",
+          "PATAGONIA VERA IPA OW X6 730CC",
+          "PATAGONIA VERA IPA OW X6 730CC TERMO"
+        ]
+      },
+      {
+        "r": 6,
+        "vals": [
+          15,
+          "AIELLO SUPERMERCADOS S.A.",
+          "SUPERMERCADOS",
+          121,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "NR MKTP",
+    "status": "OK",
+    "ref": "A1:X35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "USD",
+          null,
+          "NR MKTP",
+          "ARS",
+          9657115,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Suma de Importe Neto",
+          ".",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Fuerza de venta 1 Personal comercial",
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
+          null,
+          "Trimestre",
+          "Peso %",
+          "Objetivo",
+          "Efect. Obj",
+          "Ven Presencial",
+          "Cte Act",
+          "Efect Real",
+          "% Alcance"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          18,
+          87445.422055,
+          86216.37175,
+          71384.666,
+          0,
+          81373.16,
+          72472.975,
+          86067.2518,
+          74772.203083,
+          null,
+          null,
+          null,
+          null,
+          0.12,
+          80419.7274415,
+          "",
+          1207139.375,
+          40237.979166666664,
+          18,
+          30,
+          0,
+          0
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          16,
+          597720.0599110002,
+          480878.18563599983,
+          434363.04303900007,
+          616093.5947200002,
+          849524.78964,
+          224050.42125,
+          172722.436125,
+          188122.31847300005,
+          140005.93862799997,
+          38085.034,
+          null,
+          null,
+          0.12,
+          166950.23107533334,
+          "",
+          1207139.375,
+          6035.696875,
+          16,
+          200,
+          190.425,
+          0.03154979515103631
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          12,
+          838511.6366890003,
+          446338.2915990001,
+          537791.5174620001,
+          293917.97519500006,
+          627445.7152449999,
+          168277.81286,
+          321401.516955,
+          189454.54927800002,
+          202987.191193,
+          89256.779467,
+          null,
+          null,
+          0.12,
+          237947.7524753333,
+          "",
+          1207139.375,
+          6158.874362244898,
+          12,
+          196,
+          455.39285714285717,
+          0.07394092335029664
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "CCC Agua",
+    "status": "OK",
+    "ref": "A1:Y35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          3,
+          null,
+          "CCC AGUAS",
+          "Objetivo LB",
+          400,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "CCC Actual",
+          ".",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Código Sector de Venta",
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
+          null,
+          "Trimestre",
+          "Peso %",
+          "Objetivo",
+          "% Cart",
+          "Ven Presencial",
+          "Cte Act",
+          "Efect Real",
+          "Tendencia"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          18,
+          16,
+          7,
+          17,
+          10,
+          8,
+          13,
+          18,
+          12,
+          17,
+          6,
+          null,
+          null,
+          null,
+          15.666666666666666,
+          0.06638418079096045,
+          8.961911874533234,
+          0.022404779686333084,
+          18,
+          30,
+          30,
+          0.6695
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          16,
+          25,
+          38,
+          47,
+          24,
+          20,
+          26,
+          29,
+          25,
+          37,
+          15,
+          null,
+          null,
+          null,
+          30.333333333333332,
+          0.12853107344632766,
+          35,
+          0.14936519790888722,
+          16,
+          200,
+          200,
+          0.42857142857142855
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          12,
+          30,
+          25,
+          33,
+          20,
+          18,
+          24,
+          31,
+          20,
+          31,
+          17,
+          null,
+          null,
+          null,
+          27.333333333333332,
+          0.11581920903954802,
+          45,
+          0.14115011202389843,
+          12,
+          189,
+          189,
+          0.37777777777777777
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "SKU SUMA",
+    "status": "OK",
+    "ref": "A1:Y35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          3,
+          null,
+          "SKU SUMA RB",
+          "Objetivo LB",
+          715,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "SKUS",
+          ".",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Fuerza de venta 1 Personal comercial",
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
+          null,
+          "Trimestre",
+          "Peso %",
+          "Objetivo",
+          "% Cart",
+          "Ven Presencial",
+          "Cte Act",
+          "Efect Real",
+          "Tendencia"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          18,
+          25,
+          13,
+          19,
+          9,
+          10,
+          13,
+          27,
+          18,
+          20,
+          15,
+          null,
+          null,
+          null,
+          21.666666666666668,
+          0.05412156536219817,
+          16.019417475728154,
+          0.022404779686333084,
+          18,
+          30,
+          30,
+          0.9363636363636364
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          16,
+          75,
+          73,
+          88,
+          26,
+          56,
+          34,
+          54,
+          44,
+          50,
+          23,
+          null,
+          null,
+          null,
+          49.333333333333336,
+          0.12323064113238968,
+          106.79611650485437,
+          0.14936519790888722,
+          16,
+          200,
+          200,
+          0.21536363636363637
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          12,
+          81,
+          83,
+          59,
+          26,
+          44,
+          46,
+          82,
+          41,
+          49,
+          27,
+          null,
+          null,
+          null,
+          57.333333333333336,
+          0.14321398834304747,
+          100.92233009708738,
+          0.14115011202389843,
+          12,
+          189,
+          189,
+          0.2675324675324675
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "Brand Dist",
+    "status": "OK",
+    "ref": "A1:X35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "CCC VINOS",
+          "Objetivo LB",
+          3000,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "KPI BD",
+          ".",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Código Sector de Venta",
+          "Octubre",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Trimestre",
+          "Peso %",
+          "Objetivo",
+          "% Cart",
+          "Ven Presencial",
+          "Cte Act",
+          "Efect Real",
+          "Tendencia"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          18,
+          125.30434782608697,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          "",
+          "",
+          "",
+          18,
+          30,
+          null,
+          ""
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          16,
+          240.14117647058825,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          "",
+          "",
+          "",
+          16,
+          200,
+          null,
+          ""
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          12,
+          217.60000000000002,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          "",
+          "",
+          "",
+          12,
+          196,
+          null,
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "Censo Clientes",
+    "status": "OK",
+    "ref": "A1:M35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "#",
+          "Codigo Cliente",
+          "Razon Social",
+          "Codigo Vendedor",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          1,
+          100,
+          "MORAL JULIO ERNESTO",
+          7,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Etiquetas de fila",
+          "Cuenta de Codigo Cliente",
+          "Cta Activa",
+          "% x Censar"
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          2,
+          1003,
+          "ALFONZO ROQUE",
+          8,
+          null,
+          null,
+          null,
+          "Avance",
+          0.5295437546746448,
+          2,
+          84,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          3,
+          1004,
+          "SAAVEDRA ESTELA NOEMI",
+          8,
+          null,
+          null,
+          null,
+          null,
+          null,
+          3,
+          11,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          4,
+          1008,
+          "TUKANOSSRL",
+          8,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          72,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          5,
+          1013,
+          "MOLINA MARIELA ALEJANDRA",
+          7,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          125,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "Batalla Skuxpdv",
+    "status": "OK",
+    "ref": "B1:BS35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Año/Mes",
+          "All",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Unidad de Negocio",
+          "(Varios elementos)",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          null,
+          null,
+          null,
+          4,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "SKUS x PDV",
+          "Marca Unificado",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          "Código Cliente",
+          "ANDES",
+          "BRAHMA",
+          "JAGERMEISTER",
+          "PERRO CALLEJERO",
+          "PLAYADITO",
+          "QUILMES",
+          "TARAGUI",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          383,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "0-BT Litro Ret",
+    "status": "OK",
+    "ref": "A1:N35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Cliente",
+          "CCC Litro Ret",
+          "CCC RGB",
+          null,
+          null,
+          null,
+          null,
+          "Marca Unificado",
+          "PATAGONIA",
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          14,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          "RGB",
+          "RGB",
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          15,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Listado CNC Pat"
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          17,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          "Código Cliente",
+          "CCC Actual",
+          null,
+          null,
+          null,
+          null,
+          "Cliente"
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          36,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          112
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          41,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          701
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "0-BT Non Sugar",
+    "status": "OK",
+    "ref": "A1:B35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Cliente",
+          "CCC Non sugar"
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          28,
+          1
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          35,
+          1
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          184,
+          1
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          383,
+          1
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          404,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "0-BT Latas UNG",
+    "status": "OK",
+    "ref": "A1:B35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Cliente",
+          "CCC Lata UNG"
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          28,
+          1
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          35,
+          1
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          138,
+          1
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          184,
+          1
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          198,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "0-BT.JUGOSDELVALLE",
+    "status": "OK",
+    "ref": "A1:F35",
+    "sample": [
+      {
+        "r": 1,
+        "vals": [
+          "Año/Mes",
+          "All",
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Anulado",
+          "NO",
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "Marca",
+          "DEL VALLE JUGOS",
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "JUGOS DEL VALLE"
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "Cliente",
+          "Razon social",
+          "Domicilio",
+          "Ven",
+          "Zona",
+          "Batalla"
+        ]
+      },
+      {
+        "r": 6,
+        "vals": [
+          14,
+          "QUIROGA SANDRA NOEMI",
+          "BALCARCE Y MITRE 122",
+          7,
+          122,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "0-BT.ADY",
+    "status": "OK",
+    "ref": "A1:M35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Año/Mes",
+          "All",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Unidad de Negocio",
+          "ADYACENCIAS",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "Anulado",
+          "NO",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "Batalla",
+          null,
+          null,
+          null,
+          null,
+          "Marca",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 6,
+        "vals": [
+          "Cliente",
+          "Razon social",
+          "Domicilio",
+          "Ven",
+          "Zona",
+          "BOSQUE",
+          "DEL VALLE",
+          "GIN BOSQUE",
+          "GIN RIDER",
+          "MIKE´S",
+          "PATAGONIA GINGKO",
+          "PATAGONIA ISIDRA DEL VALLE",
+          "SIDRA 1930"
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "1-BASE DE PROMOTORES",
+    "status": "OK",
+    "ref": "A1:E15",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Codigo vendedor",
+          "Nombre ",
+          "Codigo SPV",
+          "Nombre Supervisor",
+          "Foto ranking"
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          3,
+          "ALAN BAEZ",
+          101,
+          "JULIO BASUALDO",
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          6,
+          "ADRIAN RODRIGUEZ",
+          100,
+          "GONZALO CORIA",
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          7,
+          "GONZALO DIEZ",
+          100,
+          "GONZALO CORIA",
+          null
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          8,
+          "ABEL ZALEH",
+          100,
+          "GONZALO CORIA",
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          9,
+          "GALO CHAPARRO",
+          101,
+          "JULIO BASUALDO",
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "Base ranking",
+    "status": "OK",
+    "ref": "A1:R25",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Base Ranking",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          null,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          null,
+          null,
+          3,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          null,
+          null,
+          4,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 6,
+        "vals": [
+          null,
+          null,
+          5,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "NABS (UDN)",
+    "status": "OK",
+    "ref": "A1:R35",
+    "sample": [
+      {
+        "r": 23,
+        "vals": [
+          null,
+          "Vol Htls",
+          "CZA",
+          "UNG",
+          "AGUAS",
+          "VINOS",
+          null,
+          "MIX UN",
+          "Mix Cza",
+          "Mix UNG",
+          "Mix Aguas",
+          null,
+          null,
+          "CCC UN",
+          "CCC CZA",
+          "CCC UNG",
+          "CCC Aguas",
+          "CCC Vinos"
+        ]
+      },
+      {
+        "r": 24,
+        "vals": [
+          null,
+          "Enero",
+          4291.833258333206,
+          1537.0006416666997,
+          317.8120000000006,
+          0.9449999999999998,
+          null,
+          "Enero",
+          0.6409447215209765,
+          0.22953651480701165,
+          0.04746221755948056,
+          null,
+          null,
+          "Enero",
+          1049,
+          819,
+          254,
+          11
+        ]
+      },
+      {
+        "r": 25,
+        "vals": [
+          null,
+          "Febrero",
+          3586.1238208332047,
+          1112.7867000000024,
+          241.85299999999984,
+          0.135,
+          null,
+          "Febrero",
+          0.6929154510313819,
+          0.21501407554663685,
+          0.04673114731976992,
+          null,
+          null,
+          "Febrero",
+          1018,
+          800,
+          248,
+          3
+        ]
+      },
+      {
+        "r": 26,
+        "vals": [
+          null,
+          "Marzo",
+          3408.5200250000144,
+          934.3992500000023,
+          241.41399999999987,
+          3.914999999999999,
+          null,
+          "Marzo",
+          0.7029582486548017,
+          0.19270641084890183,
+          0.04978816653446227,
+          null,
+          null,
+          "Marzo",
+          1040,
+          833,
+          326,
+          62
+        ]
+      },
+      {
+        "r": 27,
+        "vals": [
+          null,
+          "Abril",
+          1989.900445833193,
+          994.205758333302,
+          158.68099999999987,
+          1.125,
+          null,
+          "Abril",
+          0.5989803049147502,
+          0.29926606103409126,
+          0.04776459745169828,
+          null,
+          null,
+          "Abril",
+          994,
+          859,
+          221,
+          7
+        ]
+      },
+      {
+        "r": 28,
+        "vals": [
+          null,
+          "Mayo",
+          1711.8301291664982,
+          678.3489500001011,
+          115.36400000000002,
+          1.08,
+          null,
+          "Mayo",
+          0.6000257916349067,
+          0.23777293014856712,
+          0.040437058705044375,
+          null,
+          null,
+          "Mayo",
+          824,
+          730,
+          166,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "NABS (SEG.)",
+    "status": "OK",
+    "ref": "A1:Q35",
+    "sample": [
+      {
+        "r": 24,
+        "vals": [
+          "Vol Htls",
+          "Vol Core ung",
+          "Vol Resto ung",
+          "Vol Non Sugar",
+          "Vol Premium UNG",
+          null,
+          "MIX SG",
+          "Mix Core UNG",
+          "Mix Resto UNG",
+          "MIX NON SUGAR",
+          "Mix Premium UNG",
+          null,
+          "CCC SG",
+          "CCC Core Ung",
+          "CCC resto ung",
+          "CCC Non sugar",
+          "CCC Premium UNG"
+        ]
+      },
+      {
+        "r": 25,
+        "vals": [
+          "Enero",
+          1306.8368416667001,
+          91.24499999999999,
+          25.534999999999993,
+          109.18881199999984,
+          null,
+          "Enero",
+          0.8502513312223386,
+          0.05936562258103895,
+          0.016613525920399247,
+          0.07104018634735063,
+          null,
+          "Enero",
+          723,
+          418,
+          182,
+          443
+        ]
+      },
+      {
+        "r": 26,
+        "vals": [
+          "Febrero",
+          974.8441000000021,
+          56.69999999999999,
+          23.14749999999999,
+          62.342599999999976,
+          null,
+          "Febrero",
+          0.8760385975137913,
+          0.05095316110445952,
+          0.020801380893571014,
+          0.05602385434692906,
+          null,
+          "Febrero",
+          705,
+          337,
+          278,
+          352
+        ]
+      },
+      {
+        "r": 27,
+        "vals": [
+          "Marzo",
+          767.1110500000008,
+          72.62999999999997,
+          35.315,
+          67.95828399999999,
+          null,
+          "Marzo",
+          0.820967108010841,
+          0.07772908636217311,
+          0.037794336842629006,
+          0.0727293862874995,
+          null,
+          "Marzo",
+          727,
+          369,
+          266,
+          426
+        ]
+      },
+      {
+        "r": 28,
+        "vals": [
+          "Abril",
+          860.6115583333011,
+          66.22499999999998,
+          34.34625,
+          47.3592,
+          null,
+          "Abril",
+          0.8656272115905266,
+          0.0666109599998901,
+          0.03454642030798378,
+          0.04763520991810941,
+          null,
+          "Abril",
+          804,
+          335,
+          295,
+          284
+        ]
+      },
+      {
+        "r": 29,
+        "vals": [
+          "Mayo",
+          578.4439500001006,
+          39.690000000000005,
+          20.702500000000004,
+          44.70500000000001,
+          null,
+          "Mayo",
+          0.8527232923409321,
+          0.05850970949390293,
+          0.03051895340885678,
+          0.06590265968568736,
+          null,
+          "Mayo",
+          657,
+          237,
+          173,
+          280
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "1- Base TACO Mensual",
+    "status": "OK",
+    "ref": "A1:L35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "Dinam VOL x UDN",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "Vol total",
+          "Año/Mes",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "Unidad de Negocio",
+          "2026/01",
+          "2026/02",
+          "2026/03",
+          "2026/04",
+          "2026/05",
+          "2026/06",
+          "2026/07",
+          "2026/08",
+          "2026/09",
+          "2026/10",
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "CERVEZAS",
+          4291.83325833302,
+          3586.123820833104,
+          3408.520024999914,
+          1989.9004458332552,
+          1711.8301291665578,
+          1661.426725000056,
+          1698.4462750000523,
+          2073.4806333333513,
+          2417.0707999999404,
+          1062.5603000000165,
+          null
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          "UNG",
+          1537.0006416666986,
+          1112.786700000002,
+          934.3992500000027,
+          994.2057583333029,
+          678.3489500001021,
+          842.7040499999987,
+          1063.8383583333032,
+          950.1040583332997,
+          876.0046999999987,
+          500.3224000000008,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "AGUAS",
+          317.8120000000008,
+          241.85299999999995,
+          241.41400000000002,
+          158.68099999999995,
+          115.364,
+          202.435,
+          165.80200000000005,
+          132.28800000000007,
+          162.34900000000005,
+          70.213,
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "sheetName": "TACO REAL",
+    "status": "OK",
+    "ref": "A1:AF35",
+    "sample": [
+      {
+        "r": 0,
+        "vals": [
+          "KPI",
+          "Ene",
+          "Feb",
+          "Mar",
+          "Abr",
+          "May",
+          "Jun",
+          "Jul",
+          "Ago",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dic",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 1,
+        "vals": [
+          "CCC CZA",
+          "",
+          "",
+          1.2108510886016999,
+          1.2199312714776633,
+          0.9445208619899129,
+          1.175584024114544,
+          1.0419457899618676,
+          1.0657193605683837,
+          1.0630035918842833,
+          0.8433037437282902,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 2,
+        "vals": [
+          "GMV MARKETPLACE",
+          "",
+          "",
+          738.4384694686684,
+          780.7436251546293,
+          543.0758720581608,
+          747.2499215353747,
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 3,
+        "vals": [
+          "LIGA DE EJECUCION",
+          "",
+          "",
+          "",
+          0,
+          0,
+          0,
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 4,
+        "vals": [
+          "OBJETIVO COMERCIAL CZA",
+          0.8028270746428142,
+          0.7654479873709934,
+          0.7098125832986076,
+          0.9045002026514796,
+          0.7788126156353766,
+          0.7903276210636743,
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "r": 5,
+        "vals": [
+          "TAREAS VALIDADAS CV",
+          "",
+          "",
+          0,
+          0,
+          0,
+          0,
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  }
+]
