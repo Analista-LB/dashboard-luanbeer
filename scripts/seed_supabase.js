@@ -17,22 +17,24 @@ const path = require('path');
 const vm = require('vm');
 const { execSync } = require('child_process');
 
-// 1. Cargar .env si existe
-const envPath = path.join(__dirname, '..', '.env');
-if (fs.existsSync(envPath)) {
-  const envContent = fs.readFileSync(envPath, 'utf8');
-  envContent.split('\n').forEach(line => {
-    const trimmed = line.trim();
-    if (trimmed && !trimmed.startsWith('#')) {
-      const idx = trimmed.indexOf('=');
-      if (idx > 0) {
-        const k = trimmed.slice(0, idx).trim();
-        const v = trimmed.slice(idx + 1).trim();
-        if (!process.env[k]) process.env[k] = v;
+// 1. Cargar .env o .env.txt si existe
+['.env', '.env.txt', '.env.local'].forEach(fileName => {
+  const p = path.join(__dirname, '..', fileName);
+  if (fs.existsSync(p)) {
+    const envContent = fs.readFileSync(p, 'utf8');
+    envContent.split('\n').forEach(line => {
+      const trimmed = line.trim();
+      if (trimmed && !trimmed.startsWith('#')) {
+        const idx = trimmed.indexOf('=');
+        if (idx > 0) {
+          const k = trimmed.slice(0, idx).trim();
+          const v = trimmed.slice(idx + 1).trim();
+          if (!process.env[k]) process.env[k] = v;
+        }
       }
-    }
-  });
-}
+    });
+  }
+});
 
 // 2. Si no está en process.env, buscar en variables de entorno de Windows (HKCU)
 if (!process.env.SUPABASE_SERVICE_ROLE_KEY) {

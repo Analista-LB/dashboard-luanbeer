@@ -8,8 +8,8 @@
 
   // Configuración predeterminada (Reemplazar con la URL y Clave Anónima de su proyecto Supabase)
   const SUPABASE_CONFIG = {
-    url: '', // Ej: 'https://xyzcompany.supabase.co'
-    anonKey: '' // Ej: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'
+    url: 'https://fgbuzpkojloesumiordi.supabase.co', // Ej: 'https://xyzcompany.supabase.co'
+    anonKey: 'sb_publishable_I4YsxIH9QH0b4DK0mjurAA_LY4RMqVJ' // Ej: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'
   };
 
   root.__ARGON_SUPABASE_CONFIG__ = root.__ARGON_SUPABASE_CONFIG__ || SUPABASE_CONFIG;
