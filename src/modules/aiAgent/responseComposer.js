@@ -18,19 +18,21 @@
     return '$' + Number(Math.round(n)).toLocaleString('es-AR');
   }
 
-  /**
-   * AIResponseComposer
-   * Redactor comercial bajo la regla "BUENO + CLARO + CORTO".
-   * Responde en 1 sola oración lo preguntado y nada más, garantizando
-   * que no existan divagaciones ni causas inventadas.
-   */
   class AIResponseComposer {
-    static compose(structuredResult, formalQuery, originalQuestion = '') {
+    static compose(structuredResult, formalQuery = {}, originalQuestion = '') {
       if (!structuredResult) {
         return 'No se obtuvieron resultados para la consulta.';
       }
 
-      const qNorm = String(originalQuestion || '').toLowerCase();
+      // Si el motor determinístico ya construyó una respuesta comercial verificada y específica, utilizarla directamente
+      if (structuredResult.answer && typeof structuredResult.answer === 'string' && structuredResult.answer.trim().length > 0) {
+        return structuredResult.answer;
+      }
+
+      const qNorm = String(originalQuestion || '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
       const name = structuredResult.name || structuredResult.entityValue || '';
 
       // 1. Análisis de salud / Diagnóstico
@@ -66,72 +68,62 @@
         return `La mayor pérdida de volumen se concentra en Mayorista (-7.099,7 HL vs. AA).`;
       }
 
-      // 3. Desviación y variación interanual (caso crítico: Autoservicios y On Premise vs AA)
+      // 3. Desviación y variación interanual (ej. Autoservicios vs AA, On Premise vs AA, Bares vs AA)
       if (structuredResult.operation === 'compare_metric' || structuredResult.operation === 'variance_absolute') {
         const diff = structuredResult.difference || 0;
         const diffAbs = Math.abs(Number(diff.toFixed(1)));
         const varPct = structuredResult.variationPct !== null ? Number(structuredResult.variationPct.toFixed(1)) : null;
         const varPctStr = varPct !== null ? ` (${fmt(varPct, 1)}%)` : '';
         const unit = structuredResult.unit || 'HL';
+        const cur = structuredResult.current;
+        const prv = structuredResult.previous;
 
-        // Si la pregunta pide explícitamente "desviación" o "diferencia"
         if (/\b(desviacion|diferencia|brecha)\b/.test(qNorm)) {
           const signStr = diff >= 0 && varPct !== null ? ` (+${fmt(varPct, 1)}%)` : varPctStr;
           return `La desviación de ${name} vs. AA es de ${diff >= 0 ? '+' : ''}${fmt(diff, 1)} ${unit}${signStr}.`;
         }
-        // Si el valor creció (positivo)
         if (diff >= 0) {
           const signStr = varPct !== null ? ` (+${fmt(varPct, 1)}%)` : '';
           return `${name} creció ${fmt(diffAbs, 1)} ${unit} vs. AA${signStr}.`;
         }
-        // Si el valor cayó (negativo)
         return `${name} cayó ${fmt(diffAbs, 1)} ${unit} vs. AA${varPctStr}.`;
       }
 
-      // 4. Consulta de métrica puntual (ej. "¿Cuánto vendió Autoservicios?" o seguimiento "¿Y cuánto vendió?")
-      if (structuredResult.operation === 'get_metric' || formalQuery?.operation === 'get_metric' || formalQuery?.isFollowUp) {
-        if (structuredResult.metric === 'volumen_hl' || structuredResult.metric === 'volumen') {
+      // 4. Consulta de métrica puntual ("¿Cuánto vendió Autoservicios?" o seguimiento "¿Y cuánto vendió?")
+      if (structuredResult.operation === 'get_metric' || formalQuery?.intent === 'get_metric' || formalQuery?.isFollowUp) {
+        if (structuredResult.metric === 'volumen_hl' || structuredResult.metric === 'volume_hl' || structuredResult.metric === 'volumen') {
           return `${name} vendió ${fmt(structuredResult.value || structuredResult.current, 1)} HL.`;
         }
-        if (structuredResult.metric === 'facturacion') {
+        if (structuredResult.metric === 'facturacion' || structuredResult.metric === 'revenue') {
           return `${name} facturó ${fmtMoney(structuredResult.value || structuredResult.current)}.`;
         }
       }
 
-      // 5. Ranking por objetivo (ej. "¿Qué vendedor está más cerca de su objetivo?")
-      if (structuredResult.metric === 'cumplimiento_objetivo') {
+      // 5. Ranking por objetivo ("¿Qué vendedor está más cerca de su objetivo?")
+      if (structuredResult.metric === 'cumplimiento_objetivo' || structuredResult.metric === 'target_progress') {
         const pct = structuredResult.progressPct || structuredResult.value || 0;
         const faltante = structuredResult.remaining || 0;
-        return `${name}: ${fmt(pct, 1)}%. Le faltan ${fmt(faltante, 1)} HL.`;
+        return `${name} está más cerca de su objetivo con ${fmt(pct, 1)}% de cumplimiento (le faltan ${fmt(faltante, 1)} HL).`;
       }
 
-      // 6. Ranking de caída de canal (ej. "¿Qué canal perdió más volumen?")
-      if (structuredResult.operation === 'mayor_caida' || (formalQuery?.entity === 'canal' && formalQuery?.operation === 'mayor_caida')) {
+      // 6. Ranking de caída de canal ("¿Qué canal perdió más volumen?")
+      if (structuredResult.operation === 'mayor_caida' || (structuredResult.entity === 'canal' && structuredResult.difference < 0)) {
         const diff = structuredResult.difference || structuredResult.value || 0;
-        return `${name}: ${fmt(diff, 1)} HL vs. AA.`;
+        const varPct = structuredResult.variationPct !== null && structuredResult.variationPct !== undefined ? ` (${fmt(structuredResult.variationPct, 1)}%)` : '';
+        return `El canal que más cayó es ${name}, con ${fmt(diff, 1)} HL vs. AA${varPct}.`;
       }
 
-      // 7. Ranking de vendedor por volumen (ej. "¿Qué vendedor vendió más?")
-      if (formalQuery?.entity === 'vendedor' && (formalQuery?.operation === 'ranking_desc' || formalQuery?.metric === 'volumen_hl')) {
-        return `${name}: ${fmt(structuredResult.value || structuredResult.current, 1)} HL.`;
+      // 7. Ranking de vendedor por volumen ("¿Qué vendedor vendió más?", "¿Quién vendió más cerveza?")
+      if (structuredResult.entity === 'vendedor' || formalQuery?.dimension === 'vendedor') {
+        const filterTxt = structuredResult.filterValue ? ` en ${structuredResult.filterValue}` : '';
+        return `${name} lideró las ventas${filterTxt} con ${fmt(structuredResult.value || structuredResult.current, 1)} HL.`;
       }
 
-      // 8. Mes específico
-      if (structuredResult.entity === 'mes' || formalQuery?.entity === 'mes') {
-        if (structuredResult.metric === 'facturacion') {
-          return `${fmtMoney(structuredResult.value)}.`;
-        }
-        if (structuredResult.metric === 'volumen_hl' || structuredResult.metric === 'volumen') {
-          return `${name}: ${fmt(structuredResult.value, 1)} HL.`;
-        }
+      // 8. Clientes CCC
+      if (structuredResult.metric === 'clientes_ccc') {
+        return `${Number(Math.round(structuredResult.value || structuredResult.current)).toLocaleString('es-AR')} clientes únicos (CCC).`;
       }
 
-      // 9. Clientes CCC
-      if (structuredResult.metric === 'clientes_ccc' || formalQuery?.metric === 'clientes_ccc') {
-        return `${Number(Math.round(structuredResult.value || structuredResult.current)).toLocaleString('es-AR')} clientes.`;
-      }
-
-      // 10. Fallback directo conciso
       return `${name}: ${fmt(structuredResult.value || structuredResult.difference || 0, 1)} ${structuredResult.unit || ''}.`.trim();
     }
   }

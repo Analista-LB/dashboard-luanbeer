@@ -6,18 +6,22 @@
       require('./queryValidator.js'),
       require('./queryInterpreter.js'),
       require('./responseComposer.js'),
-      require('./responseValidator.js')
+      require('./responseValidator.js'),
+      require('./querySchema.js')
     );
   } else {
     root.ArgonBI = root.ArgonBI || {};
-    root.ArgonBI.AIAgent = factory(
+    const exported = factory(
       root.ArgonBI.ConversationContext,
       root.ArgonBI.CommercialQueryEngine,
       root.ArgonBI.QueryValidator,
       root.ArgonBI.AIQueryInterpreter,
       root.ArgonBI.AIResponseComposer,
-      root.ArgonBI.ResponseValidator
+      root.ArgonBI.ResponseValidator,
+      root.ArgonBI.AIQuerySchema
     );
+    root.ArgonBI.AIAgent = exported.AIAgent;
+    root.ArgonBI.AIAgentModule = exported;
   }
 })(typeof self !== 'undefined' ? self : this, function (
   ConversationContext,
@@ -25,7 +29,8 @@
   QueryValidator,
   AIQueryInterpreter,
   AIResponseComposer,
-  ResponseValidator
+  ResponseValidator,
+  AIQuerySchema
 ) {
   'use strict';
 
@@ -42,16 +47,8 @@
       this.context.clear();
     }
 
-    /**
-     * Pipeline híbrido de 7 etapas:
-     * 1. Pregunta natural -> 2. Interpretación -> 3. Validación -> 4. Tools comerciales determinísticas
-     * -> 5. Resultado estructurado -> 6. Redactor conciso -> 7. Validación numérica estricta
-     */
-    async executeQuery(questionText, dashboardState, rawBundle, mathEngine) {
-      // 1. Interpretar pregunta
-      const formalQuery = AIQueryInterpreter.interpret(questionText, this.context);
-
-      // 2. Validar consulta
+    _processSpec(questionText, formalQuery, dashboardState, rawBundle, mathEngine) {
+      // 1. Validar consulta
       const validation = QueryValidator.validate(formalQuery);
       if (!validation.valid) {
         return {
@@ -68,86 +65,27 @@
         };
       }
 
-      // 3. Inicializar motor de tools determinísticas
+      // 2. Inicializar motor de tools determinísticas y ejecutar spec
       const toolsEngine = new CommercialQueryEngine(dashboardState, rawBundle, mathEngine);
+      const structuredResult = toolsEngine.executeSpec(formalQuery);
 
-      // 4. Invocar la tool correspondiente según intención
-      let structuredResult = null;
-
-      if (formalQuery.operation === 'variance_absolute' || formalQuery.operation === 'compare_metric') {
-        structuredResult = toolsEngine.compareMetric({
-          metric: formalQuery.metric,
-          dimension: formalQuery.entity,
-          value: formalQuery.entityValue,
-          comparison: formalQuery.comparison || 'previous_year'
-        });
-      } else if (formalQuery.operation === 'get_metric' || formalQuery.isFollowUp) {
-        structuredResult = toolsEngine.getMetric({
-          metric: formalQuery.metric,
-          dimension: formalQuery.entity,
-          value: formalQuery.entityValue
-        });
-      } else if (formalQuery.operation === 'health_check') {
-        structuredResult = toolsEngine.healthCheck({
-          dimension: formalQuery.entity,
-          value: formalQuery.entityValue
-        });
-      } else if (formalQuery.operation === 'analyze_drivers') {
-        structuredResult = toolsEngine.analyzeDrivers({
-          dimension: formalQuery.entity,
-          value: formalQuery.entityValue,
-          metric: formalQuery.metric,
-          subDimension: formalQuery.subDimension || 'canal'
-        });
-      } else if (formalQuery.operation === 'cerca_objetivo') {
-        structuredResult = toolsEngine.rankDimension({
-          metric: 'cumplimiento_objetivo',
-          dimension: 'vendedor',
-          condition: '<100%',
-          sortDirection: 'desc'
-        });
-      } else if (formalQuery.operation === 'mayor_caida') {
-        structuredResult = toolsEngine.rankDimension({
-          metric: 'volumen_hl',
-          dimension: 'canal',
-          comparison: 'previous_year',
-          sortDirection: 'asc'
-        });
-      } else if (formalQuery.operation === 'mayor_caida_ccc') {
-        structuredResult = toolsEngine.compareMetric({
-          metric: 'clientes_ccc',
-          dimension: 'canal',
-          value: formalQuery.entityValue || 'Mayorista',
-          comparison: 'previous_year'
-        });
-      } else if (formalQuery.operation === 'ranking_desc') {
-        structuredResult = toolsEngine.rankDimension({
-          metric: formalQuery.metric,
-          dimension: formalQuery.entity,
-          filterDimension: formalQuery.filterDimension,
-          filterValue: formalQuery.filterValue,
-          sortDirection: 'desc'
-        });
-      }
-
-      // Fallback a motor base si la tool puntual no se resolvió
       if (!structuredResult || structuredResult.status === 'not_found') {
         return null;
       }
 
-      // 5. Redacción de respuesta ultracorta
+      // 3. Redacción de respuesta natural corta
       const rawAnswer = AIResponseComposer.compose(structuredResult, formalQuery, questionText);
 
-      // 6. Validación numérica estricta (rechazo de números alucinados)
+      // 4. Validación numérica estricta (rechazo de números alucinados)
       const validated = ResponseValidator.validate(rawAnswer, structuredResult);
 
-      // 7. Actualizar memoria conversacional
+      // 5. Actualizar memoria conversacional
       this.context.update(formalQuery, structuredResult);
 
       return {
         interpreted: true,
         question: questionText,
-        intent: formalQuery.intent || formalQuery.operation,
+        intent: formalQuery.intent || structuredResult.operation,
         answer: validated.response,
         resultado: validated.response,
         result: structuredResult,
@@ -157,19 +95,39 @@
         formula: structuredResult.formula,
         valoresUtilizados: structuredResult.valoresUtilizados || [],
         periodo: structuredResult.periodo || '2026',
-        confidence: formalQuery.confidence || 0.95,
+        confidence: formalQuery.confidence || 0.96,
         calculationDetails: {
           formula: structuredResult.formula,
+          periodo: structuredResult.periodo || 'YTD 2026 vs 2025',
+          filtros: structuredResult.name || formalQuery.entityValue || 'General',
           valoresUtilizados: structuredResult.valoresUtilizados || [],
           metric: structuredResult.metric,
           entity: structuredResult.entity,
-          confidence: formalQuery.confidence || 0.95,
+          semanticInterpretation: `Intención: ${formalQuery.intent} | Métrica: ${formalQuery.metric} | Segmento: ${formalQuery.entityValue || 'Total'}`,
+          engineDescription: 'Flujo Híbrido Agente Comercial: Interpretación Semántica → Cálculo Determinístico → Validación Numérica → Respuesta Natural',
+          confidence: formalQuery.confidence || 0.96,
           validation: {
             numericCheckPassed: validated.valid,
             verifiedNumbersCount: validated.verifiedNumbersCount || 0
           }
         }
       };
+    }
+
+    /**
+     * Ejecución sincrónica del flujo híbrido (utilizada por NLQEngine.answerQuery)
+     */
+    executeQuerySync(questionText, dashboardState, rawBundle, mathEngine) {
+      const formalQuery = AIQueryInterpreter.interpretHeuristic(questionText, this.context);
+      return this._processSpec(questionText, formalQuery, dashboardState, rawBundle, mathEngine);
+    }
+
+    /**
+     * Ejecución asincrónica del flujo híbrido (soporta adaptador LLM opcional + fallback determinístico)
+     */
+    async executeQuery(questionText, dashboardState, rawBundle, mathEngine) {
+      const formalQuery = await AIQueryInterpreter.interpret(questionText, this.context);
+      return this._processSpec(questionText, formalQuery, dashboardState, rawBundle, mathEngine);
     }
   }
 
@@ -180,6 +138,7 @@
     QueryValidator,
     AIQueryInterpreter,
     AIResponseComposer,
-    ResponseValidator
+    ResponseValidator,
+    AIQuerySchema
   };
 });

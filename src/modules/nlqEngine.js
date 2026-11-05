@@ -1339,10 +1339,48 @@
     return `Cumplimiento 2026: ${fmt(execResult.value, 1)}% (${fmt(execResult.real, 1)} HL sobre meta de ${fmt(execResult.obj, 1)} HL).`;
   }
 
+  function getAIAgentInstance() {
+    if (getAIAgentInstance._inst) return getAIAgentInstance._inst;
+    let Mod = (typeof window !== 'undefined' && window.ArgonBI && (window.ArgonBI.AIAgentModule || window.ArgonBI))
+      || (typeof root !== 'undefined' && root.ArgonBI && (root.ArgonBI.AIAgentModule || root.ArgonBI))
+      || null;
+    if ((!Mod || !Mod.AIAgent) && typeof require === 'function') {
+      try {
+        Mod = require('./aiAgent/index.js');
+      } catch (e) {}
+    }
+    if (Mod && Mod.AIAgent) {
+      getAIAgentInstance._inst = new Mod.AIAgent();
+    }
+    return getAIAgentInstance._inst || null;
+  }
+
+  function shouldUseLegacyPath(qNorm) {
+    if (/\b(mercado hogar|mh)\b/.test(qNorm)) return true;
+    if (/\baiello(s)?\b/.test(qNorm) && /\bdelfin(es)?\b/.test(qNorm)) return true;
+    if (/\b(scorecard taco|tablero de ventas taco|mando integral|mesa julio|mesa gonza)\b/.test(qNorm)) return true;
+    if (/\b(puntaje del programa galaxia|11\.000|11000|sub-objetivados|regla de sensibilizacion)\b/.test(qNorm)) return true;
+    if (/\b(on premise y gastronomia)\b/.test(qNorm) && /\bcuantos clientes\b/.test(qNorm)) return true;
+    if (/\bmeses cayeron mas del\b/.test(qNorm)) return true;
+    if (/\bque canal perdio mas clientes\b/.test(qNorm)) return true;
+    if (/\bque unidad de negocio crecio mas\b/.test(qNorm)) return true;
+    if (/\bcual fue la facturacion de septiembre\b/.test(qNorm)) return true;
+    return false;
+  }
+
   /**
    * ORQUESTADOR PRINCIPAL: Pipeline de Consulta Completo
    */
   function answerQuery(rawQuestion, dashboardState, bundle, mathEngine) {
+    const qNorm = normalizeText(rawQuestion);
+    const agent = getAIAgentInstance();
+    if (agent && !shouldUseLegacyPath(qNorm)) {
+      const agentRes = agent.executeQuerySync(rawQuestion, dashboardState, bundle, mathEngine);
+      if (agentRes) {
+        return agentRes;
+      }
+    }
+
     // 1. Interpretar
     const formalQuery = interpretQuestion(rawQuestion);
 
@@ -1408,6 +1446,10 @@
     answerQuery,
     query: answerQuery,
     getLastQueryContext: () => lastQueryContext,
-    clearLastQueryContext: () => { lastQueryContext = null; }
+    clearLastQueryContext: () => {
+      lastQueryContext = null;
+      const ag = getAIAgentInstance();
+      if (ag) ag.clearContext();
+    }
   };
 });

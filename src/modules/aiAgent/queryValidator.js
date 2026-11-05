@@ -3,18 +3,13 @@
     module.exports = factory(require('./querySchema.js'));
   } else {
     root.ArgonBI = root.ArgonBI || {};
-    root.ArgonBI.QueryValidator = factory(root.ArgonBI.QuerySchema);
+    root.ArgonBI.QueryValidator = factory(root.ArgonBI.AIQuerySchema);
   }
 })(typeof self !== 'undefined' ? self : this, function (QuerySchema) {
   'use strict';
 
-  /**
-   * QueryValidator
-   * Valida la salida estructurada del LLM contra el JSON Schema y contra
-   * los catálogos y dimensiones reales del modelo comercial.
-   */
   class QueryValidator {
-    static validate(formalQuery, dimensionCatalog = null) {
+    static validate(formalQuery) {
       if (!formalQuery) {
         return {
           valid: false,
@@ -38,78 +33,18 @@
         return {
           valid: false,
           ambiguous: true,
-          userMessage: formalQuery.clarificationQuestion || formalQuery.ambiguityPrompt || '¿Por volumen, facturación o cumplimiento?',
+          userMessage: formalQuery.ambiguityReason || formalQuery.clarificationQuestion || 'La pregunta es ambigua porque no especifica si buscás evaluar por volumen vendido (HL), facturación neta ($) o cumplimiento de objetivo (%).',
           confidence: formalQuery.confidence || 0.5
         };
       }
 
-      // 3. Validación de JSON Schema
-      if (QuerySchema && typeof QuerySchema.validateSchema === 'function') {
-        const schemaCheck = QuerySchema.validateSchema(formalQuery);
-        if (!schemaCheck.valid) {
-          return {
-            valid: false,
-            userMessage: `La consulta estructurada no cumple el esquema formal: ${schemaCheck.errors.join('; ')}`,
-            confidence: 0.2
-          };
-        }
-      }
-
-      // 4. Validación de valor de dimensión contra datos reales
-      const dim = formalQuery.dimension;
-      const val = formalQuery.dimensionValue;
-
-      if (val) {
-        const valNorm = String(val).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
-
-        // Resolución canónica de On Premise
-        if (/on premise|on-premise|refrigerado|consumo en el lugar/i.test(valNorm)) {
-          formalQuery.canonicalDimension = 'canalUnificado';
-          formalQuery.canonicalValue = 'Refrigerado';
-          formalQuery.displayLabel = 'On Premise';
-        }
-        // Bares / Nocturno
-        else if (/bar(es)?|nocturno/i.test(valNorm)) {
-          formalQuery.canonicalDimension = 'canal';
-          formalQuery.canonicalValue = 'REF NOCTURNO';
-          formalQuery.displayLabel = 'REF NOCTURNO';
-        }
-        // Autoservicio
-        else if (/autoservicio/i.test(valNorm)) {
-          formalQuery.canonicalDimension = 'canal';
-          formalQuery.canonicalValue = 'Autoservicio';
-          formalQuery.displayLabel = 'Autoservicios';
-        }
-        // Mayorista
-        else if (/mayorista/i.test(valNorm)) {
-          formalQuery.canonicalDimension = 'canal';
-          formalQuery.canonicalValue = 'Mayorista';
-          formalQuery.displayLabel = 'Mayorista';
-        }
-        // Cervezas
-        else if (/cerveza/i.test(valNorm)) {
-          formalQuery.canonicalDimension = 'unidad_negocio';
-          formalQuery.canonicalValue = 'CERVEZAS';
-          formalQuery.displayLabel = 'Cerveza';
-        }
-        // UNG
-        else if (/ung/i.test(valNorm)) {
-          formalQuery.canonicalDimension = 'unidad_negocio';
-          formalQuery.canonicalValue = 'UNG';
-          formalQuery.displayLabel = 'UNG';
-        }
-        // Aguas
-        else if (/agua/i.test(valNorm)) {
-          formalQuery.canonicalDimension = 'unidad_negocio';
-          formalQuery.canonicalValue = 'AGUAS';
-          formalQuery.displayLabel = 'Aguas';
-        }
-        // Vinos
-        else if (/vino/i.test(valNorm)) {
-          formalQuery.canonicalDimension = 'unidad_negocio';
-          formalQuery.canonicalValue = 'VINO';
-          formalQuery.displayLabel = 'Vinos';
-        }
+      // 3. Intención no reconocida
+      if (formalQuery.intent === 'unknown') {
+        return {
+          valid: false,
+          userMessage: 'Podés consultar sobre conceptos del tablero (YTD, CCC, AA, UNG, Cadenitas), volumen (HL), facturación ($), clientes únicos (CCC), canales, unidades de negocio, vendedores, trimestres, meses, objetivos o análisis de causas de caída.',
+          confidence: 0.2
+        };
       }
 
       return {

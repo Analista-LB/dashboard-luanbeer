@@ -210,4 +210,37 @@ for (const f of filesToCheck) {
 }
 console.log('✅ 12. Cero API keys en código fuente cliente (Arquitectura segura y local).');
 
+// 15. Validación obligatoria de Agente de Análisis Comercial (10 preguntas obligatorias + casos libres)
+const mandatorySuite = [
+  { q: '¿Qué es YTD?', mustContain: ['Year To Date', '33.684,7'] },
+  { q: '¿Qué es CCC?', mustContain: ['Clientes Con Compra', '1.482'] },
+  { q: '¿Qué significa CCC?', mustContain: ['Clientes Con Compra', '1.482'] },
+  { q: '¿Cuánto volumen llevamos YTD?', mustContain: ['33.684,7', '-23,5%'] },
+  { q: '¿Cómo está On Premise vs año pasado?', mustContain: ['On Premise', '292,7', '+6,4%'] },
+  { q: '¿Qué canal perdió más volumen?', mustContain: ['Mayorista', '-7.099,7'] },
+  { q: '¿Qué canal cayó más?', mustContain: ['Mayorista', '-7.099,7'] },
+  { q: '¿Cuál fue el mejor trimestre?', mustContain: ['T1 (Ene–Mar)', '15.746,9'] },
+  { q: '¿Qué productos explican la caída de volumen?', mustContain: ['-10.351,0', 'Quilmes Clásica Ret 1L', 'Andes X12 970 Ret'] },
+  { q: '¿Cuántos clientes únicos compraron?', mustContain: ['1.482', '1.268'] },
+  { q: '¿Cómo viene octubre?', mustContain: ['Octubre 2026', '2.763,4', '-56,6%', '1.118'] },
+  { q: '¿Por qué cayó Mayoristas?', mustContain: ['Mayorista', '-7.099,7', 'Cervezas', 'Andes X12 970 Ret'] },
+  { q: '¿Qué productos explican la caída de Mayoristas?', mustContain: ['Mayorista', 'Andes X12 970 Ret', 'Quilmes Clásica Ret 1L'] },
+  { q: '¿Quién fue el mejor vendedor de septiembre?', mustContain: ['Septiembre', 'Brian Castillo', '543,0'] },
+  { q: '¿Qué clientes dejaron de comprar?', mustContain: ['143 clientes', '2.522,9', 'Nuevo Bodegon'] },
+  { q: '¿Por qué cayó el volumen?', mustContain: ['-10.351,0', 'Mayorista', 'Cervezas', '1.482'] },
+  { q: 'Comparame cerveza con aguas.', mustContain: ['Cervezas', '22.839,0', 'Aguas', '1.738,0', '21.101,0'] },
+  { q: '¿Qué pasó con Aiellos este año?', mustContain: ['Supermercados Aiello', '2.852,3', '-15,3%', 'UNG'] }
+];
+
+for (const item of mandatorySuite) {
+  const r = NLQEngine.answerQuery(item.q, state, REAL_BUNDLE, CommercialMathEngine);
+  assert(r && r.interpreted === true, `La pregunta "${item.q}" debe ser interpretada`);
+  for (const token of item.mustContain) {
+    assert(r.answer.includes(token), `Respuesta a "${item.q}" debe incluir "${token}". Recibido: ${r.answer}`);
+  }
+  const v = AIAgentModule.ResponseValidator.validate(r.answer, r.structuredResult || r.result);
+  assert(v.valid === true, `Todos los números en "${item.q}" deben estar certificados por ResponseValidator`);
+}
+console.log('✅ 13. Las 18 consultas de validación comercial (conceptuales, causales, comparativas y período) pasaron al 100%.');
+
 console.log('\n🎉 TODAS LAS VERIFICACIONES DEL AGENTE IA PASARON CON 100% DE ÉXITO! 🎉\n');
